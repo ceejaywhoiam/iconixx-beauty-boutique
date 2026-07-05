@@ -99,7 +99,7 @@ function ProductPage() {
 
             {product.highlights.length > 0 && (
               <ul className="mt-8 grid gap-2 border-t border-border pt-6 sm:grid-cols-2">
-                {product.highlights.map((h) => (
+                {product.highlights.map((h: string) => (
                   <li key={h} className="flex items-start gap-2 text-sm text-foreground/80">
                     <span className="mt-1 text-accent">✦</span>
                     <span>{h}</span>
