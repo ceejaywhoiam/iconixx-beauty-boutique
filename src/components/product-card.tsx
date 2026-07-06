@@ -9,32 +9,33 @@ export function ProductCard({ product }: { product: Product }) {
       params={{ id: product.id }}
       className="group block"
     >
-      <div className="relative overflow-hidden rounded-2xl bg-secondary/50 aspect-square">
+      <div className="relative aspect-[4/5] overflow-hidden bg-blush/60">
         <img
           src={product.image}
           alt={product.name}
           loading="lazy"
           width={1024}
           height={1024}
-          className="h-full w-full object-cover transition duration-700 group-hover:scale-105"
+          className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
         />
-        <div className="absolute left-4 top-4 rounded-full bg-background/85 px-3 py-1 text-[0.65rem] tracking-luxe text-primary backdrop-blur">
-          {product.category}
-        </div>
-        {low && (
-          <div className="absolute right-4 top-4 rounded-full bg-accent px-3 py-1 text-[0.65rem] tracking-luxe text-accent-foreground">
+        {low ? (
+          <div className="absolute right-4 top-4 bg-white/90 px-3 py-1 text-[10px] uppercase tracking-[0.2em] text-primary">
             Low stock
+          </div>
+        ) : (
+          <div className="absolute right-4 top-4 bg-white/90 px-3 py-1 text-[10px] uppercase tracking-[0.2em] text-foreground">
+            {product.category}
           </div>
         )}
       </div>
-      <div className="mt-4 flex items-start justify-between gap-4">
-        <div>
-          <h3 className="text-display text-lg text-foreground">{product.name}</h3>
-          {product.tagline && (
-            <p className="text-xs text-muted-foreground">{product.tagline}</p>
-          )}
-        </div>
-        <div className="text-sm text-primary">${product.price.toFixed(2)}</div>
+      <div className="mt-6">
+        <h3 className="text-xs uppercase tracking-[0.25em] font-medium text-foreground">
+          {product.name}
+        </h3>
+        {product.tagline && (
+          <p className="mt-1 text-[11px] text-muted-foreground">{product.tagline}</p>
+        )}
+        <p className="mt-3 text-lg font-light text-primary">${product.price.toFixed(2)}</p>
       </div>
     </Link>
   );
