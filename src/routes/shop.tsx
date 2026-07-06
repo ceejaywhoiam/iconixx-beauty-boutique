@@ -9,10 +9,10 @@ const categories = ["All", "Gloss", "Lipstick", "Palette", "Mascara", "Liner"] a
 export const Route = createFileRoute("/shop")({
   head: () => ({
     meta: [
-      { title: "Shop — ICONIXX Beauty" },
-      { name: "description", content: "Shop luxury matte lip glosses, palettes, mascara, and liners from ICONIXX Beauty." },
-      { property: "og:title", content: "Shop — ICONIXX Beauty" },
-      { property: "og:description", content: "The full ICONIXX Beauty collection: glosses, palettes, mascara, and liners." },
+      { title: "Shop — TIMELESS ICONIXX Beauty" },
+      { name: "description", content: "Shop luxury matte lip glosses, palettes, mascara, and liners from TIMELESS ICONIXX Beauty." },
+      { property: "og:title", content: "Shop — TIMELESS ICONIXX Beauty" },
+      { property: "og:description", content: "The full TIMELESS ICONIXX Beauty collection: glosses, palettes, mascara, and liners." },
     ],
   }),
   component: Shop,
@@ -31,7 +31,7 @@ function Shop() {
           className="mt-4 text-5xl text-primary md:text-7xl"
           style={{ fontFamily: "'DM Serif Display', serif" }}
         >
-          Shop ICONIXX
+          Shop TIMELESS ICONIXX
         </h1>
         <div className="mt-4 h-1 w-24 bg-blush" />
         <p className="mt-6 max-w-xl text-base font-light leading-relaxed text-muted-foreground">

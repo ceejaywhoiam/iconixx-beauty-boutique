@@ -11,14 +11,14 @@ export const Route = createFileRoute("/product/$id")({
   },
   head: ({ loaderData }) => {
     if (!loaderData) {
-      return { meta: [{ title: "Product not found — ICONIXX Beauty" }, { name: "robots", content: "noindex" }] };
+      return { meta: [{ title: "Product not found — TIMELESS ICONIXX Beauty" }, { name: "robots", content: "noindex" }] };
     }
     const { product } = loaderData;
     return {
       meta: [
-        { title: `${product.name} — ICONIXX Beauty` },
+        { title: `${product.name} — TIMELESS ICONIXX Beauty` },
         { name: "description", content: product.description.slice(0, 155) },
-        { property: "og:title", content: `${product.name} — ICONIXX Beauty` },
+        { property: "og:title", content: `${product.name} — TIMELESS ICONIXX Beauty` },
         { property: "og:description", content: product.description.slice(0, 155) },
         { property: "og:image", content: product.image },
         { name: "twitter:image", content: product.image },

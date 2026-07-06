@@ -9,7 +9,7 @@ export function SiteHeader() {
             className="truncate text-2xl text-primary"
             style={{ fontFamily: "'DM Serif Display', serif" }}
           >
-            ICONIXX
+            TIMELESS ICONIXX
           </span>
           <span className="tracking-[0.35em] text-[10px] uppercase text-accent">Beauty</span>
         </Link>
@@ -41,7 +41,7 @@ export function SiteFooter() {
             className="text-3xl text-primary"
             style={{ fontFamily: "'DM Serif Display', serif" }}
           >
-            ICONIXX
+            TIMELESS ICONIXX
           </div>
           <div className="mt-1 text-[10px] uppercase tracking-[0.35em] text-accent">Beauty</div>
           <p className="mt-4 max-w-xs text-sm font-light leading-relaxed text-muted-foreground">
@@ -58,7 +58,7 @@ export function SiteFooter() {
           </ul>
         </div>
         <div>
-          <div className="text-[10px] uppercase tracking-[0.35em] text-primary">The Iconixx List</div>
+          <div className="text-[10px] uppercase tracking-[0.35em] text-primary">The Timeless Iconixx List</div>
           <p className="mt-6 text-sm font-light text-muted-foreground">
             Drops, restocks, and soft-luxury moments in your inbox.
           </p>
@@ -75,7 +75,7 @@ export function SiteFooter() {
         </div>
       </div>
       <div className="border-t border-border/60 px-6 py-6 text-center text-[10px] uppercase tracking-[0.3em] text-muted-foreground">
-        © {new Date().getFullYear()} ICONIXX Beauty
+        © {new Date().getFullYear()} TIMELESS ICONIXX Beauty
       </div>
     </footer>
   );

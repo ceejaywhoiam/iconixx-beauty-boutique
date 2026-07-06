@@ -5,10 +5,10 @@ import { SiteHeader, SiteFooter } from "@/components/site-header";
 export const Route = createFileRoute("/contact")({
   head: () => ({
     meta: [
-      { title: "Contact — ICONIXX Beauty" },
-      { name: "description", content: "Get in touch with ICONIXX Beauty for orders, press, or collaborations." },
-      { property: "og:title", content: "Contact — ICONIXX Beauty" },
-      { property: "og:description", content: "Reach out to the ICONIXX Beauty team." },
+      { title: "Contact — TIMELESS ICONIXX Beauty" },
+      { name: "description", content: "Get in touch with TIMELESS ICONIXX Beauty for orders, press, or collaborations." },
+      { property: "og:title", content: "Contact — TIMELESS ICONIXX Beauty" },
+      { property: "og:description", content: "Reach out to the TIMELESS ICONIXX Beauty team." },
     ],
   }),
   component: Contact,

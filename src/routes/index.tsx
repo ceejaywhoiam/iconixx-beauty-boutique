@@ -22,7 +22,7 @@ function Index() {
         <div className="absolute inset-0 z-0">
           <img
             src={hero}
-            alt="ICONIXX Beauty campaign"
+            alt="TIMELESS ICONIXX Beauty campaign"
             className="h-full w-full object-cover"
           />
           <div className="absolute inset-0 bg-gradient-to-b from-background/40 via-background/10 to-background/80" />
@@ -36,7 +36,7 @@ function Index() {
             className="mt-6 text-6xl leading-none text-primary drop-shadow-sm md:text-9xl"
             style={{ fontFamily: "'DM Serif Display', serif" }}
           >
-            ICONIXX
+            TIMELESS ICONIXX
           </h1>
           <p className="mt-8 text-[11px] uppercase tracking-[0.4em] font-light text-foreground">
             Redefining the standard of elegance

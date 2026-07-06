@@ -110,7 +110,7 @@ export const products: Product[] = [
     quantity: 7,
     image: trophyWife,
     description:
-      "A rich mauve nude made for the woman who walks with confidence, elegance, and boss energy. Trophy Wife delivers a smooth velvet-matte finish with a luxurious lightweight feel that speaks power, beauty, and sophistication in every swipe. A timeless shade for business meetings, brunch dates, soft glam nights, luxury selfies, and everyday Iconixx beauty.",
+      "A rich mauve nude made for the woman who walks with confidence, elegance, and boss energy. Trophy Wife delivers a smooth velvet-matte finish with a luxurious lightweight feel that speaks power, beauty, and sophistication in every swipe. A timeless shade for business meetings, brunch dates, soft glam nights, luxury selfies, and everyday Timeless Iconixx beauty.",
     highlights: [
       "Sophisticated mauve nude tone",
       "Smooth velvet matte finish",
@@ -130,7 +130,7 @@ export const products: Product[] = [
     quantityNote: "10 Black Tubes • 10 Rose Gold Tubes",
     image: mascara,
     description:
-      "Turn every blink into a statement with the Iconixx Beauty Mascara — designed to deliver bold volume, dramatic length, and flawless definition in every stroke. This luxury formula lifts and separates each lash effortlessly while creating a soft glamorous finish that lasts all day without clumping or flaking. The sleek black and rose gold packaging brings timeless elegance to your beauty routine while the precision wand coats every lash from root to tip for a fuller, eye-opening effect.",
+      "Turn every blink into a statement with the Timeless Iconixx Beauty Mascara — designed to deliver bold volume, dramatic length, and flawless definition in every stroke. This luxury formula lifts and separates each lash effortlessly while creating a soft glamorous finish that lasts all day without clumping or flaking. The sleek black and rose gold packaging brings timeless elegance to your beauty routine while the precision wand coats every lash from root to tip for a fuller, eye-opening effect.",
     highlights: [
       "Intense volume & dramatic length",
       "Smooth clump-free application",
@@ -185,7 +185,7 @@ export const products: Product[] = [
     quantity: 20,
     image: liner,
     description:
-      "Create bold, flawless eyes with the Midnight Precision Liquid Liner by Iconixx Beauty — the ultimate luxury eyeliner designed for smooth, effortless application. This ultra-black formula glides on like silk with a precision tip that delivers sharp wings, dramatic cat-eyes, or sleek everyday definition in just one stroke. Smudge-resistant, long-lasting, and richly pigmented — made for beauty queens who want their eyes to speak before they do.",
+      "Create bold, flawless eyes with the Midnight Precision Liquid Liner by Timeless Iconixx Beauty — the ultimate luxury eyeliner designed for smooth, effortless application. This ultra-black formula glides on like silk with a precision tip that delivers sharp wings, dramatic cat-eyes, or sleek everyday definition in just one stroke. Smudge-resistant, long-lasting, and richly pigmented — made for beauty queens who want their eyes to speak before they do.",
     highlights: [
       "Ultra-black intense pigment",
       "Precision tip for sharp wings",
