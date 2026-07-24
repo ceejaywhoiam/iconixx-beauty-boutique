@@ -1,7 +1,8 @@
-import { createFileRoute, Link, notFound } from "@tanstack/react-router";
+import { createFileRoute, Link, notFound, useRouter } from "@tanstack/react-router";
 import { getProduct, products } from "@/lib/products";
 import { ProductCard } from "@/components/product-card";
 import { SiteHeader, SiteFooter } from "@/components/site-header";
+import { useCart } from "@/lib/cart";
 
 export const Route = createFileRoute("/product/$id")({
   loader: ({ params }) => {
@@ -49,6 +50,15 @@ function ProductPage() {
   const related = products.filter((p) => p.category === product.category && p.id !== product.id).slice(0, 3);
   const inStock = product.quantity > 0;
   const low = product.quantity <= 10;
+  const { addItem, setOpen } = useCart();
+  const router = useRouter();
+
+  function handleAdd(goToCart: boolean) {
+    addItem(product.id, 1);
+    setOpen(true);
+    if (goToCart) router.navigate({ to: "/cart" });
+  }
+
 
   return (
     <div className="min-h-screen bg-background">
@@ -110,10 +120,18 @@ function ProductPage() {
 
             <div className="mt-10 flex flex-wrap gap-3">
               <button
+                onClick={() => handleAdd(false)}
                 disabled={!inStock}
                 className="rounded-full bg-primary px-8 py-3 text-xs tracking-luxe text-primary-foreground transition hover:bg-primary/90 disabled:opacity-40"
               >
                 Add to Bag — ${product.price.toFixed(2)}
+              </button>
+              <button
+                onClick={() => handleAdd(true)}
+                disabled={!inStock}
+                className="rounded-full border border-primary/40 px-8 py-3 text-xs tracking-luxe text-primary transition hover:bg-primary hover:text-primary-foreground disabled:opacity-40"
+              >
+                Buy now
               </button>
               <Link to="/shop" className="rounded-full border border-primary/30 px-8 py-3 text-xs tracking-luxe text-primary hover:bg-primary hover:text-primary-foreground">
                 Continue shopping

@@ -1,6 +1,9 @@
 import { Link } from "@tanstack/react-router";
+import { ShoppingBag } from "lucide-react";
+import { useCart } from "@/lib/cart";
 
 export function SiteHeader() {
+  const { count } = useCart();
   return (
     <header className="sticky top-0 z-40 border-b border-border/50 bg-background/85 backdrop-blur-md">
       <div className="mx-auto grid max-w-7xl grid-cols-[minmax(0,1fr)_auto] items-center gap-4 px-6 py-5 md:grid-cols-3">
@@ -19,12 +22,18 @@ export function SiteHeader() {
           <Link to="/about" className="text-foreground/70 transition-colors hover:text-primary" activeProps={{ className: "!text-primary" }}>About</Link>
           <Link to="/contact" className="text-foreground/70 transition-colors hover:text-primary" activeProps={{ className: "!text-primary" }}>Contact</Link>
         </nav>
-        <div className="flex justify-end">
+        <div className="flex items-center justify-end gap-3">
           <Link
-            to="/shop"
-            className="bg-primary px-6 py-3 text-[10px] font-bold uppercase tracking-[0.25em] text-primary-foreground transition-colors hover:bg-primary/90"
+            to="/cart"
+            aria-label={`Shopping bag with ${count} item${count === 1 ? "" : "s"}`}
+            className="relative flex h-11 w-11 items-center justify-center border border-border hover:border-primary hover:text-primary"
           >
-            Shop
+            <ShoppingBag className="h-4 w-4" />
+            {count > 0 && (
+              <span className="absolute -right-2 -top-2 flex h-5 min-w-5 items-center justify-center rounded-full bg-primary px-1 text-[10px] font-bold text-primary-foreground">
+                {count}
+              </span>
+            )}
           </Link>
         </div>
       </div>
