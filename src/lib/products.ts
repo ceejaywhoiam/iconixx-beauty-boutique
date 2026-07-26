@@ -1,15 +1,22 @@
-import pinkDynasty from "@/assets/pink-dynasty.jpg";
-import expensiveTaste from "@/assets/expensive-taste.jpg";
+import pinkDynastyAsset from "@/assets/pink-dynasty.png.asset.json";
+import expensiveTasteAsset from "@/assets/expensive-taste.png.asset.json";
 import richGirl from "@/assets/rich-girl-energy.jpg";
-import firstClassKiss from "@/assets/first-class-kiss.jpg";
+import firstClassKissAsset from "@/assets/first-class-kiss.png.asset.json";
 import trophyWife from "@/assets/trophy-wife.jpg";
 import mascara from "@/assets/mascara.jpg";
 import nudePalette from "@/assets/nude-palette.jpg";
 import royalPalette from "@/assets/royal-palette.jpg";
-import liner from "@/assets/liner.jpg";
-import ceoLipstick from "@/assets/ceo-lipstick.jpg";
-import breezeLashes from "@/assets/breeze-cluster-lashes-kit.jpg";
+import linerAsset from "@/assets/midnight-precision.jpeg.asset.json";
+import ceoLipstickAsset from "@/assets/ceo-lip-collection.png.asset.json";
+import breezeLashesAsset from "@/assets/breeze-cluster.png.asset.json";
 import timelessLipKit from "@/assets/timeless-beauty-lip-kit.jpg";
+
+const pinkDynasty = pinkDynastyAsset.url;
+const expensiveTaste = expensiveTasteAsset.url;
+const firstClassKiss = firstClassKissAsset.url;
+const liner = linerAsset.url;
+const ceoLipstick = ceoLipstickAsset.url;
+const breezeLashes = breezeLashesAsset.url;
 
 export type Category = "Gloss" | "Lipstick" | "Palette" | "Mascara" | "Liner" | "Lashes" | "Lip Kit";
 
