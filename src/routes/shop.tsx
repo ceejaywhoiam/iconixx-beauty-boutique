@@ -10,9 +10,9 @@ export const Route = createFileRoute("/shop")({
   head: () => ({
     meta: [
       { title: "Shop — TIMELESS ICONIXX Beauty" },
-      { name: "description", content: "Shop luxury matte lip glosses, palettes, mascara, and liners from TIMELESS ICONIXX Beauty." },
+      { name: "description", content: "Shop luxury matte lip glosses, palettes, mascara, liners, lashes, and lip kits from TIMELESS ICONIXX Beauty." },
       { property: "og:title", content: "Shop — TIMELESS ICONIXX Beauty" },
-      { property: "og:description", content: "The full TIMELESS ICONIXX Beauty collection: glosses, palettes, mascara, and liners." },
+      { property: "og:description", content: "The full TIMELESS ICONIXX Beauty collection: glosses, palettes, mascara, liners, lashes, and lip kits." },
     ],
   }),
   component: Shop,

@@ -2,7 +2,12 @@ import { Link } from "@tanstack/react-router";
 import type { Product } from "@/lib/products";
 
 export function ProductCard({ product }: { product: Product }) {
-  const low = product.quantity <= 10;
+  const badge =
+    product.quantity === 0
+      ? { text: "Coming soon", tone: "muted" as const }
+      : product.quantity <= 10
+        ? { text: "Low stock", tone: "accent" as const }
+        : { text: product.category, tone: "category" as const };
   return (
     <Link
       to="/product/$id"
@@ -18,15 +23,18 @@ export function ProductCard({ product }: { product: Product }) {
           height={1024}
           className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
         />
-        {low ? (
-          <div className="absolute right-4 top-4 bg-white/90 px-3 py-1 text-[10px] uppercase tracking-[0.2em] text-primary">
-            Low stock
-          </div>
-        ) : (
-          <div className="absolute right-4 top-4 bg-white/90 px-3 py-1 text-[10px] uppercase tracking-[0.2em] text-foreground">
-            {product.category}
-          </div>
-        )}
+        <div
+          className={
+            "absolute right-4 top-4 bg-white/90 px-3 py-1 text-[10px] uppercase tracking-[0.2em] " +
+            (badge.tone === "accent"
+              ? "text-primary"
+              : badge.tone === "muted"
+                ? "text-muted-foreground"
+                : "text-foreground")
+          }
+        >
+          {badge.text}
+        </div>
       </div>
       <div className="mt-6">
         <h3 className="text-xs uppercase tracking-[0.25em] font-medium text-foreground">
