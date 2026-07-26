@@ -8,8 +8,10 @@ import nudePalette from "@/assets/nude-palette.jpg";
 import royalPalette from "@/assets/royal-palette.jpg";
 import liner from "@/assets/liner.jpg";
 import ceoLipstick from "@/assets/ceo-lipstick.jpg";
+import breezeLashes from "@/assets/breeze-cluster-lashes-kit.jpg";
+import timelessLipKit from "@/assets/timeless-beauty-lip-kit.jpg";
 
-export type Category = "Gloss" | "Lipstick" | "Palette" | "Mascara" | "Liner";
+export type Category = "Gloss" | "Lipstick" | "Palette" | "Mascara" | "Liner" | "Lashes" | "Lip Kit";
 
 export interface Product {
   id: string;
