@@ -4,15 +4,15 @@ import { products } from "@/lib/products";
 import { ProductCard } from "@/components/product-card";
 import { SiteHeader, SiteFooter } from "@/components/site-header";
 
-const categories = ["All", "Gloss", "Lipstick", "Palette", "Mascara", "Liner"] as const;
+const categories = ["All", "Gloss", "Lipstick", "Palette", "Mascara", "Liner", "Lashes", "Lip Kit"] as const;
 
 export const Route = createFileRoute("/shop")({
   head: () => ({
     meta: [
       { title: "Shop — TIMELESS ICONIXX Beauty" },
-      { name: "description", content: "Shop luxury matte lip glosses, palettes, mascara, and liners from TIMELESS ICONIXX Beauty." },
+      { name: "description", content: "Shop luxury matte lip glosses, palettes, mascara, liners, lashes, and lip kits from TIMELESS ICONIXX Beauty." },
       { property: "og:title", content: "Shop — TIMELESS ICONIXX Beauty" },
-      { property: "og:description", content: "The full TIMELESS ICONIXX Beauty collection: glosses, palettes, mascara, and liners." },
+      { property: "og:description", content: "The full TIMELESS ICONIXX Beauty collection: glosses, palettes, mascara, liners, lashes, and lip kits." },
     ],
   }),
   component: Shop,

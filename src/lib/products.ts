@@ -8,8 +8,10 @@ import nudePalette from "@/assets/nude-palette.jpg";
 import royalPalette from "@/assets/royal-palette.jpg";
 import liner from "@/assets/liner.jpg";
 import ceoLipstick from "@/assets/ceo-lipstick.jpg";
+import breezeLashes from "@/assets/breeze-cluster-lashes-kit.jpg";
+import timelessLipKit from "@/assets/timeless-beauty-lip-kit.jpg";
 
-export type Category = "Gloss" | "Lipstick" | "Palette" | "Mascara" | "Liner";
+export type Category = "Gloss" | "Lipstick" | "Palette" | "Mascara" | "Liner" | "Lashes" | "Lip Kit";
 
 export interface Product {
   id: string;
@@ -212,6 +214,36 @@ export const products: Product[] = [
       "Comfortable non-drying wear",
       "Luxury rose gold casing",
     ],
+  },
+  {
+    id: "breeze-cluster-lashes-kit",
+    name: "Breeze Cluster Lashes Kit",
+    tagline: "Salon Look at Home",
+    category: "Lashes",
+    price: 14.99,
+    quantity: 30,
+    image: breezeLashes,
+    description:
+      "Get the salon lash look without the salon price! The Breeze Cluster Lashes Kit gives you soft, fluffy, and incredibly realistic lashes that blend seamlessly with your natural lashes. Lightweight, comfortable, and designed to last up to 7–10 days with proper care, you’ll enjoy effortless beauty from morning to night. Whether you’re going for an everyday glow or full glam, these lashes make every look unforgettable.",
+    highlights: [
+      "Soft, fluffy, realistic cluster lashes",
+      "Lightweight & comfortable wear",
+      "Lasts up to 7–10 days with proper care",
+      "Blends seamlessly with natural lashes",
+      "Perfect for everyday glow or full glam",
+      "Kit includes lash tray, bond & lock adhesive, remover, precision applicator, and mini curler",
+    ],
+  },
+  {
+    id: "timeless-beauty-lip-kit",
+    name: "Timeless Beauty Lip Kit",
+    tagline: "Coming Soon",
+    category: "Lip Kit",
+    price: 24.99,
+    quantity: 0,
+    image: timelessLipKit,
+    description: "Coming Soon",
+    highlights: [],
   },
 ];
 
