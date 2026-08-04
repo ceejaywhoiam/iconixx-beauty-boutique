@@ -1,28 +1,16 @@
-import pinkDynastyAsset from "@/assets/pink-dynasty.png.asset.json";
-import expensiveTasteAsset from "@/assets/expensive-taste.png.asset.json";
-import richGirlAsset from "@/assets/rich-girl-energy.png.asset.json";
-import firstClassKissAsset from "@/assets/first-class-kiss.png.asset.json";
-import trophyWifeAsset from "@/assets/trophy-wife.png.asset.json";
-import mascaraAsset from "@/assets/timeless-collection.png.asset.json";
-import nudePaletteAsset from "@/assets/timeless-nude-pallet.png.asset.json";
-import royalPaletteAsset from "@/assets/royal-reign.png.asset.json";
-import linerAsset from "@/assets/midnight-precision.jpeg.asset.json";
-import ceoLipstickAsset from "@/assets/ceo-lip-collection.png.asset.json";
-import breezeLashesAsset from "@/assets/breeze-cluster.png.asset.json";
-import timelessLipKitAsset from "@/assets/timeless-beauty-kit.png.asset.json";
-
-const pinkDynasty = pinkDynastyAsset.url;
-const expensiveTaste = expensiveTasteAsset.url;
-const richGirl = richGirlAsset.url;
-const firstClassKiss = firstClassKissAsset.url;
-const trophyWife = trophyWifeAsset.url;
-const mascara = mascaraAsset.url;
-const nudePalette = nudePaletteAsset.url;
-const royalPalette = royalPaletteAsset.url;
-const liner = linerAsset.url;
-const ceoLipstick = ceoLipstickAsset.url;
-const breezeLashes = breezeLashesAsset.url;
-const timelessLipKit = timelessLipKitAsset.url;
+import pinkDynastyImg from "@/assets/pink-dynasty.jpg";
+import expensiveTasteImg from "@/assets/expensive-taste.jpg";
+import richGirlImg from "@/assets/rich-girl-energy.jpg";
+import firstClassKissImg from "@/assets/first-class-kiss.jpg";
+import trophyWifeImg from "@/assets/trophy-wife.jpg";
+import mascaraImg from "@/assets/mascara.jpg";
+import nudePaletteImg from "@/assets/nude-palette.jpg";
+import royalPaletteImg from "@/assets/royal-palette.jpg";
+import linerImg from "@/assets/liner.jpg";
+import ceoLipstickImg from "@/assets/ceo-lipstick.jpg";
+import breezeLashesImg from "@/assets/breeze-cluster.png";
+import timelessLipKitImg from "@/assets/timeless-beauty-lip-kit.jpg";
+import heroImg from "@/assets/hero.jpg";
 
 export type Category = "Gloss" | "Lipstick" | "Palette" | "Mascara" | "Liner" | "Lashes" | "Lip Kit";
 
@@ -47,9 +35,9 @@ export const products: Product[] = [
     category: "Gloss",
     price: 12,
     quantity: 11,
-    image: pinkDynasty,
+    image: pinkDynastyImg,
     description:
-      "A soft luxury pink created for the girls who know their worth and wear confidence effortlessly. Pink Dynasty is the perfect baby pink matte gloss that delivers smooth, velvety color with a lightweight feel and an elegant finish. Feminine, classy, and timeless — made for soft glam days, brunch dates, selfies, boss moves, and being that girl everywhere you go.",
+      "A soft luxury pink created for the girls who know their worth and wear confidence effortlessly. Pink Dynasty is the perfect baby pink matte gloss that delivers smooth, velvety color with a [...]",
     highlights: [
       "Soft luxury baby pink",
       "Smooth velvet matte finish",
@@ -66,9 +54,9 @@ export const products: Product[] = [
     category: "Gloss",
     price: 12,
     quantity: 9,
-    image: expensiveTaste,
+    image: expensiveTasteImg,
     description:
-      "A rich caramel nude designed for the woman who loves luxury, confidence, and timeless beauty. Expensive Taste delivers a smooth velvet-matte finish with a lightweight feel that melts perfectly onto the lips while giving effortless soft glam energy. Classy, bold, and sophisticated — perfect for everyday luxury, date nights, business looks, vacations, and iconic selfies.",
+      "A rich caramel nude designed for the woman who loves luxury, confidence, and timeless beauty. Expensive Taste delivers a smooth velvet-matte finish with a lightweight feel that melts perfec[...]",
     highlights: [
       "Rich caramel nude tone",
       "Smooth velvet matte finish",
@@ -85,9 +73,9 @@ export const products: Product[] = [
     category: "Gloss",
     price: 12,
     quantity: 14,
-    image: richGirl,
+    image: richGirlImg,
     description:
-      "A bold royal pink made for the girls who expect luxury, confidence, and attention the moment they walk in the room. Rich Girl Energy delivers rich color with a smooth velvet-matte finish that feels lightweight while giving full glam energy. Feminine, classy, playful, and powerful all at once — perfect for date nights, brunches, vacations, selfies, and soft luxury looks.",
+      "A bold royal pink made for the girls who expect luxury, confidence, and attention the moment they walk in the room. Rich Girl Energy delivers rich color with a smooth velvet-matte finish th[...]",
     highlights: [
       "Rich vibrant princess pink",
       "Smooth velvet matte finish",
@@ -104,9 +92,9 @@ export const products: Product[] = [
     category: "Gloss",
     price: 12,
     quantity: 9,
-    image: firstClassKiss,
+    image: firstClassKissImg,
     description:
-      "A rich luxurious red shade designed for the woman who carries herself like a VIP everywhere she goes. First Class Kiss delivers bold feminine energy with a smooth velvet-matte finish that feels lightweight yet unforgettable. A glamorous statement color made for soft luxury, date nights, vacations, selfies, girls' nights, and walking in confidence.",
+      "A rich luxurious red shade designed for the woman who carries herself like a VIP everywhere she goes. First Class Kiss delivers bold feminine energy with a smooth velvet-matte finish that [...]",
     highlights: [
       "Rich vibrant red tone",
       "Smooth velvet matte finish",
@@ -123,9 +111,9 @@ export const products: Product[] = [
     category: "Gloss",
     price: 12,
     quantity: 7,
-    image: trophyWife,
+    image: trophyWifeImg,
     description:
-      "A rich mauve nude made for the woman who walks with confidence, elegance, and boss energy. Trophy Wife delivers a smooth velvet-matte finish with a luxurious lightweight feel that speaks power, beauty, and sophistication in every swipe. A timeless shade for business meetings, brunch dates, soft glam nights, luxury selfies, and everyday Timeless Iconixx beauty.",
+      "A rich mauve nude made for the woman who walks with confidence, elegance, and boss energy. Trophy Wife delivers a smooth velvet-matte finish with a luxurious lightweight feel that speaks p[...]",
     highlights: [
       "Sophisticated mauve nude tone",
       "Smooth velvet matte finish",
@@ -143,9 +131,9 @@ export const products: Product[] = [
     price: 14.99,
     quantity: 20,
     quantityNote: "10 Black Tubes • 10 Rose Gold Tubes",
-    image: mascara,
+    image: mascaraImg,
     description:
-      "Turn every blink into a statement with the Timeless Iconixx Beauty Mascara — designed to deliver bold volume, dramatic length, and flawless definition in every stroke. This luxury formula lifts and separates each lash effortlessly while creating a soft glamorous finish that lasts all day without clumping or flaking. The sleek black and rose gold packaging brings timeless elegance to your beauty routine while the precision wand coats every lash from root to tip for a fuller, eye-opening effect.",
+      "Turn every blink into a statement with the Timeless Iconixx Beauty Mascara — designed to deliver bold volume, dramatic length, and flawless definition in every stroke. This luxury formul[...]",
     highlights: [
       "Intense volume & dramatic length",
       "Smooth clump-free application",
@@ -162,9 +150,9 @@ export const products: Product[] = [
     category: "Palette",
     price: 24.99,
     quantity: 10,
-    image: nudePalette,
+    image: nudePaletteImg,
     description:
-      "The Timeless Nude Luxe Palette is the definition of effortless beauty. Featuring warm caramel tones, rich chocolate browns, golden shimmer shades, and smooth transition colors, this palette delivers soft glam perfection every time. Whether you want a natural daytime look or a sultry nighttime beat, this palette does it all beautifully.",
+      "The Timeless Nude Luxe Palette is the definition of effortless beauty. Featuring warm caramel tones, rich chocolate browns, golden shimmer shades, and smooth transition colors, this palett[...]",
     highlights: [
       "Warm caramel & chocolate tones",
       "Golden shimmer accents",
@@ -180,9 +168,9 @@ export const products: Product[] = [
     category: "Palette",
     price: 24.99,
     quantity: 10,
-    image: royalPalette,
+    image: royalPaletteImg,
     description:
-      "A luxury neutral palette designed for soft glam lovers who want elegance, warmth, and rich pigment all in one. Featuring creamy matte browns, caramel tones, champagne shimmer, and golden bronze sparkle shades, this palette creates effortless beauty for everyday wear or full glam nights.",
+      "A luxury neutral palette designed for soft glam lovers who want elegance, warmth, and rich pigment all in one. Featuring creamy matte browns, caramel tones, champagne shimmer, and golden b[...]",
     highlights: [
       "Creamy matte browns",
       "Champagne shimmer shades",
@@ -198,9 +186,9 @@ export const products: Product[] = [
     category: "Liner",
     price: 8,
     quantity: 20,
-    image: liner,
+    image: linerImg,
     description:
-      "Create bold, flawless eyes with the Midnight Precision Liquid Liner by Timeless Iconixx Beauty — the ultimate luxury eyeliner designed for smooth, effortless application. This ultra-black formula glides on like silk with a precision tip that delivers sharp wings, dramatic cat-eyes, or sleek everyday definition in just one stroke. Smudge-resistant, long-lasting, and richly pigmented — made for beauty queens who want their eyes to speak before they do.",
+      "Create bold, flawless eyes with the Midnight Precision Liquid Liner by Timeless Iconixx Beauty — the ultimate luxury eyeliner designed for smooth, effortless application. This ultra-blac[...]",
     highlights: [
       "Ultra-black intense pigment",
       "Precision tip for sharp wings",
@@ -217,9 +205,9 @@ export const products: Product[] = [
     price: 22,
     quantity: 30,
     quantityNote: "10 of each shade",
-    image: ceoLipstick,
+    image: ceoLipstickImg,
     description:
-      "The CEO Lip Collection is the ultimate statement set designed for the woman who walks in confidence and leaves a lasting impression. This ultra-smooth lipstick trio delivers rich pigment, a velvety matte finish, and luxurious all-day wear without feeling dry. From brunch dates to boss meetings, this collection was made to stand out.",
+      "The CEO Lip Collection is the ultimate statement set designed for the woman who walks in confidence and leaves a lasting impression. This ultra-smooth lipstick trio delivers rich pigment, [...]",
     highlights: [
       "Three signature shades",
       "Velvet matte finish",
@@ -235,9 +223,9 @@ export const products: Product[] = [
     category: "Lashes",
     price: 14.99,
     quantity: 30,
-    image: breezeLashes,
+    image: breezeLashesImg,
     description:
-      "Get the salon lash look without the salon price! The Breeze Cluster Lashes Kit gives you soft, fluffy, and incredibly realistic lashes that blend seamlessly with your natural lashes. Lightweight, comfortable, and designed to last up to 7–10 days with proper care, you’ll enjoy effortless beauty from morning to night. Whether you’re going for an everyday glow or full glam, these lashes make every look unforgettable.",
+      "Get the salon lash look without the salon price! The Breeze Cluster Lashes Kit gives you soft, fluffy, and incredibly realistic lashes that blend seamlessly with your natural lashes. Light[...]",
     highlights: [
       "Soft, fluffy, realistic cluster lashes",
       "Lightweight & comfortable wear",
@@ -254,7 +242,7 @@ export const products: Product[] = [
     category: "Lip Kit",
     price: 24.99,
     quantity: 0,
-    image: timelessLipKit,
+    image: timelessLipKitImg,
     description: "Coming Soon",
     highlights: [],
   },
@@ -263,3 +251,5 @@ export const products: Product[] = [
 export function getProduct(id: string) {
   return products.find((p) => p.id === id);
 }
+
+export const heroImage = heroImg;
