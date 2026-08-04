@@ -4,16 +4,17 @@ import { getProduct, type Product } from "@/lib/products";
 export interface CartItem {
   id: string;
   quantity: number;
+  options?: Record<string, string>;
 }
 
 interface CartContextValue {
   items: CartItem[];
-  detailed: Array<{ product: Product; quantity: number; lineTotal: number }>;
+  detailed: Array<{ product: Product; quantity: number; lineTotal: number; options?: Record<string, string> }>;
   count: number;
   subtotal: number;
-  addItem: (id: string, quantity?: number) => void;
-  removeItem: (id: string) => void;
-  setQuantity: (id: string, quantity: number) => void;
+  addItem: (id: string, quantity?: number, options?: Record<string, string>) => void;
+  removeItem: (id: string, options?: Record<string, string>) => void;
+  setQuantity: (id: string, quantity: number, options?: Record<string, string>) => void;
   clear: () => void;
   isOpen: boolean;
   setOpen: (open: boolean) => void;
@@ -42,25 +43,26 @@ export function CartProvider({ children }: { children: ReactNode }) {
     } catch {}
   }, [items, hydrated]);
 
-  const addItem = useCallback((id: string, quantity = 1) => {
+  const addItem = useCallback((id: string, quantity = 1, options?: Record<string, string>) => {
     setItems((prev) => {
-      const existing = prev.find((i) => i.id === id);
-      if (existing) {
-        return prev.map((i) => (i.id === id ? { ...i, quantity: i.quantity + quantity } : i));
+      // Try to find an existing item with same id and same options
+      const matchIndex = prev.findIndex((i) => i.id === id && JSON.stringify(i.options || {}) === JSON.stringify(options || {}));
+      if (matchIndex !== -1) {
+        return prev.map((i, idx) => (idx === matchIndex ? { ...i, quantity: i.quantity + quantity } : i));
       }
-      return [...prev, { id, quantity }];
+      return [...prev, { id, quantity, options }];
     });
   }, []);
 
-  const removeItem = useCallback((id: string) => {
-    setItems((prev) => prev.filter((i) => i.id !== id));
+  const removeItem = useCallback((id: string, options?: Record<string, string>) => {
+    setItems((prev) => prev.filter((i) => !(i.id === id && JSON.stringify(i.options || {}) === JSON.stringify(options || {}))));
   }, []);
 
-  const setQuantity = useCallback((id: string, quantity: number) => {
+  const setQuantity = useCallback((id: string, quantity: number, options?: Record<string, string>) => {
     setItems((prev) =>
       quantity <= 0
-        ? prev.filter((i) => i.id !== id)
-        : prev.map((i) => (i.id === id ? { ...i, quantity } : i)),
+        ? prev.filter((i) => !(i.id === id && JSON.stringify(i.options || {}) === JSON.stringify(options || {})))
+        : prev.map((i) => (i.id === id && JSON.stringify(i.options || {}) === JSON.stringify(options || {}) ? { ...i, quantity } : i)),
     );
   }, []);
 
@@ -71,9 +73,9 @@ export function CartProvider({ children }: { children: ReactNode }) {
       .map((i) => {
         const product = getProduct(i.id);
         if (!product) return null;
-        return { product, quantity: i.quantity, lineTotal: product.price * i.quantity };
+        return { product, quantity: i.quantity, lineTotal: product.price * i.quantity, options: i.options };
       })
-      .filter((v): v is { product: Product; quantity: number; lineTotal: number } => v !== null);
+      .filter((v): v is { product: Product; quantity: number; lineTotal: number; options?: Record<string, string> } => v !== null);
     const count = detailed.reduce((s, l) => s + l.quantity, 0);
     const subtotal = detailed.reduce((s, l) => s + l.lineTotal, 0);
     return { items, detailed, count, subtotal, addItem, removeItem, setQuantity, clear, isOpen, setOpen };
