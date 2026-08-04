@@ -67,7 +67,7 @@ function CartPage() {
               {detailed.map((l) => (
                 <li key={l.product.id} className="flex gap-4 py-6">
                   <Link to="/product/$id" params={{ id: l.product.id }} className="block h-24 w-24 flex-shrink-0 overflow-hidden bg-blush/30">
-                    <img src={l.product.image} alt={l.product.name} className="h-full w-full object-cover" />
+                    <img src={l.product.image} alt={l.product.name} className="h-full w-full object-contain p-2" />
                   </Link>
                   <div className="flex flex-1 flex-col justify-between">
                     <div>
