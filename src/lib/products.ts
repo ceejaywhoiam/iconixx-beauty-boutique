@@ -37,7 +37,7 @@ export const products: Product[] = [
     quantity: 11,
     image: pinkDynastyImg,
     description:
-      "A soft luxury pink created for the girls who know their worth and wear confidence effortlessly. Pink Dynasty is the perfect baby pink matte gloss that delivers smooth, velvety color with a [...]",
+      "A soft luxury pink created for the girls who know their worth and wear confidence effortlessly. Pink Dynasty is the perfect baby pink matte gloss that delivers smooth, velvety color with a [...]
     highlights: [
       "Soft luxury baby pink",
       "Smooth velvet matte finish",
@@ -56,7 +56,7 @@ export const products: Product[] = [
     quantity: 9,
     image: expensiveTasteImg,
     description:
-      "A rich caramel nude designed for the woman who loves luxury, confidence, and timeless beauty. Expensive Taste delivers a smooth velvet-matte finish with a lightweight feel that melts perfec[...]",
+      "A rich caramel nude designed for the woman who loves luxury, confidence, and timeless beauty. Expensive Taste delivers a smooth velvet-matte finish with a lightweight feel that melts perfec[...]
     highlights: [
       "Rich caramel nude tone",
       "Smooth velvet matte finish",
@@ -75,7 +75,7 @@ export const products: Product[] = [
     quantity: 14,
     image: richGirlImg,
     description:
-      "A bold royal pink made for the girls who expect luxury, confidence, and attention the moment they walk in the room. Rich Girl Energy delivers rich color with a smooth velvet-matte finish th[...]",
+      "A bold royal pink made for the girls who expect luxury, confidence, and attention the moment they walk in the room. Rich Girl Energy delivers rich color with a smooth velvet-matte finish th[...]
     highlights: [
       "Rich vibrant princess pink",
       "Smooth velvet matte finish",
@@ -94,7 +94,7 @@ export const products: Product[] = [
     quantity: 9,
     image: firstClassKissImg,
     description:
-      "A rich luxurious red shade designed for the woman who carries herself like a VIP everywhere she goes. First Class Kiss delivers bold feminine energy with a smooth velvet-matte finish that [...]",
+      "A rich luxurious red shade designed for the woman who carries herself like a VIP everywhere she goes. First Class Kiss delivers bold feminine energy with a smooth velvet-matte finish that [[...]
     highlights: [
       "Rich vibrant red tone",
       "Smooth velvet matte finish",
@@ -113,7 +113,7 @@ export const products: Product[] = [
     quantity: 7,
     image: trophyWifeImg,
     description:
-      "A rich mauve nude made for the woman who walks with confidence, elegance, and boss energy. Trophy Wife delivers a smooth velvet-matte finish with a luxurious lightweight feel that speaks p[...]",
+      "A rich mauve nude made for the woman who walks with confidence, elegance, and boss energy. Trophy Wife delivers a smooth velvet-matte finish with a luxurious lightweight feel that speaks p[...]
     highlights: [
       "Sophisticated mauve nude tone",
       "Smooth velvet matte finish",
@@ -133,7 +133,7 @@ export const products: Product[] = [
     quantityNote: "10 Black Tubes • 10 Rose Gold Tubes",
     image: mascaraImg,
     description:
-      "Turn every blink into a statement with the Timeless Iconixx Beauty Mascara — designed to deliver bold volume, dramatic length, and flawless definition in every stroke. This luxury formul[...]",
+      "Turn every blink into a statement with the Timeless Iconixx Beauty Mascara — designed to deliver bold volume, dramatic length, and flawless definition in every stroke. This luxury formul[...]
     highlights: [
       "Intense volume & dramatic length",
       "Smooth clump-free application",
@@ -152,7 +152,7 @@ export const products: Product[] = [
     quantity: 10,
     image: nudePaletteImg,
     description:
-      "The Timeless Nude Luxe Palette is the definition of effortless beauty. Featuring warm caramel tones, rich chocolate browns, golden shimmer shades, and smooth transition colors, this palett[...]",
+      "The Timeless Nude Luxe Palette is the definition of effortless beauty. Featuring warm caramel tones, rich chocolate browns, golden shimmer shades, and smooth transition colors, this palett[...]
     highlights: [
       "Warm caramel & chocolate tones",
       "Golden shimmer accents",
@@ -170,7 +170,7 @@ export const products: Product[] = [
     quantity: 10,
     image: royalPaletteImg,
     description:
-      "A luxury neutral palette designed for soft glam lovers who want elegance, warmth, and rich pigment all in one. Featuring creamy matte browns, caramel tones, champagne shimmer, and golden b[...]",
+      "A luxury neutral palette designed for soft glam lovers who want elegance, warmth, and rich pigment all in one. Featuring creamy matte browns, caramel tones, champagne shimmer, and golden b[...]
     highlights: [
       "Creamy matte browns",
       "Champagne shimmer shades",
@@ -188,7 +188,7 @@ export const products: Product[] = [
     quantity: 20,
     image: linerImg,
     description:
-      "Create bold, flawless eyes with the Midnight Precision Liquid Liner by Timeless Iconixx Beauty — the ultimate luxury eyeliner designed for smooth, effortless application. This ultra-blac[...]",
+      "Create bold, flawless eyes with the Midnight Precision Liquid Liner by Timeless Iconixx Beauty — the ultimate luxury eyeliner designed for smooth, effortless application. This ultra-blac[...]
     highlights: [
       "Ultra-black intense pigment",
       "Precision tip for sharp wings",
@@ -207,7 +207,7 @@ export const products: Product[] = [
     quantityNote: "10 of each shade",
     image: ceoLipstickImg,
     description:
-      "The CEO Lip Collection is the ultimate statement set designed for the woman who walks in confidence and leaves a lasting impression. This ultra-smooth lipstick trio delivers rich pigment, [...]",
+      "The CEO Lip Collection is the ultimate statement set designed for the woman who walks in confidence and leaves a lasting impression. This ultra-smooth lipstick trio delivers rich pigment, [...]
     highlights: [
       "Three signature shades",
       "Velvet matte finish",
@@ -225,7 +225,7 @@ export const products: Product[] = [
     quantity: 30,
     image: breezeLashesImg,
     description:
-      "Get the salon lash look without the salon price! The Breeze Cluster Lashes Kit gives you soft, fluffy, and incredibly realistic lashes that blend seamlessly with your natural lashes. Light[...]",
+      "Get the salon lash look without the salon price! The Breeze Cluster Lashes Kit gives you soft, fluffy, and incredibly realistic lashes that blend seamlessly with your natural lashes. Light[...]
     highlights: [
       "Soft, fluffy, realistic cluster lashes",
       "Lightweight & comfortable wear",
