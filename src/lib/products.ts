@@ -3,14 +3,14 @@ import expensiveTasteImg from "https://ik.imagekit.io/jodiplease/expensive-taste
 import richGirlImg from "https://ik.imagekit.io/jodiplease/rich-girl-energy_compressed.png?updatedAt=1785590749662";
 import firstClassKissImg from "https://ik.imagekit.io/jodiplease/first-class-kiss_compressed.png?updatedAt=1785590750953";
 import trophyWifeImg from "https://ik.imagekit.io/jodiplease/trophy-wife_compressed.png?updatedAt=1785590749918";
-import mascaraImg from "@/assets/mascara.jpg";
+import mascaraImg from "https://ik.imagekit.io/jodiplease/mascara.jpg";
 import nudePaletteImg from "https://ik.imagekit.io/jodiplease/timeless-nude-pallet_compressed.png?updatedAt=1785590753053";
 import royalPaletteImg from "https://ik.imagekit.io/jodiplease/royal-reign_compressed.png?updatedAt=1785590753514";
-import linerImg from "@/assets/liner.jpg";
+import linerImg from "https://ik.imagekit.io/jodiplease/liner.jpg";
 import ceoLipstickImg from "https://ik.imagekit.io/jodiplease/ceo-lip-collection_compressed.png?updatedAt=1785590745539";
 import breezeLashesImg from "https://ik.imagekit.io/jodiplease/breeze-cluster_compressed.png?updatedAt=1785590752852";
 import timelessLipKitImg from "https://ik.imagekit.io/jodiplease/timeless-beauty-kit_compressed.png?updatedAt=1785590752827";
-import heroImg from "@/assets/hero.jpg";
+import heroImg from "https://ik.imagekit.io/jodiplease/hero.jpg";
 
 export type Category = "Gloss" | "Lipstick" | "Palette" | "Mascara" | "Liner" | "Lashes" | "Lip Kit";
 
