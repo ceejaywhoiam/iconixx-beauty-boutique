@@ -6,7 +6,7 @@ const trophyWifeImg = "https://ik.imagekit.io/jodiplease/trophy-wife_compressed.
 const mascaraImg = "https://ik.imagekit.io/jodiplease/mascara.png";
 const nudePaletteImg = "https://ik.imagekit.io/jodiplease/timeless-nude-pallet_compressed.png?updatedAt=1785590753053";
 const royalPaletteImg = "https://ik.imagekit.io/jodiplease/royal-reign_compressed.png?updatedAt=1785590753514";
-const linerImg = "https://ik.imagekit.io/jodiplease/liner.jpg";
+const linerImg = "https://ik.imagekit.io/jodiplease/mascara-precision.png";
 const ceoLipstickImg = "https://ik.imagekit.io/jodiplease/ceo-lip-collection_compressed.png?updatedAt=1785590745539";
 const breezeLashesImg = "https://ik.imagekit.io/jodiplease/breeze-cluster_compressed.png?updatedAt=1785590752852";
 const timelessLipKitImg = "https://ik.imagekit.io/jodiplease/timeless-beauty-kit_compressed.png?updatedAt=1785590752827";
