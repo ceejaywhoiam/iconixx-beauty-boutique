@@ -80,7 +80,7 @@ function ProductPage() {
               alt={product.name}
               width={1024}
               height={1024}
-              className="relative w-full rounded-2xl object-cover shadow-xl"
+              className="relative aspect-square w-full rounded-2xl object-contain bg-blush/20 p-6 shadow-xl"
             />
           </div>
 
