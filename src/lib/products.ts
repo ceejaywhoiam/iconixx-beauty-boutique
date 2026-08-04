@@ -1,15 +1,15 @@
-import pinkDynastyImg from "@/assets/pink-dynasty.jpg";
-import expensiveTasteImg from "@/assets/expensive-taste.jpg";
-import richGirlImg from "@/assets/rich-girl-energy.jpg";
-import firstClassKissImg from "@/assets/first-class-kiss.jpg";
-import trophyWifeImg from "@/assets/trophy-wife.jpg";
+import pinkDynastyImg from "https://ik.imagekit.io/jodiplease/pink-dynasty_compressed.png?updatedAt=1785590748796";
+import expensiveTasteImg from "https://ik.imagekit.io/jodiplease/expensive-taste_compressed.png?updatedAt=1785590749988";
+import richGirlImg from "https://ik.imagekit.io/jodiplease/rich-girl-energy_compressed.png?updatedAt=1785590749662";
+import firstClassKissImg from "https://ik.imagekit.io/jodiplease/first-class-kiss_compressed.png?updatedAt=1785590750953";
+import trophyWifeImg from "https://ik.imagekit.io/jodiplease/trophy-wife_compressed.png?updatedAt=1785590749918";
 import mascaraImg from "@/assets/mascara.jpg";
-import nudePaletteImg from "@/assets/nude-palette.jpg";
-import royalPaletteImg from "@/assets/royal-palette.jpg";
+import nudePaletteImg from "https://ik.imagekit.io/jodiplease/timeless-nude-pallet_compressed.png?updatedAt=1785590753053";
+import royalPaletteImg from "https://ik.imagekit.io/jodiplease/royal-reign_compressed.png?updatedAt=1785590753514";
 import linerImg from "@/assets/liner.jpg";
-import ceoLipstickImg from "@/assets/ceo-lipstick.jpg";
-import breezeLashesImg from "@/assets/breeze-cluster.png";
-import timelessLipKitImg from "@/assets/timeless-beauty-lip-kit.jpg";
+import ceoLipstickImg from "https://ik.imagekit.io/jodiplease/ceo-lip-collection_compressed.png?updatedAt=1785590745539";
+import breezeLashesImg from "https://ik.imagekit.io/jodiplease/breeze-cluster_compressed.png?updatedAt=1785590752852";
+import timelessLipKitImg from "https://ik.imagekit.io/jodiplease/timeless-beauty-kit_compressed.png?updatedAt=1785590752827";
 import heroImg from "@/assets/hero.jpg";
 
 export type Category = "Gloss" | "Lipstick" | "Palette" | "Mascara" | "Liner" | "Lashes" | "Lip Kit";
