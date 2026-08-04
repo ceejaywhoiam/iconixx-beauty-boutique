@@ -1,26 +1,70 @@
 import { Link } from "@tanstack/react-router";
-import { ShoppingBag } from "lucide-react";
+import { Menu, ShoppingBag } from "lucide-react";
+import { useState } from "react";
+import { Sheet, SheetContent, SheetTitle, SheetTrigger } from "@/components/ui/sheet";
 import { useCart } from "@/lib/cart";
+
+const NAV_LINKS = [
+  { to: "/", label: "Home", exact: true },
+  { to: "/shop", label: "Shop" },
+  { to: "/about", label: "About" },
+  { to: "/contact", label: "Contact" },
+] as const;
 
 export function SiteHeader() {
   const { count } = useCart();
+  const [mobileOpen, setMobileOpen] = useState(false);
   return (
     <header className="sticky top-0 z-40 border-b border-border/50 bg-background/85 backdrop-blur-md">
-      <div className="mx-auto grid max-w-7xl grid-cols-[minmax(0,1fr)_auto] items-center gap-4 px-6 py-5 md:grid-cols-3">
-        <Link to="/" className="flex min-w-0 flex-col leading-none">
-          <span
-            className="truncate text-2xl text-primary"
-            style={{ fontFamily: "'DM Serif Display', serif" }}
-          >
+      <div className="mx-auto grid max-w-7xl grid-cols-[auto_minmax(0,1fr)_auto] items-center gap-4 px-6 py-5 md:grid-cols-3">
+        <div className="flex items-center md:hidden">
+          <Sheet open={mobileOpen} onOpenChange={setMobileOpen}>
+            <SheetTrigger
+              aria-label="Open menu"
+              className="flex h-11 w-11 items-center justify-center border border-border hover:border-primary hover:text-primary"
+            >
+              <Menu className="h-4 w-4" />
+            </SheetTrigger>
+            <SheetContent side="left" className="w-72 p-0">
+              <SheetTitle className="text-display border-b border-border/60 px-6 py-5 text-xl text-primary">
+                TIMELESS ICONIXX
+              </SheetTitle>
+              <nav className="flex flex-col px-6 py-4 text-[12px] uppercase tracking-[0.25em]">
+                {NAV_LINKS.map((link) => (
+                  <Link
+                    key={link.to}
+                    to={link.to}
+                    activeOptions={link.exact ? { exact: true } : undefined}
+                    onClick={() => setMobileOpen(false)}
+                    className="border-b border-border/40 py-4 text-foreground/70 transition-colors hover:text-primary"
+                    activeProps={{ className: "!text-primary" }}
+                  >
+                    {link.label}
+                  </Link>
+                ))}
+              </nav>
+            </SheetContent>
+          </Sheet>
+        </div>
+
+        <Link to="/" className="flex min-w-0 flex-col leading-none md:justify-self-start">
+          <span className="text-display truncate text-2xl text-primary">
             TIMELESS ICONIXX
           </span>
           <span className="tracking-[0.35em] text-[10px] uppercase text-accent">Beauty</span>
         </Link>
         <nav className="hidden items-center justify-center gap-10 text-[11px] uppercase tracking-[0.25em] md:flex">
-          <Link to="/" activeOptions={{ exact: true }} className="text-foreground/70 transition-colors hover:text-primary" activeProps={{ className: "!text-primary" }}>Home</Link>
-          <Link to="/shop" className="text-foreground/70 transition-colors hover:text-primary" activeProps={{ className: "!text-primary" }}>Shop</Link>
-          <Link to="/about" className="text-foreground/70 transition-colors hover:text-primary" activeProps={{ className: "!text-primary" }}>About</Link>
-          <Link to="/contact" className="text-foreground/70 transition-colors hover:text-primary" activeProps={{ className: "!text-primary" }}>Contact</Link>
+          {NAV_LINKS.map((link) => (
+            <Link
+              key={link.to}
+              to={link.to}
+              activeOptions={link.exact ? { exact: true } : undefined}
+              className="text-foreground/70 transition-colors hover:text-primary"
+              activeProps={{ className: "!text-primary" }}
+            >
+              {link.label}
+            </Link>
+          ))}
         </nav>
         <div className="flex items-center justify-end gap-3">
           <Link
