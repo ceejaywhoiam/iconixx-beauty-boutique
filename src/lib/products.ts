@@ -45,7 +45,7 @@ export const products: Product[] = [
     name: "Pink Dynasty",
     tagline: "1 of 5 — Matte Lip Gloss",
     category: "Gloss",
-    price: 10,
+    price: 12,
     quantity: 11,
     image: pinkDynasty,
     description:
@@ -64,7 +64,7 @@ export const products: Product[] = [
     name: "Expensive Taste",
     tagline: "2 of 5 — Matte Lip Gloss",
     category: "Gloss",
-    price: 10,
+    price: 12,
     quantity: 9,
     image: expensiveTaste,
     description:
@@ -83,7 +83,7 @@ export const products: Product[] = [
     name: "Rich Girl Energy",
     tagline: "3 of 5 — Matte Lip Gloss",
     category: "Gloss",
-    price: 10,
+    price: 12,
     quantity: 14,
     image: richGirl,
     description:
@@ -102,7 +102,7 @@ export const products: Product[] = [
     name: "First Class Kiss",
     tagline: "4 of 5 — Matte Lip Gloss",
     category: "Gloss",
-    price: 10,
+    price: 12,
     quantity: 9,
     image: firstClassKiss,
     description:
@@ -121,7 +121,7 @@ export const products: Product[] = [
     name: "Trophy Wife",
     tagline: "5 of 5 — Matte Lip Gloss",
     category: "Gloss",
-    price: 10,
+    price: 12,
     quantity: 7,
     image: trophyWife,
     description:
@@ -160,7 +160,7 @@ export const products: Product[] = [
     name: "Timeless Nude Luxe Palette",
     tagline: "Tan Case",
     category: "Palette",
-    price: 9.99,
+    price: 24.99,
     quantity: 10,
     image: nudePalette,
     description:
@@ -178,7 +178,7 @@ export const products: Product[] = [
     name: "Royal Reign Palette",
     tagline: "Black Case",
     category: "Palette",
-    price: 9.99,
+    price: 24.99,
     quantity: 10,
     image: royalPalette,
     description:
