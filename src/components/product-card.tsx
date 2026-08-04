@@ -44,6 +44,36 @@ export function ProductCard({ product }: { product: Product }) {
           <p className="mt-1 text-[11px] text-muted-foreground">{product.tagline}</p>
         )}
         <p className="mt-3 text-lg font-light text-primary">${product.price.toFixed(2)}</p>
+
+        {/* Shade selector: only shown for the CEO Lip Collection product card */}
+        {product.id === "ceo-lip-collection" && (
+          <div className="mt-3 flex items-center gap-3">
+            <div className="text-[10px] uppercase tracking-[0.25em] text-muted-foreground">Shades</div>
+
+            <div className="flex items-center gap-2">
+              <span
+                title="Nude Blush Millionaire"
+                aria-label="Nude Blush Millionaire"
+                className="inline-block h-4 w-4 rounded-full border border-border shadow-sm"
+                style={{ backgroundColor: '#f3d6d0' }}
+              />
+
+              <span
+                title="Purple Passenger Princess"
+                aria-label="Purple Passenger Princess"
+                className="inline-block h-4 w-4 rounded-full border border-border shadow-sm"
+                style={{ backgroundColor: '#b78acb' }}
+              />
+
+              <span
+                title="Peach Impulsive"
+                aria-label="Peach Impulsive"
+                className="inline-block h-4 w-4 rounded-full border border-border shadow-sm"
+                style={{ backgroundColor: '#ffb89a' }}
+              />
+            </div>
+          </div>
+        )}
       </div>
     </Link>
   );
