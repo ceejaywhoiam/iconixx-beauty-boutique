@@ -1,16 +1,16 @@
-import pinkDynastyImg from "https://ik.imagekit.io/jodiplease/pink-dynasty_compressed.png?updatedAt=1785590748796";
-import expensiveTasteImg from "https://ik.imagekit.io/jodiplease/expensive-taste_compressed.png?updatedAt=1785590749988";
-import richGirlImg from "https://ik.imagekit.io/jodiplease/rich-girl-energy_compressed.png?updatedAt=1785590749662";
-import firstClassKissImg from "https://ik.imagekit.io/jodiplease/first-class-kiss_compressed.png?updatedAt=1785590750953";
-import trophyWifeImg from "https://ik.imagekit.io/jodiplease/trophy-wife_compressed.png?updatedAt=1785590749918";
-import mascaraImg from "https://ik.imagekit.io/jodiplease/mascara.jpg";
-import nudePaletteImg from "https://ik.imagekit.io/jodiplease/timeless-nude-pallet_compressed.png?updatedAt=1785590753053";
-import royalPaletteImg from "https://ik.imagekit.io/jodiplease/royal-reign_compressed.png?updatedAt=1785590753514";
-import linerImg from "https://ik.imagekit.io/jodiplease/liner.jpg";
-import ceoLipstickImg from "https://ik.imagekit.io/jodiplease/ceo-lip-collection_compressed.png?updatedAt=1785590745539";
-import breezeLashesImg from "https://ik.imagekit.io/jodiplease/breeze-cluster_compressed.png?updatedAt=1785590752852";
-import timelessLipKitImg from "https://ik.imagekit.io/jodiplease/timeless-beauty-kit_compressed.png?updatedAt=1785590752827";
-import heroImg from "https://ik.imagekit.io/jodiplease/hero.jpg";
+const pinkDynastyImg = "https://ik.imagekit.io/jodiplease/pink-dynasty_compressed.png?updatedAt=1785590748796";
+const expensiveTasteImg = "https://ik.imagekit.io/jodiplease/expensive-taste_compressed.png?updatedAt=1785590749988";
+const richGirlImg = "https://ik.imagekit.io/jodiplease/rich-girl-energy_compressed.png?updatedAt=1785590749662";
+const firstClassKissImg = "https://ik.imagekit.io/jodiplease/first-class-kiss_compressed.png?updatedAt=1785590750953";
+const trophyWifeImg = "https://ik.imagekit.io/jodiplease/trophy-wife_compressed.png?updatedAt=1785590749918";
+const mascaraImg = "https://ik.imagekit.io/jodiplease/mascara.jpg";
+const nudePaletteImg = "https://ik.imagekit.io/jodiplease/timeless-nude-pallet_compressed.png?updatedAt=1785590753053";
+const royalPaletteImg = "https://ik.imagekit.io/jodiplease/royal-reign_compressed.png?updatedAt=1785590753514";
+const linerImg = "https://ik.imagekit.io/jodiplease/liner.jpg";
+const ceoLipstickImg = "https://ik.imagekit.io/jodiplease/ceo-lip-collection_compressed.png?updatedAt=1785590745539";
+const breezeLashesImg = "https://ik.imagekit.io/jodiplease/breeze-cluster_compressed.png?updatedAt=1785590752852";
+const timelessLipKitImg = "https://ik.imagekit.io/jodiplease/timeless-beauty-kit_compressed.png?updatedAt=1785590752827";
+const heroImg = "https://ik.imagekit.io/jodiplease/hero.jpg";
 
 export type Category =
   | "Gloss"
@@ -44,7 +44,7 @@ export const products: Product[] = [
     quantity: 11,
     image: pinkDynastyImg,
     description:
-      "A soft luxury pink created for the girls who know their worth and wear confidence effortlessly. Pink Dynasty is a baby pink matte gloss that delivers smooth, velvety color with long-lasting comfort and high pigment payoff.",
+      "A soft luxury pink created for the girls who know their worth and wear confidence effortlessly. Pink Dynasty is a baby pink matte gloss that delivers smooth, velvety color with long-lasting com[...]",
     highlights: [
       "Soft luxury baby pink",
       "Smooth velvet matte finish",
@@ -63,7 +63,7 @@ export const products: Product[] = [
     quantity: 9,
     image: expensiveTasteImg,
     description:
-      "A rich caramel nude designed for the woman who loves luxury, confidence, and timeless beauty. Expensive Taste delivers a smooth velvet-matte finish with a lightweight feel and deep, buildable pigment.",
+      "A rich caramel nude designed for the woman who loves luxury, confidence, and timeless beauty. Expensive Taste delivers a smooth velvet-matte finish with a lightweight feel and deep, buildable p[...]",
     highlights: [
       "Rich caramel nude tone",
       "Smooth velvet matte finish",
@@ -82,7 +82,7 @@ export const products: Product[] = [
     quantity: 14,
     image: richGirlImg,
     description:
-      "A bold royal pink made for the girls who expect luxury, confidence, and attention. Rich Girl Energy delivers rich, vibrant color with a smooth velvet-matte finish and comfortable all-day wear.",
+      "A bold royal pink made for the girls who expect luxury, confidence, and attention. Rich Girl Energy delivers rich, vibrant color with a smooth velvet-matte finish and comfortable all-day wear.[...]",
     highlights: [
       "Rich vibrant princess pink",
       "Smooth velvet matte finish",
@@ -101,7 +101,7 @@ export const products: Product[] = [
     quantity: 9,
     image: firstClassKissImg,
     description:
-      "A rich luxurious red shade designed for the woman who carries herself like a VIP. First Class Kiss delivers bold feminine energy with a smooth velvet-matte finish and long-lasting, comfortable wear.",
+      "A rich luxurious red shade designed for the woman who carries herself like a VIP. First Class Kiss delivers bold feminine energy with a smooth velvet-matte finish and long-lasting, comfortable [...]",
     highlights: [
       "Rich vibrant red tone",
       "Smooth velvet matte finish",
@@ -140,7 +140,7 @@ export const products: Product[] = [
     quantityNote: "10 Black Tubes • 10 Rose Gold Tubes",
     image: mascaraImg,
     description:
-      "Turn every blink into a statement with the Timeless Iconixx Beauty Mascara — designed to deliver bold volume, dramatic length, and flawless definition. Our precision wand and clump-free formula make application effortless.",
+      "Turn every blink into a statement with the Timeless Iconixx Beauty Mascara — designed to deliver bold volume, dramatic length, and flawless definition. Our precision wand and clump-free formu[...]",
     highlights: [
       "Intense volume & dramatic length",
       "Smooth clump-free application",
@@ -159,7 +159,7 @@ export const products: Product[] = [
     quantity: 10,
     image: nudePaletteImg,
     description:
-      "The Timeless Nude Luxe Palette is the definition of effortless beauty. Featuring warm caramel tones, rich chocolate browns, golden shimmer accents, and buttery transition shades, this palette blends easily for day-to-night looks.",
+      "The Timeless Nude Luxe Palette is the definition of effortless beauty. Featuring warm caramel tones, rich chocolate browns, golden shimmer accents, and buttery transition shades, this palette b[...]",
     highlights: [
       "Warm caramel & chocolate tones",
       "Golden shimmer accents",
@@ -177,7 +177,7 @@ export const products: Product[] = [
     quantity: 10,
     image: royalPaletteImg,
     description:
-      "A luxury neutral palette designed for soft glam lovers who want elegance, warmth, and rich pigment all in one. Creamy matte browns, champagne shimmer, and golden bronze accents create versatile looks with high payoff.",
+      "A luxury neutral palette designed for soft glam lovers who want elegance, warmth, and rich pigment all in one. Creamy matte browns, champagne shimmer, and golden bronze accents create versatile[...]",
     highlights: [
       "Creamy matte browns",
       "Champagne shimmer shades",
@@ -195,7 +195,7 @@ export const products: Product[] = [
     quantity: 20,
     image: linerImg,
     description:
-      "Create bold, flawless eyes with the Midnight Precision Liquid Liner — the ultimate luxury eyeliner for smooth, effortless application. The ultra-black pigment and precision tip make sharp wings and clean lines simple.",
+      "Create bold, flawless eyes with the Midnight Precision Liquid Liner — the ultimate luxury eyeliner for smooth, effortless application. The ultra-black pigment and precision tip make sharp win[...]",
     highlights: [
       "Ultra-black intense pigment",
       "Precision tip for sharp wings",
@@ -214,7 +214,7 @@ export const products: Product[] = [
     quantityNote: "10 of each shade",
     image: ceoLipstickImg,
     description:
-      "The CEO Lip Collection is a signature trio designed for the woman who walks in confidence and leaves a lasting impression. Ultra-smooth, velvet-matte formulas deliver rich pigment and comfortable, non-drying wear.",
+      "The CEO Lip Collection is a signature trio designed for the woman who walks in confidence and leaves a lasting impression. Ultra-smooth, velvet-matte formulas deliver rich pigment and comfortab[...]",
     highlights: [
       "Three signature shades",
       "Velvet matte finish",
@@ -232,7 +232,7 @@ export const products: Product[] = [
     quantity: 30,
     image: breezeLashesImg,
     description:
-      "Get the salon lash look without the salon price. The Breeze Cluster Lashes Kit provides soft, fluffy, and realistic lashes that blend seamlessly with your natural lashes. Includes tools for easy application and long wear.",
+      "Get the salon lash look without the salon price. The Breeze Cluster Lashes Kit provides soft, fluffy, and realistic lashes that blend seamlessly with your natural lashes. Includes tools for eas[...]",
     highlights: [
       "Soft, fluffy, realistic cluster lashes",
       "Lightweight & comfortable wear",
