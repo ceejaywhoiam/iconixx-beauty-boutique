@@ -3,7 +3,7 @@ const expensiveTasteImg = "https://ik.imagekit.io/jodiplease/expensive-taste_com
 const richGirlImg = "https://ik.imagekit.io/jodiplease/rich-girl-energy_compressed.png?updatedAt=1785590749662";
 const firstClassKissImg = "https://ik.imagekit.io/jodiplease/first-class-kiss_compressed.png?updatedAt=1785590750953";
 const trophyWifeImg = "https://ik.imagekit.io/jodiplease/trophy-wife_compressed.png?updatedAt=1785590749918";
-const mascaraImg = "https://ik.imagekit.io/jodiplease/mascara.jpg";
+const mascaraImg = "https://ik.imagekit.io/jodiplease/mascara.png";
 const nudePaletteImg = "https://ik.imagekit.io/jodiplease/timeless-nude-pallet_compressed.png?updatedAt=1785590753053";
 const royalPaletteImg = "https://ik.imagekit.io/jodiplease/royal-reign_compressed.png?updatedAt=1785590753514";
 const linerImg = "https://ik.imagekit.io/jodiplease/liner.jpg";
