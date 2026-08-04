@@ -32,6 +32,7 @@ export interface Product {
   image: string;
   description: string;
   highlights: string[];
+  colors?: string[];
 }
 
 export const products: Product[] = [
@@ -44,7 +45,7 @@ export const products: Product[] = [
     quantity: 11,
     image: pinkDynastyImg,
     description:
-      "A soft luxury pink created for the girls who know their worth and wear confidence effortlessly. Pink Dynasty is a baby pink matte gloss that delivers smooth, velvety color with long-lasting com[...]",
+      "A soft luxury pink created for the girls who know their worth and wear confidence effortlessly. Pink Dynasty is a baby pink matte gloss that delivers smooth, velvety color with long-lasting[...]",
     highlights: [
       "Soft luxury baby pink",
       "Smooth velvet matte finish",
@@ -63,7 +64,7 @@ export const products: Product[] = [
     quantity: 9,
     image: expensiveTasteImg,
     description:
-      "A rich caramel nude designed for the woman who loves luxury, confidence, and timeless beauty. Expensive Taste delivers a smooth velvet-matte finish with a lightweight feel and deep, buildable p[...]",
+      "A rich caramel nude designed for the woman who loves luxury, confidence, and timeless beauty. Expensive Taste delivers a smooth velvet-matte finish with a lightweight feel and deep, buildab[...]",
     highlights: [
       "Rich caramel nude tone",
       "Smooth velvet matte finish",
@@ -82,7 +83,7 @@ export const products: Product[] = [
     quantity: 14,
     image: richGirlImg,
     description:
-      "A bold royal pink made for the girls who expect luxury, confidence, and attention. Rich Girl Energy delivers rich, vibrant color with a smooth velvet-matte finish and comfortable all-day wear.[...]",
+      "A bold royal pink made for the girls who expect luxury, confidence, and attention. Rich Girl Energy delivers rich, vibrant color with a smooth velvet-matte finish and comfortable all-day we[...]",
     highlights: [
       "Rich vibrant princess pink",
       "Smooth velvet matte finish",
@@ -101,7 +102,7 @@ export const products: Product[] = [
     quantity: 9,
     image: firstClassKissImg,
     description:
-      "A rich luxurious red shade designed for the woman who carries herself like a VIP. First Class Kiss delivers bold feminine energy with a smooth velvet-matte finish and long-lasting, comfortable [...]",
+      "A rich luxurious red shade designed for the woman who carries herself like a VIP. First Class Kiss delivers bold feminine energy with a smooth velvet-matte finish and long-lasting, comfort[...]",
     highlights: [
       "Rich vibrant red tone",
       "Smooth velvet matte finish",
@@ -120,7 +121,7 @@ export const products: Product[] = [
     quantity: 7,
     image: trophyWifeImg,
     description:
-      "A rich mauve nude made for the woman who walks with confidence, elegance, and boss energy. Trophy Wife offers a smooth velvet-matte finish, luxurious lightweight feel, and rich color payoff.",
+      "A rich mauve nude made for the woman who walks with confidence, elegance, and boss energy. Trophy Wife offers a smooth velvet-matte finish, luxurious lightweight feel, and rich color payof[...]",
     highlights: [
       "Sophisticated mauve nude tone",
       "Smooth velvet matte finish",
@@ -137,8 +138,9 @@ export const products: Product[] = [
     category: "Mascara",
     price: 14.99,
     quantity: 20,
-    quantityNote: "10 Black Tubes • 10 Rose Gold Tubes",
+    quantityNote: "10 Black Tubes • 10 Gold Tubes",
     image: mascaraImg,
+    colors: ["Black", "Gold"],
     description:
       "Turn every blink into a statement with the Timeless Iconixx Beauty Mascara — designed to deliver bold volume, dramatic length, and flawless definition. Our precision wand and clump-free formu[...]",
     highlights: [
@@ -195,7 +197,7 @@ export const products: Product[] = [
     quantity: 20,
     image: linerImg,
     description:
-      "Create bold, flawless eyes with the Midnight Precision Liquid Liner — the ultimate luxury eyeliner for smooth, effortless application. The ultra-black pigment and precision tip make sharp win[...]",
+      "Create bold, flawless eyes with the Midnight Precision Liquid Liner — the ultimate luxury eyeliner for smooth, effortless application. The ultra-black pigment and precision tip make shar[...]",
     highlights: [
       "Ultra-black intense pigment",
       "Precision tip for sharp wings",
