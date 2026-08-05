@@ -142,7 +142,7 @@ export const products: Product[] = [
     image: mascaraImg,
     colors: ["Black", "Gold"],
     description:
-      "Turn every blink into a statement with the Timeless Iconixx Beauty Mascara — designed to deliver bold volume, dramatic length, and flawless definition. Our precision wand and clump-free formu[...]",
+      "Turn every blink into a statement with the Timeless Iconixx Beauty Mascara — designed to deliver bold volume, dramatic length, and flawless definition. Our precision wand and clump-free [...]",
     highlights: [
       "Intense volume & dramatic length",
       "Smooth clump-free application",
@@ -161,7 +161,7 @@ export const products: Product[] = [
     quantity: 10,
     image: nudePaletteImg,
     description:
-      "The Timeless Nude Luxe Palette is the definition of effortless beauty. Featuring warm caramel tones, rich chocolate browns, golden shimmer accents, and buttery transition shades, this palette b[...]",
+      "The Timeless Nude Luxe Palette is the definition of effortless beauty. Featuring warm caramel tones, rich chocolate browns, golden shimmer accents, and buttery transition shades, this pale[...]",
     highlights: [
       "Warm caramel & chocolate tones",
       "Golden shimmer accents",
@@ -179,7 +179,7 @@ export const products: Product[] = [
     quantity: 10,
     image: royalPaletteImg,
     description:
-      "A luxury neutral palette designed for soft glam lovers who want elegance, warmth, and rich pigment all in one. Creamy matte browns, champagne shimmer, and golden bronze accents create versatile[...]",
+      "A luxury neutral palette designed for soft glam lovers who want elegance, warmth, and rich pigment all in one. Creamy matte browns, champagne shimmer, and golden bronze accents create vers[...]",
     highlights: [
       "Creamy matte browns",
       "Champagne shimmer shades",
@@ -215,8 +215,9 @@ export const products: Product[] = [
     quantity: 30,
     quantityNote: "10 of each shade",
     image: ceoLipstickImg,
+    colors: ["Nude Blush Millionaire", "Purple Passenger Princess", "Peach Impulsive"],
     description:
-      "The CEO Lip Collection is a signature trio designed for the woman who walks in confidence and leaves a lasting impression. Ultra-smooth, velvet-matte formulas deliver rich pigment and comfortab[...]",
+      "The CEO Lip Collection is a signature trio designed for the woman who walks in confidence and leaves a lasting impression. Ultra-smooth, velvet-matte formulas deliver rich pigment and comf[...]",
     highlights: [
       "Three signature shades",
       "Velvet matte finish",
@@ -234,7 +235,7 @@ export const products: Product[] = [
     quantity: 30,
     image: breezeLashesImg,
     description:
-      "Get the salon lash look without the salon price. The Breeze Cluster Lashes Kit provides soft, fluffy, and realistic lashes that blend seamlessly with your natural lashes. Includes tools for eas[...]",
+      "Get the salon lash look without the salon price. The Breeze Cluster Lashes Kit provides soft, fluffy, and realistic lashes that blend seamlessly with your natural lashes. Includes tools fo[...]",
     highlights: [
       "Soft, fluffy, realistic cluster lashes",
       "Lightweight & comfortable wear",
