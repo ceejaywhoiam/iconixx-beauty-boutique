@@ -1,14 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import type { Product } from "@/lib/products";
-
-// Name -> hex map for shade swatches. Add more entries here as new shades are introduced.
-const colorMap: Record<string, string> = {
-  "Nude Blush Millionaire": "#f3d6d0",
-  "Purple Passenger Princess": "#b78acb",
-  "Peach Impulsive": "#ffb89a",
-  Black: "#000000",
-  Gold: "#d4af37",
-};
+import { colorMap } from "@/lib/colors";
 
 export function ProductCard({ product }: { product: Product }) {
   const badge =
