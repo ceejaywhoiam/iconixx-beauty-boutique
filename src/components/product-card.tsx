@@ -1,6 +1,15 @@
 import { Link } from "@tanstack/react-router";
 import type { Product } from "@/lib/products";
 
+// Name -> hex map for shade swatches. Add more entries here as new shades are introduced.
+const colorMap: Record<string, string> = {
+  "Nude Blush Millionaire": "#f3d6d0",
+  "Purple Passenger Princess": "#b78acb",
+  "Peach Impulsive": "#ffb89a",
+  Black: "#000000",
+  Gold: "#d4af37",
+};
+
 export function ProductCard({ product }: { product: Product }) {
   const badge =
     product.quantity === 0
@@ -45,32 +54,21 @@ export function ProductCard({ product }: { product: Product }) {
         )}
         <p className="mt-3 text-lg font-light text-primary">${product.price.toFixed(2)}</p>
 
-        {/* Shade selector: only shown for the CEO Lip Collection product card */}
-        {product.id === "ceo-lip-collection" && (
+        {/* Shade selector: render swatches for any product that defines a colors array */}
+        {product.colors && product.colors.length > 0 && (
           <div className="mt-3 flex items-center gap-3">
             <div className="text-[10px] uppercase tracking-[0.25em] text-muted-foreground">Shades</div>
 
             <div className="flex items-center gap-2">
-              <span
-                title="Nude Blush Millionaire"
-                aria-label="Nude Blush Millionaire"
-                className="inline-block h-4 w-4 rounded-full border border-border shadow-sm"
-                style={{ backgroundColor: '#f3d6d0' }}
-              />
-
-              <span
-                title="Purple Passenger Princess"
-                aria-label="Purple Passenger Princess"
-                className="inline-block h-4 w-4 rounded-full border border-border shadow-sm"
-                style={{ backgroundColor: '#b78acb' }}
-              />
-
-              <span
-                title="Peach Impulsive"
-                aria-label="Peach Impulsive"
-                className="inline-block h-4 w-4 rounded-full border border-border shadow-sm"
-                style={{ backgroundColor: '#ffb89a' }}
-              />
+              {product.colors.map((c) => (
+                <span
+                  key={c}
+                  title={`${c} — ${colorMap[c] ?? ""}`}
+                  aria-label={c}
+                  className="inline-block h-4 w-4 rounded-full border border-border shadow-sm"
+                  style={{ backgroundColor: colorMap[c] ?? 'transparent' }}
+                />
+              ))}
             </div>
           </div>
         )}
