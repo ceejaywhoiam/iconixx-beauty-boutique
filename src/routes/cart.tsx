@@ -4,6 +4,7 @@ import { useServerFn } from "@tanstack/react-start";
 import { SiteHeader, SiteFooter } from "@/components/site-header";
 import { useCart } from "@/lib/cart";
 import { createCheckoutSession } from "@/lib/checkout.functions";
+import { colorMap } from "@/lib/colors";
 
 export const Route = createFileRoute("/cart")({
   head: () => ({
@@ -65,7 +66,7 @@ function CartPage() {
           <div className="mt-12 grid gap-12 lg:grid-cols-[2fr_1fr]">
             <ul className="divide-y divide-border/60 border-y border-border/60">
               {detailed.map((l) => (
-                <li key={l.product.id} className="flex gap-4 py-6">
+                <li key={`${l.product.id}-${JSON.stringify(l.options || {})}`} className="flex gap-4 py-6">
                   <Link to="/product/$id" params={{ id: l.product.id }} className="block h-24 w-24 flex-shrink-0 overflow-hidden bg-blush/30">
                     <img src={l.product.image} alt={l.product.name} className="h-full w-full object-contain p-2" />
                   </Link>
@@ -75,23 +76,33 @@ function CartPage() {
                         {l.product.name}
                       </Link>
                       <div className="mt-1 text-[11px] text-muted-foreground">{l.product.category}</div>
+                      {l.options && l.options.shade && (
+                        <div className="mt-2 flex items-center gap-2 text-[12px] text-muted-foreground">
+                          <span
+                            className="inline-block h-3 w-3 rounded-full border border-border"
+                            style={{ backgroundColor: colorMap[l.options.shade] ?? 'transparent' }}
+                            aria-hidden
+                          />
+                          <span>{l.options.shade}</span>
+                        </div>
+                      )}
                     </div>
                     <div className="flex items-center gap-4">
                       <div className="flex items-center border border-border">
                         <button
-                          onClick={() => setQuantity(l.product.id, l.quantity - 1)}
+                          onClick={() => setQuantity(l.product.id, l.quantity - 1, l.options)}
                           className="px-3 py-1 text-sm hover:bg-blush/30"
                           aria-label="Decrease quantity"
                         >−</button>
                         <span className="min-w-8 text-center text-sm">{l.quantity}</span>
                         <button
-                          onClick={() => setQuantity(l.product.id, Math.min(l.product.quantity, l.quantity + 1))}
+                          onClick={() => setQuantity(l.product.id, Math.min(l.product.quantity, l.quantity + 1), l.options)}
                           className="px-3 py-1 text-sm hover:bg-blush/30"
                           aria-label="Increase quantity"
                         >+</button>
                       </div>
                       <button
-                        onClick={() => removeItem(l.product.id)}
+                        onClick={() => removeItem(l.product.id, l.options)}
                         className="text-[10px] uppercase tracking-[0.25em] text-muted-foreground hover:text-primary"
                       >
                         Remove
