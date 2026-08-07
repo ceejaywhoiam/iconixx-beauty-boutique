@@ -3,11 +3,10 @@ import { getProduct } from "@/lib/products";
 
 interface CheckoutInput {
   items: Array<{ id: string; quantity: number }>;
-  origin: string;
 }
 
 export const createCheckoutSession = createServerFn({ method: "POST" })
-  .inputValidator((data: CheckoutInput) => {
+  .validator((data: CheckoutInput) => {
     if (!data || !Array.isArray(data.items) || data.items.length === 0) {
       throw new Error("Cart is empty");
     }
@@ -20,14 +19,15 @@ export const createCheckoutSession = createServerFn({ method: "POST" })
         quantity: Math.max(1, Math.min(99, Math.floor(Number(i.quantity) || 1))),
       }))
       .slice(0, 50);
-    return { items, origin: data.origin };
+    return { items };
   })
-  .handler(async ({ data }) => {
+  .handler(async ({ data, request }) => {
     const key = process.env.STRIPE_SECRET_KEY;
     if (!key) throw new Error("Stripe is not configured");
 
     const { default: Stripe } = await import("stripe");
     const stripe = new Stripe(key);
+    const origin = new URL(request.url).origin;
 
     const line_items = data.items.map((i) => {
       const product = getProduct(i.id);
@@ -48,8 +48,8 @@ export const createCheckoutSession = createServerFn({ method: "POST" })
     const session = await stripe.checkout.sessions.create({
       mode: "payment",
       line_items,
-      success_url: `${data.origin}/success?session_id={CHECKOUT_SESSION_ID}`,
-      cancel_url: `${data.origin}/cart`,
+      success_url: `${origin}/success?session_id={CHECKOUT_SESSION_ID}`,
+      cancel_url: `${origin}/cancel`,
       shipping_address_collection: { allowed_countries: ["US", "CA", "GB", "AU"] },
       automatic_tax: { enabled: false },
     });
