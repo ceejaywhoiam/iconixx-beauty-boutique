@@ -32,7 +32,10 @@ function SuccessPage() {
         <div className="text-[10px] uppercase tracking-[0.4em] text-accent">
           {session_id ? "Confirmed" : "Order Status"}
         </div>
-        <h1 className="mt-4 text-4xl text-primary md:text-6xl" style={{ fontFamily: "'DM Serif Display', serif" }}>
+        <h1
+          className="mt-4 text-4xl text-primary md:text-6xl"
+          style={{ fontFamily: "'DM Serif Display', serif" }}
+        >
           {session_id ? "Thank you, beautiful." : "We couldn't confirm your checkout."}
         </h1>
         <p className="mt-6 text-sm font-light leading-relaxed text-muted-foreground">

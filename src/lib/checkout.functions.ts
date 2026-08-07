@@ -6,7 +6,7 @@ interface CheckoutInput {
 }
 
 export const createCheckoutSession = createServerFn({ method: "POST" })
-  .inputValidator((data: CheckoutInput) => {
+  .validator((data: CheckoutInput) => {
     if (!data || !Array.isArray(data.items) || data.items.length === 0) {
       throw new Error("Cart is empty");
     }

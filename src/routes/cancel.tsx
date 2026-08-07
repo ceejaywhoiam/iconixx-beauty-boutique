@@ -5,7 +5,10 @@ export const Route = createFileRoute("/cancel")({
   head: () => ({
     meta: [
       { title: "Checkout Cancelled — TIMELESS ICONIXX Beauty" },
-      { name: "description", content: "Your checkout was cancelled and your bag is still waiting for you." },
+      {
+        name: "description",
+        content: "Your checkout was cancelled and your bag is still waiting for you.",
+      },
       { name: "robots", content: "noindex" },
     ],
   }),
@@ -18,11 +21,15 @@ function CancelPage() {
       <SiteHeader />
       <section className="mx-auto max-w-2xl px-6 py-32 text-center">
         <div className="text-[10px] uppercase tracking-[0.4em] text-accent">Checkout Cancelled</div>
-        <h1 className="mt-4 text-4xl text-primary md:text-6xl" style={{ fontFamily: "'DM Serif Display', serif" }}>
+        <h1
+          className="mt-4 text-4xl text-primary md:text-6xl"
+          style={{ fontFamily: "'DM Serif Display', serif" }}
+        >
           Your bag is still waiting.
         </h1>
         <p className="mt-6 text-sm font-light leading-relaxed text-muted-foreground">
-          No charge was made. You can review your bag, make changes, and try checkout again whenever you&apos;re ready.
+          No charge was made. You can review your bag, make changes, and try checkout again whenever
+          you&apos;re ready.
         </p>
         <div className="mt-10 flex flex-col items-center justify-center gap-3 sm:flex-row">
           <Link

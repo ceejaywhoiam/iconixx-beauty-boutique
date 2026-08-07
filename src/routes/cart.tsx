@@ -51,7 +51,10 @@ function CartPage() {
       <SiteHeader />
       <section className="mx-auto max-w-5xl px-6 py-16">
         <div className="text-[10px] uppercase tracking-[0.4em] text-accent">Your Bag</div>
-        <h1 className="mt-3 text-4xl text-primary md:text-6xl" style={{ fontFamily: "'DM Serif Display', serif" }}>
+        <h1
+          className="mt-3 text-4xl text-primary md:text-6xl"
+          style={{ fontFamily: "'DM Serif Display', serif" }}
+        >
           Shopping Bag
         </h1>
         <div className="mt-3 h-1 w-16 bg-blush" />
@@ -70,21 +73,38 @@ function CartPage() {
           <div className="mt-12 grid gap-12 lg:grid-cols-[2fr_1fr]">
             <ul className="divide-y divide-border/60 border-y border-border/60">
               {detailed.map((l) => (
-                <li key={`${l.product.id}-${JSON.stringify(l.options || {})}`} className="flex gap-4 py-6">
-                  <Link to="/product/$id" params={{ id: l.product.id }} className="block h-24 w-24 flex-shrink-0 overflow-hidden bg-blush/30">
-                    <img src={l.product.image} alt={l.product.name} className="h-full w-full object-contain p-2" />
+                <li
+                  key={`${l.product.id}-${JSON.stringify(l.options || {})}`}
+                  className="flex gap-4 py-6"
+                >
+                  <Link
+                    to="/product/$id"
+                    params={{ id: l.product.id }}
+                    className="block h-24 w-24 flex-shrink-0 overflow-hidden bg-blush/30"
+                  >
+                    <img
+                      src={l.product.image}
+                      alt={l.product.name}
+                      className="h-full w-full object-contain p-2"
+                    />
                   </Link>
                   <div className="flex flex-1 flex-col justify-between">
                     <div>
-                      <Link to="/product/$id" params={{ id: l.product.id }} className="text-xs uppercase tracking-[0.25em] hover:text-primary">
+                      <Link
+                        to="/product/$id"
+                        params={{ id: l.product.id }}
+                        className="text-xs uppercase tracking-[0.25em] hover:text-primary"
+                      >
                         {l.product.name}
                       </Link>
-                      <div className="mt-1 text-[11px] text-muted-foreground">{l.product.category}</div>
+                      <div className="mt-1 text-[11px] text-muted-foreground">
+                        {l.product.category}
+                      </div>
                       {l.options && l.options.shade && (
                         <div className="mt-2 flex items-center gap-2 text-[12px] text-muted-foreground">
                           <span
                             className="inline-block h-3 w-3 rounded-full border border-border"
-                            style={{ backgroundColor: colorMap[l.options.shade] ?? 'transparent' }}
+                            style={{ backgroundColor: colorMap[l.options.shade] ?? "transparent" }}
                             aria-hidden
                           />
                           <span>{l.options.shade}</span>
@@ -97,13 +117,23 @@ function CartPage() {
                           onClick={() => setQuantity(l.product.id, l.quantity - 1, l.options)}
                           className="px-3 py-1 text-sm hover:bg-blush/30"
                           aria-label="Decrease quantity"
-                        >−</button>
+                        >
+                          −
+                        </button>
                         <span className="min-w-8 text-center text-sm">{l.quantity}</span>
                         <button
-                          onClick={() => setQuantity(l.product.id, Math.min(l.product.quantity, l.quantity + 1), l.options)}
+                          onClick={() =>
+                            setQuantity(
+                              l.product.id,
+                              Math.min(l.product.quantity, l.quantity + 1),
+                              l.options,
+                            )
+                          }
                           className="px-3 py-1 text-sm hover:bg-blush/30"
                           aria-label="Increase quantity"
-                        >+</button>
+                        >
+                          +
+                        </button>
                       </div>
                       <button
                         onClick={() => removeItem(l.product.id, l.options)}
@@ -136,7 +166,9 @@ function CartPage() {
                 {loading ? "Redirecting…" : "Checkout"}
               </button>
               {!checkoutEnabled && !error && (
-                <p className="mt-3 text-xs text-muted-foreground">Secure checkout is temporarily unavailable.</p>
+                <p className="mt-3 text-xs text-muted-foreground">
+                  Secure checkout is temporarily unavailable.
+                </p>
               )}
               {error && <p className="mt-3 text-xs text-destructive">{error}</p>}
               <button
