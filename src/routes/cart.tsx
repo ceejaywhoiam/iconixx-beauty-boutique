@@ -23,15 +23,19 @@ function CartPage() {
   const router = useRouter();
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
+  const checkoutEnabled = Boolean(import.meta.env.VITE_STRIPE_PUBLISHABLE_KEY?.trim());
 
   async function handleCheckout() {
     setError(null);
+    if (!checkoutEnabled) {
+      setError("Secure checkout is not configured right now. Please try again later.");
+      return;
+    }
     setLoading(true);
     try {
       const { url } = await checkoutFn({
         data: {
           items: detailed.map((l) => ({ id: l.product.id, quantity: l.quantity })),
-          origin: window.location.origin,
         },
       });
       if (url) window.location.href = url;
@@ -126,11 +130,14 @@ function CartPage() {
               </div>
               <button
                 onClick={handleCheckout}
-                disabled={loading}
+                disabled={loading || !checkoutEnabled}
                 className="mt-8 w-full bg-primary px-6 py-4 text-[10px] font-bold uppercase tracking-[0.3em] text-primary-foreground hover:bg-primary/90 disabled:opacity-50"
               >
                 {loading ? "Redirecting…" : "Checkout"}
               </button>
+              {!checkoutEnabled && !error && (
+                <p className="mt-3 text-xs text-muted-foreground">Secure checkout is temporarily unavailable.</p>
+              )}
               {error && <p className="mt-3 text-xs text-destructive">{error}</p>}
               <button
                 onClick={() => router.navigate({ to: "/shop" })}
