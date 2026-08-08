@@ -1,5 +1,6 @@
 import { createServerFn } from "@tanstack/react-start";
 import { getProduct } from "@/lib/products";
+import { assertAllowedOrigin } from "@/lib/origin";
 
 interface CheckoutInput {
   items: Array<{ id: string; quantity: number }>;
@@ -10,9 +11,6 @@ export const createCheckoutSession = createServerFn({ method: "POST" })
     if (!data || !Array.isArray(data.items) || data.items.length === 0) {
       throw new Error("Cart is empty");
     }
-    if (typeof data.origin !== "string" || !/^https?:\/\//.test(data.origin)) {
-      throw new Error("Invalid origin");
-    }
     const items = data.items
       .map((i) => ({
         id: String(i.id),
@@ -22,6 +20,8 @@ export const createCheckoutSession = createServerFn({ method: "POST" })
     return { items };
   })
   .handler(async ({ data, request }) => {
+    assertAllowedOrigin(request.headers.get("origin"));
+
     const key = process.env.STRIPE_SECRET_KEY;
     if (!key) throw new Error("Stripe is not configured");
 
