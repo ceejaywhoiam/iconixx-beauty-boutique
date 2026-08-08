@@ -20,15 +20,15 @@ export const createCheckoutSession = createServerFn({ method: "POST" })
         quantity: Math.max(1, Math.min(99, Math.floor(Number(i.quantity) || 1))),
       }))
       .slice(0, 50);
-    return { items };
+    return { items, origin: data.origin };
   })
-  .handler(async ({ data, request }) => {
+  .handler(async ({ data }) => {
     const key = process.env.STRIPE_SECRET_KEY;
     if (!key) throw new Error("Stripe is not configured");
 
     const { default: Stripe } = await import("stripe");
     const stripe = new Stripe(key);
-    const origin = new URL(request.url).origin;
+    const origin = data.origin;
 
     const line_items = data.items.map((i) => {
       const product = getProduct(i.id);
