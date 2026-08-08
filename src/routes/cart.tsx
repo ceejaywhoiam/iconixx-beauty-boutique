@@ -36,7 +36,6 @@ function CartPage() {
       const { url } = await checkoutFn({
         data: {
           items: detailed.map((l) => ({ id: l.product.id, quantity: l.quantity })),
-          origin: window.location.origin,
         },
       });
       if (url) window.location.href = url;
