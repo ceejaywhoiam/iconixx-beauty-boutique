@@ -3,6 +3,7 @@ import { getProduct } from "@/lib/products";
 
 interface CheckoutInput {
   items: Array<{ id: string; quantity: number }>;
+  origin?: string;
 }
 
 export const createCheckoutSession = createServerFn({ method: "POST" })
