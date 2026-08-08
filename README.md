@@ -15,6 +15,10 @@ Copy `.env.example` to a local env file such as `.env.local` and set:
   when creating Checkout Sessions.
 - `VITE_STRIPE_PUBLISHABLE_KEY` — the client-safe Stripe publishable key used to
   enable the checkout button in the storefront.
+- `SUPABASE_URL` and `VITE_SUPABASE_URL` — your Supabase project URL.
+- `SUPABASE_PUBLISHABLE_KEY` and `VITE_SUPABASE_PUBLISHABLE_KEY` — your
+  Supabase publishable (anon) key.
+- `SUPABASE_SERVICE_ROLE_KEY` — only required for server-side admin operations.
 
 ### Local development
 
