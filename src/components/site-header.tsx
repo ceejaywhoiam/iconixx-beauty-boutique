@@ -4,12 +4,12 @@ import { useState } from "react";
 import { Sheet, SheetContent, SheetTitle, SheetTrigger } from "@/components/ui/sheet";
 import { useCart } from "@/lib/cart";
 
-const NAV_LINKS = [
+const NAV_LINKS: ReadonlyArray<{ to: string; label: string; exact?: boolean }> = [
   { to: "/", label: "Home", exact: true },
   { to: "/shop", label: "Shop" },
   { to: "/about", label: "About" },
   { to: "/contact", label: "Contact" },
-] as const;
+];
 
 export function SiteHeader() {
   const { count } = useCart();

@@ -69,13 +69,13 @@ export function CartProvider({ children }: { children: ReactNode }) {
   const clear = useCallback(() => setItems([]), []);
 
   const value = useMemo<CartContextValue>(() => {
-    const detailed = items
-      .map((i) => {
-        const product = getProduct(i.id);
-        if (!product) return null;
-        return { product, quantity: i.quantity, lineTotal: product.price * i.quantity, options: i.options };
-      })
-      .filter((v): v is { product: Product; quantity: number; lineTotal: number; options?: Record<string, string> } => v !== null);
+    const detailed = items.flatMap((i) => {
+      const product = getProduct(i.id);
+      if (!product) return [];
+      return [
+        { product, quantity: i.quantity, lineTotal: product.price * i.quantity, options: i.options },
+      ];
+    });
     const count = detailed.reduce((s, l) => s + l.quantity, 0);
     const subtotal = detailed.reduce((s, l) => s + l.lineTotal, 0);
     return { items, detailed, count, subtotal, addItem, removeItem, setQuantity, clear, isOpen, setOpen };
