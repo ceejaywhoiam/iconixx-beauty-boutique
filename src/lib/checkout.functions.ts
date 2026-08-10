@@ -15,6 +15,40 @@ async function getStripe() {
   return new Stripe(key);
 }
 
+export type SessionVerificationStatus = "confirmed" | "pending" | "invalid";
+
+export interface SessionVerificationResult {
+  status: SessionVerificationStatus;
+  sessionId: string | null;
+}
+
+/** Retrieve and verify a Checkout Session from Stripe server-side. */
+export const verifyCheckoutSession = createServerFn({ method: "GET" })
+  .validator((data: { sessionId?: string }) => ({
+    sessionId: typeof data?.sessionId === "string" ? data.sessionId.slice(0, 200) : null,
+  }))
+  .handler(async ({ data }): Promise<SessionVerificationResult> => {
+    if (!data.sessionId) {
+      return { status: "invalid", sessionId: null };
+    }
+
+    try {
+      const stripe = await getStripe();
+      const session = await stripe.checkout.sessions.retrieve(data.sessionId);
+
+      if (session.status === "complete" && session.payment_status === "paid") {
+        return { status: "confirmed", sessionId: data.sessionId };
+      }
+      if (session.status === "open" || session.payment_status === "unpaid") {
+        return { status: "pending", sessionId: data.sessionId };
+      }
+      return { status: "invalid", sessionId: data.sessionId };
+    } catch (err) {
+      console.warn("[verifyCheckoutSession] Failed to retrieve session:", (err as Error).message);
+      return { status: "invalid", sessionId: data.sessionId };
+    }
+  });
+
 export const createCheckoutSession = createServerFn({ method: "POST" })
   .inputValidator((data: CheckoutInput) => {
     if (!data || !Array.isArray(data.items) || data.items.length === 0) {
@@ -111,6 +145,7 @@ export const createCheckoutSession = createServerFn({ method: "POST" })
         },
       ],
       metadata: {
+        app: "iconixx-beauty-boutique",
         cart: JSON.stringify(
           data.items.map((i) => ({ id: i.id, q: i.quantity, s: i.options?.["shade"] ?? null })),
         ).slice(0, 480),
