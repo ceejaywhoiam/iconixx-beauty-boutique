@@ -30,7 +30,11 @@ function CartPage() {
     try {
       const { url } = await checkoutFn({
         data: {
-          items: detailed.map((l) => ({ id: l.product.id, quantity: l.quantity })),
+          items: detailed.map((l) => ({
+            id: l.product.id,
+            quantity: l.quantity,
+            options: l.options,
+          })),
           origin: window.location.origin,
         },
       });
