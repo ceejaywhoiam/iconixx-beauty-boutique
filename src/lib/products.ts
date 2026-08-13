@@ -3,6 +3,10 @@ const expensiveTasteImg = "https://ik.imagekit.io/jodiplease/expensive-taste_com
 const richGirlImg = "https://ik.imagekit.io/jodiplease/rich-girl-energy_compressed.png?updatedAt=1785590749662";
 const firstClassKissImg = "https://ik.imagekit.io/jodiplease/first-class-kiss_compressed.png?updatedAt=1785590750953";
 const trophyWifeImg = "https://ik.imagekit.io/jodiplease/trophy-wife_compressed.png?updatedAt=1785590749918";
+const ceoKissesImg = "https://ik.imagekit.io/jodiplease/ceo-kisses.png";
+const mochaLatteImg = "https://ik.imagekit.io/jodiplease/mocha-latte.png";
+const classyAndSassyImg = "https://ik.imagekit.io/jodiplease/classy-and-sassy.png";
+const firstLadyImg = "https://ik.imagekit.io/jodiplease/first-lady.png";
 const mascaraImg = "https://ik.imagekit.io/jodiplease/mascara.png";
 const nudePaletteImg = "https://ik.imagekit.io/jodiplease/timeless-nude-pallet_compressed.png?updatedAt=1785590753053";
 const royalPaletteImg = "https://ik.imagekit.io/jodiplease/royal-reign_compressed.png?updatedAt=1785590753514";
@@ -129,6 +133,74 @@ export const products: Product[] = [
       "Rich highly pigmented color",
       "Soft luxury boss-girl energy",
       "Beautiful on every skin tone",
+    ],
+  },
+  {
+    id: "ceo-kisses",
+    name: "CEO Kisses",
+    category: "Gloss",
+    price: 10,
+    quantity: 8,
+    image: ceoKissesImg,
+    description:
+      "Wrap your lips in luxurious shine with Iconixx Beauty Vegan Lip Gloss. This silky-smooth, non-sticky formula delivers a beautiful wash of color while leaving your lips feeling soft, hydrated, and comfortable all day. Designed for effortless glamour, it glides on evenly to create a radiant, high-shine finish that's perfect for everyday wear or layering over your favorite lipstick.\n\nInfused with nourishing vegan ingredients, this gloss helps lock in moisture while giving your lips a fuller, healthier-looking appearance. Whether you're going for a natural glow or a glamorous finish, Iconixx Beauty adds the perfect touch of confidence to every look.",
+    highlights: [
+      "Silky-smooth, non-sticky formula",
+      "Radiant high-shine finish",
+      "Helps lock in moisture",
+      "Comfortable all-day wear",
+      "Vegan ingredients",
+    ],
+  },
+  {
+    id: "mocha-latte",
+    name: "Mocha Latte",
+    category: "Gloss",
+    price: 10,
+    quantity: 8,
+    image: mochaLatteImg,
+    description:
+      "Wrap your lips in luxurious shine with Iconixx Beauty Vegan Lip Gloss. This silky-smooth, non-sticky formula delivers a beautiful wash of color while leaving your lips feeling soft, hydrated, and comfortable all day. Designed for effortless glamour, it glides on evenly to create a radiant, high-shine finish that's perfect for everyday wear or layering over your favorite lipstick.\n\nInfused with nourishing vegan ingredients, this gloss helps lock in moisture while giving your lips a fuller, healthier-looking appearance. Whether you're going for a natural glow or a glamorous finish, Iconixx Beauty adds the perfect touch of confidence to every look.",
+    highlights: [
+      "Silky-smooth, non-sticky formula",
+      "Radiant high-shine finish",
+      "Helps lock in moisture",
+      "Comfortable all-day wear",
+      "Vegan ingredients",
+    ],
+  },
+  {
+    id: "classy-and-sassy",
+    name: "Classy & Sassy",
+    category: "Gloss",
+    price: 10,
+    quantity: 9,
+    image: classyAndSassyImg,
+    description:
+      "Wrap your lips in luxurious shine with Iconixx Beauty Vegan Lip Gloss. This silky-smooth, non-sticky formula delivers a beautiful wash of color while leaving your lips feeling soft, hydrated, and comfortable all day. Designed for effortless glamour, it glides on evenly to create a radiant, high-shine finish that's perfect for everyday wear or layering over your favorite lipstick.\n\nInfused with nourishing vegan ingredients, this gloss helps lock in moisture while giving your lips a fuller, healthier-looking appearance. Whether you're going for a natural glow or a glamorous finish, Iconixx Beauty adds the perfect touch of confidence to every look.",
+    highlights: [
+      "Silky-smooth, non-sticky formula",
+      "Radiant high-shine finish",
+      "Helps lock in moisture",
+      "Comfortable all-day wear",
+      "Vegan ingredients",
+    ],
+  },
+  {
+    id: "first-lady",
+    name: "First Lady",
+    category: "Gloss",
+    price: 10,
+    quantity: 8,
+    image: firstLadyImg,
+    description:
+      "Wrap your lips in luxurious shine with Iconixx Beauty Vegan Lip Gloss. This silky-smooth, non-sticky formula delivers a beautiful wash of color while leaving your lips feeling soft, hydrated, and comfortable all day. Designed for effortless glamour, it glides on evenly to create a radiant, high-shine finish that's perfect for everyday wear or layering over your favorite lipstick.\n\nInfused with nourishing vegan ingredients, this gloss helps lock in moisture while giving your lips a fuller, healthier-looking appearance. Whether you're going for a natural glow or a glamorous finish, Iconixx Beauty adds the perfect touch of confidence to every look.",
+    highlights: [
+      "Silky-smooth, non-sticky formula",
+      "Radiant high-shine finish",
+      "Helps lock in moisture",
+      "Comfortable all-day wear",
+      "Vegan ingredients",
     ],
   },
   {
