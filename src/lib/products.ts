@@ -17,7 +17,8 @@ const timelessLipKitImg = "https://ik.imagekit.io/jodiplease/timeless-beauty-kit
 const heroImg = "https://ik.imagekit.io/jodiplease/hero.jpg";
 
 export type Category =
-  | "Gloss"
+  | "Matte Liquid Gloss"
+  | "Lip Gloss"
   | "Lipstick"
   | "Palette"
   | "Mascara"
@@ -44,7 +45,7 @@ export const products: Product[] = [
     id: "pink-dynasty",
     name: "Pink Dynasty",
     tagline: "1 of 5 — Matte Lip Gloss",
-    category: "Gloss",
+    category: "Matte Liquid Gloss",
     price: 12,
     quantity: 11,
     image: pinkDynastyImg,
@@ -63,7 +64,7 @@ export const products: Product[] = [
     id: "expensive-taste",
     name: "Expensive Taste",
     tagline: "2 of 5 — Matte Lip Gloss",
-    category: "Gloss",
+    category: "Matte Liquid Gloss",
     price: 12,
     quantity: 9,
     image: expensiveTasteImg,
@@ -82,7 +83,7 @@ export const products: Product[] = [
     id: "rich-girl-energy",
     name: "Rich Girl Energy",
     tagline: "3 of 5 — Matte Lip Gloss",
-    category: "Gloss",
+    category: "Matte Liquid Gloss",
     price: 12,
     quantity: 14,
     image: richGirlImg,
@@ -101,7 +102,7 @@ export const products: Product[] = [
     id: "first-class-kiss",
     name: "First Class Kiss",
     tagline: "4 of 5 — Matte Lip Gloss",
-    category: "Gloss",
+    category: "Matte Liquid Gloss",
     price: 12,
     quantity: 9,
     image: firstClassKissImg,
@@ -120,7 +121,7 @@ export const products: Product[] = [
     id: "trophy-wife",
     name: "Trophy Wife",
     tagline: "5 of 5 — Matte Lip Gloss",
-    category: "Gloss",
+    category: "Matte Liquid Gloss",
     price: 12,
     quantity: 7,
     image: trophyWifeImg,
@@ -138,7 +139,7 @@ export const products: Product[] = [
   {
     id: "ceo-kisses",
     name: "CEO Kisses",
-    category: "Gloss",
+    category: "Lip Gloss",
     price: 10,
     quantity: 8,
     image: ceoKissesImg,
@@ -155,7 +156,7 @@ export const products: Product[] = [
   {
     id: "mocha-latte",
     name: "Mocha Latte",
-    category: "Gloss",
+    category: "Lip Gloss",
     price: 10,
     quantity: 8,
     image: mochaLatteImg,
@@ -172,7 +173,7 @@ export const products: Product[] = [
   {
     id: "classy-and-sassy",
     name: "Classy & Sassy",
-    category: "Gloss",
+    category: "Lip Gloss",
     price: 10,
     quantity: 9,
     image: classyAndSassyImg,
@@ -189,7 +190,7 @@ export const products: Product[] = [
   {
     id: "first-lady",
     name: "First Lady",
-    category: "Gloss",
+    category: "Lip Gloss",
     price: 10,
     quantity: 8,
     image: firstLadyImg,
