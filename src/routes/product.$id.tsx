@@ -3,6 +3,7 @@ import { getProduct, products } from "@/lib/products";
 import { ProductCard } from "@/components/product-card";
 import { SiteHeader, SiteFooter } from "@/components/site-header";
 import { useCart } from "@/lib/cart";
+import { ProductGallery } from "@/components/product-gallery";
 
 export const Route = createFileRoute("/product/$id")({
   loader: ({ params }) => {
@@ -73,16 +74,20 @@ function ProductPage() {
         </div>
 
         <div className="mt-8 grid gap-12 md:grid-cols-2">
-          <div className="relative">
-            <div className="absolute -inset-4 rounded-3xl bg-blush/30 blur-2xl" aria-hidden />
-            <img
-              src={product.image}
-              alt={product.name}
-              width={1024}
-              height={1024}
-              className="relative aspect-square w-full rounded-2xl object-contain bg-blush/20 p-6 shadow-xl"
-            />
-          </div>
+          {product.gallery && product.gallery.length > 0 ? (
+            <ProductGallery name={product.name} shades={product.gallery} />
+          ) : (
+            <div className="relative">
+              <div className="absolute -inset-4 rounded-3xl bg-blush/30 blur-2xl" aria-hidden />
+              <img
+                src={product.image}
+                alt={product.name}
+                width={1024}
+                height={1024}
+                className="relative aspect-square w-full rounded-2xl object-contain bg-blush/20 p-6 shadow-xl"
+              />
+            </div>
+          )}
 
           <div>
             <div className="tracking-luxe text-accent">{product.category}</div>
