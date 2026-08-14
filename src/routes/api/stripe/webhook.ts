@@ -1,12 +1,14 @@
-import { createServerFileRoute } from "@tanstack/react-start/server";
+import { createFileRoute } from "@tanstack/react-router";
 
 // In-memory idempotency store for processed Stripe event IDs.
 // For production, replace with a persistent store (e.g., a Supabase table).
 // TODO: replace with Supabase `stripe_events` table insert with unique constraint on event_id.
 const processedEventIds = new Set<string>();
 
-export const ServerRoute = createServerFileRoute("/api/stripe/webhook").methods({
-  POST: async ({ request }) => {
+export const Route = createFileRoute("/api/stripe/webhook")({
+  server: {
+    handlers: {
+      POST: async ({ request }: { request: Request }) => {
     const webhookSecret = process.env.STRIPE_WEBHOOK_SECRET;
     if (!webhookSecret) {
       console.error("[stripe/webhook] STRIPE_WEBHOOK_SECRET is not configured");
@@ -67,5 +69,8 @@ export const ServerRoute = createServerFileRoute("/api/stripe/webhook").methods(
       console.error("[stripe/webhook] Handler error for event", event.id, err);
       return new Response("Internal error", { status: 500 });
     }
+      },
+    },
   },
 });
+
