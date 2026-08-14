@@ -7,6 +7,10 @@ const ceoKissesImg = "https://ik.imagekit.io/jodiplease/ceo-kisses.png";
 const mochaLatteImg = "https://ik.imagekit.io/jodiplease/mocha-latte.png";
 const classyAndSassyImg = "https://ik.imagekit.io/jodiplease/classy-and-sassy.png";
 const firstLadyImg = "https://ik.imagekit.io/jodiplease/first-lady.png";
+const prettyAndPaidImg = "https://ik.imagekit.io/jodiplease/pretty-and-paid.png";
+const millionDollarMoodImg = "https://ik.imagekit.io/jodiplease/million-dollar-mood.png";
+const princessTreatmentImg = "https://ik.imagekit.io/jodiplease/princess-treatment.png";
+const pinkCityImg = "https://ik.imagekit.io/jodiplease/pink-city.png";
 const mascaraImg = "https://ik.imagekit.io/jodiplease/mascara.png";
 const nudePaletteImg = "https://ik.imagekit.io/jodiplease/timeless-nude-pallet_compressed.png?updatedAt=1785590753053";
 const royalPaletteImg = "https://ik.imagekit.io/jodiplease/royal-reign_compressed.png?updatedAt=1785590753514";
@@ -202,6 +206,74 @@ export const products: Product[] = [
     image: firstLadyImg,
     description:
       "Wrap your lips in luxurious shine with Iconixx Beauty Vegan Lip Gloss. This silky-smooth, non-sticky formula delivers a beautiful wash of color while leaving your lips feeling soft, hydrat[...]",
+    highlights: [
+      "Silky-smooth, non-sticky formula",
+      "Radiant high-shine finish",
+      "Helps lock in moisture",
+      "Comfortable all-day wear",
+      "Vegan ingredients",
+    ],
+  },
+  {
+    id: "pretty-and-paid",
+    name: "Pretty & Paid",
+    category: "Lip Gloss",
+    price: 10,
+    quantity: 7,
+    image: prettyAndPaidImg,
+    description:
+      "Wrap your lips in luxurious shine with Iconixx Beauty Vegan Lip Gloss. This silky-smooth, non-sticky formula delivers a beautiful wash of color while leaving your lips feeling soft, hydrated, and comfortable all day. Designed for effortless glamour, it glides on evenly to create a radiant, high-shine finish that's perfect for everyday wear or layering over your favorite lipstick.\n\nInfused with nourishing vegan ingredients, this gloss helps lock in moisture while giving your lips a fuller, healthier-looking appearance. Whether you're going for a natural glow or a glamorous finish, Iconixx Beauty adds the perfect touch of confidence to every look.",
+    highlights: [
+      "Silky-smooth, non-sticky formula",
+      "Radiant high-shine finish",
+      "Helps lock in moisture",
+      "Comfortable all-day wear",
+      "Vegan ingredients",
+    ],
+  },
+  {
+    id: "million-dollar-mood",
+    name: "Million Dollar Mood",
+    category: "Lip Gloss",
+    price: 10,
+    quantity: 7,
+    image: millionDollarMoodImg,
+    description:
+      "Wrap your lips in luxurious shine with Iconixx Beauty Vegan Lip Gloss. This silky-smooth, non-sticky formula delivers a beautiful wash of color while leaving your lips feeling soft, hydrated, and comfortable all day. Designed for effortless glamour, it glides on evenly to create a radiant, high-shine finish that's perfect for everyday wear or layering over your favorite lipstick.\n\nInfused with nourishing vegan ingredients, this gloss helps lock in moisture while giving your lips a fuller, healthier-looking appearance. Whether you're going for a natural glow or a glamorous finish, Iconixx Beauty adds the perfect touch of confidence to every look.",
+    highlights: [
+      "Silky-smooth, non-sticky formula",
+      "Radiant high-shine finish",
+      "Helps lock in moisture",
+      "Comfortable all-day wear",
+      "Vegan ingredients",
+    ],
+  },
+  {
+    id: "princess-treatment",
+    name: "Princess Treatment",
+    category: "Lip Gloss",
+    price: 10,
+    quantity: 9,
+    image: princessTreatmentImg,
+    description:
+      "Wrap your lips in luxurious shine with Iconixx Beauty Vegan Lip Gloss. This silky-smooth, non-sticky formula delivers a beautiful wash of color while leaving your lips feeling soft, hydrated, and comfortable all day. Designed for effortless glamour, it glides on evenly to create a radiant, high-shine finish that's perfect for everyday wear or layering over your favorite lipstick.\n\nInfused with nourishing vegan ingredients, this gloss helps lock in moisture while giving your lips a fuller, healthier-looking appearance. Whether you're going for a natural glow or a glamorous finish, Iconixx Beauty adds the perfect touch of confidence to every look.",
+    highlights: [
+      "Silky-smooth, non-sticky formula",
+      "Radiant high-shine finish",
+      "Helps lock in moisture",
+      "Comfortable all-day wear",
+      "Vegan ingredients",
+    ],
+  },
+  {
+    id: "pink-city",
+    name: "Pink City",
+    category: "Lip Gloss",
+    price: 10,
+    quantity: 9,
+    image: pinkCityImg,
+    description:
+      "Wrap your lips in luxurious shine with Iconixx Beauty Vegan Lip Gloss. This silky-smooth, non-sticky formula delivers a beautiful wash of color while leaving your lips feeling soft, hydrated, and comfortable all day. Designed for effortless glamour, it glides on evenly to create a radiant, high-shine finish that's perfect for everyday wear or layering over your favorite lipstick.\n\nInfused with nourishing vegan ingredients, this gloss helps lock in moisture while giving your lips a fuller, healthier-looking appearance. Whether you're going for a natural glow or a glamorous finish, Iconixx Beauty adds the perfect touch of confidence to every look.",
     highlights: [
       "Silky-smooth, non-sticky formula",
       "Radiant high-shine finish",
