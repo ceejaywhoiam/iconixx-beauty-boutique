@@ -216,8 +216,8 @@ export const products: Product[] = [
     tagline: "Luxury Mascara",
     category: "Mascara",
     price: 14.99,
-    quantity: 20,
-    quantityNote: "10 Black Tubes • 10 Gold Tubes",
+    quantity: 26,
+    quantityNote: "",
     image: mascaraImg,
     colors: ["Black", "Gold"],
     gallery: [
