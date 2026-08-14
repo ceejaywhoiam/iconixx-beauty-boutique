@@ -114,7 +114,7 @@ function Index() {
             </p>
             <Link
               to="/shop"
-              className="inline-block border border-primary-foreground px-10 py-4 text-[10px] font-bold uppercase tracking-[0.3em] text-primary-foreground transition-colors hover:bg-primary-foreg[...]
+              className="inline-block border border-primary-foreground px-10 py-4 text-[10px] font-bold uppercase tracking-[0.3em] text-primary-foreground transition-colors hover:bg-primary-foreground"
             >
               Shop the Series
             </Link>
@@ -152,13 +152,7 @@ function Index() {
       </section>
 
       {/* Ethos — over subtle texture */}
-      <section
-        className="relative overflow-hidden px-8 py-32"
-        style={{
-          backgroundImage:
-            "radial-gradient(circle at 20% 20%, rgba(232,138,171,0.14), transparent 55%), radial-gradient(circle at 80% 60%, rgba(248,200,216,0.35), transparent 60%), repeating-linear-gradient(45[...]
-        }}
-      >
+      <section className="relative overflow-hidden px-8 py-32">
         <div className="relative mx-auto max-w-4xl space-y-12 text-center">
           <div className="flex justify-center">
             <svg
@@ -167,7 +161,7 @@ function Index() {
               viewBox="0 0 24 24"
               aria-hidden
             >
-              <path d="M14.017 21L14.017 18C14.017 16.8954 14.9124 16 16.017 16H19.017C19.5693 16 20.017 15.5523 20.017 15V9C20.017 8.44772 19.5693 8 19.017 8H15.017C14.4647 8 14.017 7.55228 14.0[...]
+              <path d="M14.017 21L14.017 18C14.017 16.8954 14.9124 16 16.017 16H19.017C19.5693 16 20.017 15.5523 20.017 15V9C20.017 8.44772 19.5693 8 19.017 8H15.017C14.4647 8 14.017 7.55228 14.0[...]" />
             </svg>
           </div>
           <blockquote
