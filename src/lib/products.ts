@@ -221,8 +221,8 @@ export const products: Product[] = [
     image: mascaraImg,
     colors: ["Black", "Gold"],
     gallery: [
-      { label: "Black", image: "https://ik.imagekit.io/jodiplease/timeless-mascara-black.png" },
-      { label: "Gold", image: "https://ik.imagekit.io/jodiplease/timeless-mascara-gold.png" },
+      { label: "Black", image: "https://ik.imagekit.io/jodiplease/mascara_OoKUumeo7.png" },
+      { label: "Gold", image: "https://ik.imagekit.io/jodiplease/mascara-gold.png" },
     ],
     description:
       "Turn every blink into a statement with the Timeless Iconixx Beauty Mascara — designed to deliver bold volume, dramatic length, and flawless definition. Our precision wand and clump-free [...]",
