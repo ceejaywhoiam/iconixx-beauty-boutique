@@ -4,6 +4,8 @@ import { ProductCard } from "@/components/product-card";
 import { SiteHeader, SiteFooter } from "@/components/site-header";
 import { useCart } from "@/lib/cart";
 import { ProductGallery } from "@/components/product-gallery";
+import { colorMap } from "@/lib/colors";
+import { useState } from "react";
 
 export const Route = createFileRoute("/product/$id")({
   loader: ({ params }) => {
@@ -53,9 +55,17 @@ function ProductPage() {
   const low = product.quantity <= 10;
   const { addItem, setOpen } = useCart();
   const router = useRouter();
+  const shades = product.gallery ?? [];
+  const hasShades = shades.length > 0;
+  const [shade, setShade] = useState<string | null>(null);
+  const [shadeError, setShadeError] = useState(false);
 
   function handleAdd(goToCart: boolean) {
-    addItem(product.id, 1);
+    if (hasShades && !shade) {
+      setShadeError(true);
+      return;
+    }
+    addItem(product.id, 1, shade ? { shade } : undefined);
     setOpen(true);
     if (goToCart) router.navigate({ to: "/cart" });
   }
@@ -75,7 +85,15 @@ function ProductPage() {
 
         <div className="mt-8 grid gap-12 md:grid-cols-2">
           {product.gallery && product.gallery.length > 0 ? (
-            <ProductGallery name={product.name} shades={product.gallery} />
+            <ProductGallery
+              name={product.name}
+              shades={product.gallery}
+              selected={shade ?? undefined}
+              onSelect={(l) => {
+                setShade(l);
+                setShadeError(false);
+              }}
+            />
           ) : (
             <div className="relative">
               <div className="absolute -inset-4 rounded-3xl bg-blush/30 blur-2xl" aria-hidden />
@@ -121,6 +139,50 @@ function ProductPage() {
                   </li>
                 ))}
               </ul>
+            )}
+
+            {hasShades && (
+              <div className="mt-8 border-t border-border pt-6">
+                <div className="flex items-center justify-between">
+                  <div className="text-[10px] uppercase tracking-[0.25em] text-primary">
+                    Shade{shade ? ":" : ""} <span className="text-muted-foreground normal-case tracking-normal">{shade ?? ""}</span>
+                  </div>
+                  {!shade && (
+                    <span className="text-[11px] text-muted-foreground">Please select a shade</span>
+                  )}
+                </div>
+                <div className="mt-3 flex flex-wrap gap-2">
+                  {shades.map((s) => (
+                    <button
+                      key={s.label}
+                      type="button"
+                      onClick={() => {
+                        setShade(s.label);
+                        setShadeError(false);
+                      }}
+                      aria-pressed={shade === s.label}
+                      className={
+                        "flex items-center gap-2 rounded-full border px-4 py-2 text-[11px] transition " +
+                        (shade === s.label
+                          ? "border-primary bg-primary text-primary-foreground"
+                          : "border-border hover:border-primary/60")
+                      }
+                    >
+                      <span
+                        className="inline-block h-3 w-3 rounded-full border border-border/60"
+                        style={{ backgroundColor: colorMap[s.label] ?? "transparent" }}
+                        aria-hidden
+                      />
+                      {s.label}
+                    </button>
+                  ))}
+                </div>
+                {shadeError && (
+                  <p className="mt-3 text-[11px] text-destructive">
+                    Choose a shade before adding to your bag.
+                  </p>
+                )}
+              </div>
             )}
 
             <div className="mt-10 flex flex-wrap gap-3">

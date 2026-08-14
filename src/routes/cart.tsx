@@ -83,8 +83,12 @@ function CartPage() {
                     className="block h-24 w-24 flex-shrink-0 overflow-hidden bg-blush/30"
                   >
                     <img
-                      src={l.product.image}
-                      alt={l.product.name}
+                      src={
+                        (l.options?.shade &&
+                          l.product.gallery?.find((g) => g.label === l.options!.shade)?.image) ||
+                        l.product.image
+                      }
+                      alt={l.options?.shade ? `${l.product.name} — ${l.options.shade}` : l.product.name}
                       className="h-full w-full object-contain p-2"
                     />
                   </Link>

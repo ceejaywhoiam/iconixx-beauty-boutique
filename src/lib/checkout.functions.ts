@@ -102,8 +102,20 @@ export const createCheckoutSession = createServerFn({ method: "POST" })
           product_data: {
             name: shade ? `${product.name} — ${shade}` : product.name,
             ...(description ? { description } : {}),
-            ...(product.image.startsWith("http") ? { images: [product.image] } : {}),
-            metadata: { product_id: product.id, category: product.category },
+            ...((shade && product.gallery?.find((g) => g.label === shade)?.image) ||
+            product.image.startsWith("http")
+              ? {
+                  images: [
+                    (shade && product.gallery?.find((g) => g.label === shade)?.image) ||
+                      product.image,
+                  ],
+                }
+              : {}),
+            metadata: {
+              product_id: product.id,
+              category: product.category,
+              ...(shade ? { shade } : {}),
+            },
           },
         },
       };

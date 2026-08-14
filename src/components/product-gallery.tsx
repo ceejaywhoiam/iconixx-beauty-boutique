@@ -1,17 +1,37 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { colorMap } from "@/lib/colors";
 import type { GalleryShade } from "@/lib/products";
 
 export function ProductGallery({
   name,
   shades,
+  selected,
+  onSelect,
 }: {
   name: string;
   shades: GalleryShade[];
+  selected?: string;
+  onSelect?: (label: string) => void;
 }) {
-  const [i, setI] = useState(0);
+  const [i, setI] = useState(() => {
+    const idx = shades.findIndex((s) => s.label === selected);
+    return idx === -1 ? 0 : idx;
+  });
+
+  useEffect(() => {
+    const idx = shades.findIndex((s) => s.label === selected);
+    if (idx !== -1 && idx !== i) setI(idx);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [selected]);
+
+  const select = (idx: number) => {
+    setI(idx);
+    const s = shades[idx];
+    if (s && onSelect) onSelect(s.label);
+  };
+
   const active = shades[i]!;
-  const go = (n: number) => setI((n + shades.length) % shades.length);
+  const go = (n: number) => select((n + shades.length) % shades.length);
 
   return (
     <div className="relative">
@@ -53,7 +73,7 @@ export function ProductGallery({
           <button
             key={s.label}
             type="button"
-            onClick={() => setI(idx)}
+            onClick={() => select(idx)}
             aria-label={s.label}
             aria-current={idx === i}
             title={s.label}
@@ -72,7 +92,7 @@ export function ProductGallery({
           <button
             key={s.label}
             type="button"
-            onClick={() => setI(idx)}
+            onClick={() => select(idx)}
             aria-label={`Show ${s.label}`}
             className={
               "h-3 w-3 rounded-full border transition " +
