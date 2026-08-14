@@ -69,8 +69,8 @@ export const Route = createFileRoute("/api/stripe/webhook")({
       console.error("[stripe/webhook] Handler error for event", event.id, err);
       return new Response("Internal error", { status: 500 });
     }
-  },
       },
     },
   },
 });
+
