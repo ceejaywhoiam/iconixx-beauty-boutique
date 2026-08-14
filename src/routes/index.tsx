@@ -10,7 +10,7 @@ export const Route = createFileRoute("/")({
 
 function Index() {
   const featured = products.slice(0, 4);
-  const glosses = products.filter((p) => p.category === "Gloss");
+  const glosses = products.filter((p) => p.category === "Lip Gloss");
   const bandImage = glosses[0]?.image ?? featured[0]?.image;
 
   return (
