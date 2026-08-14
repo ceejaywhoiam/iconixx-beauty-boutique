@@ -150,7 +150,7 @@ export const products: Product[] = [
     quantity: 8,
     image: ceoKissesImg,
     description:
-      "Wrap your lips in luxurious shine with Iconixx Beauty Vegan Lip Gloss. This silky-smooth, non-sticky formula delivers a beautiful wash of color while leaving your lips feeling soft, hydrated, and comfortable all day. Designed for effortless glamour, it glides on evenly to create a radiant, high-shine finish that's perfect for everyday wear or layering over your favorite lipstick.\n\nInfused with nourishing vegan ingredients, this gloss helps lock in moisture while giving your lips a fuller, healthier-looking appearance. Whether you're going for a natural glow or a glamorous finish, Iconixx Beauty adds the perfect touch of confidence to every look.",
+      "Wrap your lips in luxurious shine with Iconixx Beauty Vegan Lip Gloss. This silky-smooth, non-sticky formula delivers a beautiful wash of color while leaving your lips feeling soft, hydrat[...]",
     highlights: [
       "Silky-smooth, non-sticky formula",
       "Radiant high-shine finish",
@@ -167,7 +167,7 @@ export const products: Product[] = [
     quantity: 8,
     image: mochaLatteImg,
     description:
-      "Wrap your lips in luxurious shine with Iconixx Beauty Vegan Lip Gloss. This silky-smooth, non-sticky formula delivers a beautiful wash of color while leaving your lips feeling soft, hydrated, and comfortable all day. Designed for effortless glamour, it glides on evenly to create a radiant, high-shine finish that's perfect for everyday wear or layering over your favorite lipstick.\n\nInfused with nourishing vegan ingredients, this gloss helps lock in moisture while giving your lips a fuller, healthier-looking appearance. Whether you're going for a natural glow or a glamorous finish, Iconixx Beauty adds the perfect touch of confidence to every look.",
+      "Wrap your lips in luxurious shine with Iconixx Beauty Vegan Lip Gloss. This silky-smooth, non-sticky formula delivers a beautiful wash of color while leaving your lips feeling soft, hydrat[...]",
     highlights: [
       "Silky-smooth, non-sticky formula",
       "Radiant high-shine finish",
@@ -184,7 +184,7 @@ export const products: Product[] = [
     quantity: 9,
     image: classyAndSassyImg,
     description:
-      "Wrap your lips in luxurious shine with Iconixx Beauty Vegan Lip Gloss. This silky-smooth, non-sticky formula delivers a beautiful wash of color while leaving your lips feeling soft, hydrated, and comfortable all day. Designed for effortless glamour, it glides on evenly to create a radiant, high-shine finish that's perfect for everyday wear or layering over your favorite lipstick.\n\nInfused with nourishing vegan ingredients, this gloss helps lock in moisture while giving your lips a fuller, healthier-looking appearance. Whether you're going for a natural glow or a glamorous finish, Iconixx Beauty adds the perfect touch of confidence to every look.",
+      "Wrap your lips in luxurious shine with Iconixx Beauty Vegan Lip Gloss. This silky-smooth, non-sticky formula delivers a beautiful wash of color while leaving your lips feeling soft, hydrat[...]",
     highlights: [
       "Silky-smooth, non-sticky formula",
       "Radiant high-shine finish",
@@ -201,7 +201,7 @@ export const products: Product[] = [
     quantity: 8,
     image: firstLadyImg,
     description:
-      "Wrap your lips in luxurious shine with Iconixx Beauty Vegan Lip Gloss. This silky-smooth, non-sticky formula delivers a beautiful wash of color while leaving your lips feeling soft, hydrated, and comfortable all day. Designed for effortless glamour, it glides on evenly to create a radiant, high-shine finish that's perfect for everyday wear or layering over your favorite lipstick.\n\nInfused with nourishing vegan ingredients, this gloss helps lock in moisture while giving your lips a fuller, healthier-looking appearance. Whether you're going for a natural glow or a glamorous finish, Iconixx Beauty adds the perfect touch of confidence to every look.",
+      "Wrap your lips in luxurious shine with Iconixx Beauty Vegan Lip Gloss. This silky-smooth, non-sticky formula delivers a beautiful wash of color while leaving your lips feeling soft, hydrat[...]",
     highlights: [
       "Silky-smooth, non-sticky formula",
       "Radiant high-shine finish",
@@ -220,6 +220,10 @@ export const products: Product[] = [
     quantityNote: "10 Black Tubes • 10 Gold Tubes",
     image: mascaraImg,
     colors: ["Black", "Gold"],
+    gallery: [
+      { label: "Black", image: "https://ik.imagekit.io/jodiplease/timeless-mascara-black.png" },
+      { label: "Gold", image: "https://ik.imagekit.io/jodiplease/timeless-mascara-gold.png" },
+    ],
     description:
       "Turn every blink into a statement with the Timeless Iconixx Beauty Mascara — designed to deliver bold volume, dramatic length, and flawless definition. Our precision wand and clump-free [...]",
     highlights: [
