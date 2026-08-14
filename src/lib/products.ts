@@ -26,6 +26,11 @@ export type Category =
   | "Lashes"
   | "Lip Kit";
 
+export interface GalleryShade {
+  label: string;
+  image: string;
+}
+
 export interface Product {
   id: string;
   name: string;
@@ -38,6 +43,7 @@ export interface Product {
   description: string;
   highlights: string[];
   colors?: string[];
+  gallery?: GalleryShade[];
 }
 
 export const products: Product[] = [
@@ -289,6 +295,11 @@ export const products: Product[] = [
     quantityNote: "10 of each shade",
     image: ceoLipstickImg,
     colors: ["Nude Blush Millionaire", "Purple Passenger Princess", "Peach Impulsive"],
+    gallery: [
+      { label: "Nude Blush Millionaire", image: "https://ik.imagekit.io/jodiplease/nude-blush.png?updatedAt=1786642316463" },
+      { label: "Purple Passenger Princess", image: "https://ik.imagekit.io/jodiplease/purple-passenger.png?updatedAt=1786642314632" },
+      { label: "Peach Impulsive", image: "https://ik.imagekit.io/jodiplease/peach-impulsive.png?updatedAt=1786642314820" },
+    ],
     description:
       "The CEO Lip Collection is a signature trio designed for the woman who walks in confidence and leaves a lasting impression. Ultra-smooth, velvet-matte formulas deliver rich pigment and comf[...]",
     highlights: [
