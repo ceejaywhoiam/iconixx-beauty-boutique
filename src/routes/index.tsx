@@ -38,7 +38,7 @@ function Index() {
           >
             TIMELESS ICONIXX
           </h1>
-          <p className="mt-8 text-[11px] uppercase tracking-[0.4em] font-light text-foreground">
+          <p className="mt-8 inline-block bg-background/60 backdrop-blur-sm px-3 py-1 rounded-md text-[12px] uppercase tracking-[0.35em] font-medium text-primary-foreground drop-shadow-md">
             Redefining the standard of elegance
           </p>
           <div className="mt-10 flex flex-wrap justify-center gap-4">
@@ -114,7 +114,7 @@ function Index() {
             </p>
             <Link
               to="/shop"
-              className="inline-block border border-primary-foreground px-10 py-4 text-[10px] font-bold uppercase tracking-[0.3em] text-primary-foreground transition-colors hover:bg-primary-foreground hover:text-primary"
+              className="inline-block border border-primary-foreground px-10 py-4 text-[10px] font-bold uppercase tracking-[0.3em] text-primary-foreground transition-colors hover:bg-primary-foreg[...]
             >
               Shop the Series
             </Link>
@@ -156,7 +156,7 @@ function Index() {
         className="relative overflow-hidden px-8 py-32"
         style={{
           backgroundImage:
-            "radial-gradient(circle at 20% 20%, rgba(232,138,171,0.14), transparent 55%), radial-gradient(circle at 80% 60%, rgba(248,200,216,0.35), transparent 60%), repeating-linear-gradient(45deg, rgba(196,92,124,0.05) 0 2px, transparent 2px 12px)",
+            "radial-gradient(circle at 20% 20%, rgba(232,138,171,0.14), transparent 55%), radial-gradient(circle at 80% 60%, rgba(248,200,216,0.35), transparent 60%), repeating-linear-gradient(45[...]
         }}
       >
         <div className="relative mx-auto max-w-4xl space-y-12 text-center">
@@ -167,7 +167,7 @@ function Index() {
               viewBox="0 0 24 24"
               aria-hidden
             >
-              <path d="M14.017 21L14.017 18C14.017 16.8954 14.9124 16 16.017 16H19.017C19.5693 16 20.017 15.5523 20.017 15V9C20.017 8.44772 19.5693 8 19.017 8H15.017C14.4647 8 14.017 7.55228 14.017 7V5C14.017 4.44772 14.4647 4 15.017 4H19.017C20.6739 4 22.017 5.34315 22.017 7V15C22.017 18.3137 19.3307 21 16.017 21H14.017ZM3.017 21L3.017 18C3.017 16.8954 3.91238 16 5.017 16H8.017C8.56928 16 9.017 15.5523 9.017 15V9C9.017 8.44772 8.56928 8 8.017 8H4.017C3.46472 8 3.017 7.55228 3.017 7V5C3.017 4.44772 3.46472 4 4.017 4H8.017C9.67386 4 11.017 5.34315 11.017 7V15C11.017 18.3137 8.33071 21 5.017 21H3.017Z" />
+              <path d="M14.017 21L14.017 18C14.017 16.8954 14.9124 16 16.017 16H19.017C19.5693 16 20.017 15.5523 20.017 15V9C20.017 8.44772 19.5693 8 19.017 8H15.017C14.4647 8 14.017 7.55228 14.0[...]
             </svg>
           </div>
           <blockquote
