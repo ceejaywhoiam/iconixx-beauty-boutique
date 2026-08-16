@@ -8,6 +8,8 @@ import { colorMap } from "@/lib/colors";
 import { useState } from "react";
 
 export const Route = createFileRoute("/product/$id")({
+  // Provide concrete params for the Start crawler so SSG/crawling succeeds.
+  staticParams: () => products.map((p) => ({ id: p.id })),
   loader: ({ params }) => {
     const product = getProduct(params.id);
     if (!product) throw notFound();
