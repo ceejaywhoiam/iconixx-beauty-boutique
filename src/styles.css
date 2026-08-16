@@ -107,6 +107,15 @@
     font-weight: 500;
     letter-spacing: -0.01em;
   }
+
+  /*
+   * Default image behavior: ensure images are centered and fully visible
+   * inside their frames by default. Individual elements can still override
+   * this by applying a different Tailwind object-* class (e.g. object-cover).
+   */
+  img {
+    @apply object-contain object-center;
+  }
 }
 
 @utility text-display {
