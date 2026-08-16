@@ -114,7 +114,7 @@ function Index() {
             </p>
             <Link
               to="/shop"
-              className="inline-block border border-primary-foreground px-10 py-4 text-[10px] font-bold uppercase tracking-[0.3em] text-primary-foreground transition-colors hover:bg-primary-foreg[...]
+              className="inline-block border border-primary-foreground px-10 py-4 text-[10px] font-bold uppercase tracking-[0.3em] text-primary-foreground transition-colors hover:bg-primary-foreground hover:text-primary"
             >
               Shop the Series
             </Link>
