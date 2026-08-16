@@ -12,8 +12,8 @@ const millionDollarMoodImg = "https://ik.imagekit.io/jodiplease/million-dollar-m
 const princessTreatmentImg = "https://ik.imagekit.io/jodiplease/princess-treatment.png";
 const pinkCityImg = "https://ik.imagekit.io/jodiplease/pink-city.png";
 const mascaraImg = "https://ik.imagekit.io/jodiplease/mascara.png";
-const nudePaletteImg = "https://ik.imagekit.io/jodiplease/timeless-nude-pallet_compressed.png?updatedAt=1785590753053";
-const royalPaletteImg = "https://ik.imagekit.io/jodiplease/royal-reign_compressed.png?updatedAt=1785590753514";
+const nudePaletteImg = "https://ik.imagekit.io/jodiplease/timeless-palettes.png?updatedAt=1785885062923";
+const royalPaletteImg = "https://ik.imagekit.io/jodiplease/palettes.png?updatedAt=1785885062992";
 const linerImg = "https://ik.imagekit.io/jodiplease/mascara-precision.png";
 const ceoLipstickImg = "https://ik.imagekit.io/jodiplease/ceo-lip-collection_compressed.png?updatedAt=1785590745539";
 const breezeLashesImg = "https://ik.imagekit.io/jodiplease/breeze-cluster_compressed.png?updatedAt=1785590752852";
