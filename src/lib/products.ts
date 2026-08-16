@@ -60,7 +60,7 @@ export const products: Product[] = [
     quantity: 11,
     image: pinkDynastyImg,
     description:
-      "A soft luxury pink created for the girls who know their worth and wear confidence effortlessly. Pink Dynasty is a baby pink matte gloss that delivers smooth, velvety color with long-lasting[...]",
+      "A soft luxury pink created for the girls who know their worth and wear confidence effortlessly. Pink Dynasty is a baby pink matte gloss that delivers smooth, velvety color with long-lasting, comfortable wear and a beautifully pigmented finish that flatters every skin tone.",
     highlights: [
       "Soft luxury baby pink",
       "Smooth velvet matte finish",
@@ -79,7 +79,7 @@ export const products: Product[] = [
     quantity: 9,
     image: expensiveTasteImg,
     description:
-      "A rich caramel nude designed for the woman who loves luxury, confidence, and timeless beauty. Expensive Taste delivers a smooth velvet-matte finish with a lightweight feel and deep, buildab[...]",
+      "A rich caramel nude designed for the woman who loves luxury, confidence, and timeless beauty. Expensive Taste delivers a smooth velvet-matte finish with a lightweight feel and deep, buildable color that stays comfortable and beautiful all day.",
     highlights: [
       "Rich caramel nude tone",
       "Smooth velvet matte finish",
@@ -98,7 +98,7 @@ export const products: Product[] = [
     quantity: 14,
     image: richGirlImg,
     description:
-      "A bold royal pink made for the girls who expect luxury, confidence, and attention. Rich Girl Energy delivers rich, vibrant color with a smooth velvet-matte finish and comfortable all-day we[...]",
+      "A bold royal pink made for the girls who expect luxury, confidence, and attention. Rich Girl Energy delivers rich, vibrant color with a smooth velvet-matte finish and comfortable all-day wear that makes a glamorous statement on every skin tone.",
     highlights: [
       "Rich vibrant princess pink",
       "Smooth velvet matte finish",
@@ -117,7 +117,7 @@ export const products: Product[] = [
     quantity: 9,
     image: firstClassKissImg,
     description:
-      "A rich luxurious red shade designed for the woman who carries herself like a VIP. First Class Kiss delivers bold feminine energy with a smooth velvet-matte finish and long-lasting, comfort[...]",
+      "A rich luxurious red shade designed for the woman who carries herself like a VIP. First Class Kiss delivers bold feminine energy with a smooth velvet-matte finish and long-lasting, comfortable wear that flatters every skin tone.",
     highlights: [
       "Rich vibrant red tone",
       "Smooth velvet matte finish",
@@ -136,7 +136,7 @@ export const products: Product[] = [
     quantity: 7,
     image: trophyWifeImg,
     description:
-      "A rich mauve nude made for the woman who walks with confidence, elegance, and boss energy. Trophy Wife offers a smooth velvet-matte finish, luxurious lightweight feel, and rich color payof[...]",
+      "A rich mauve nude made for the woman who walks with confidence, elegance, and boss energy. Trophy Wife offers a smooth velvet-matte finish, luxurious lightweight feel, and rich color payoff that looks beautiful on every skin tone.",
     highlights: [
       "Sophisticated mauve nude tone",
       "Smooth velvet matte finish",
@@ -154,7 +154,7 @@ export const products: Product[] = [
     quantity: 8,
     image: ceoKissesImg,
     description:
-      "Wrap your lips in luxurious shine with Iconixx Beauty Vegan Lip Gloss. This silky-smooth, non-sticky formula delivers a beautiful wash of color while leaving your lips feeling soft, hydrat[...]",
+      "Wrap your lips in luxurious shine with Iconixx Beauty Vegan Lip Gloss. This silky-smooth, non-sticky formula delivers a beautiful wash of color while leaving your lips feeling soft, hydrated, and comfortable all day. Designed for effortless glamour, it glides on evenly to create a radiant, high-shine finish that's perfect for everyday wear or layering over your favorite lipstick.\n\nInfused with nourishing vegan ingredients, this gloss helps lock in moisture while giving your lips a fuller, healthier-looking appearance. Whether you're going for a natural glow or a glamorous finish, Iconixx Beauty adds the perfect touch of confidence to every look.",
     highlights: [
       "Silky-smooth, non-sticky formula",
       "Radiant high-shine finish",
@@ -171,7 +171,7 @@ export const products: Product[] = [
     quantity: 8,
     image: mochaLatteImg,
     description:
-      "Wrap your lips in luxurious shine with Iconixx Beauty Vegan Lip Gloss. This silky-smooth, non-sticky formula delivers a beautiful wash of color while leaving your lips feeling soft, hydrat[...]",
+      "Wrap your lips in luxurious shine with Iconixx Beauty Vegan Lip Gloss. This silky-smooth, non-sticky formula delivers a beautiful wash of color while leaving your lips feeling soft, hydrated, and comfortable all day. Designed for effortless glamour, it glides on evenly to create a radiant, high-shine finish that's perfect for everyday wear or layering over your favorite lipstick.\n\nInfused with nourishing vegan ingredients, this gloss helps lock in moisture while giving your lips a fuller, healthier-looking appearance. Whether you're going for a natural glow or a glamorous finish, Iconixx Beauty adds the perfect touch of confidence to every look.",
     highlights: [
       "Silky-smooth, non-sticky formula",
       "Radiant high-shine finish",
@@ -188,7 +188,7 @@ export const products: Product[] = [
     quantity: 9,
     image: classyAndSassyImg,
     description:
-      "Wrap your lips in luxurious shine with Iconixx Beauty Vegan Lip Gloss. This silky-smooth, non-sticky formula delivers a beautiful wash of color while leaving your lips feeling soft, hydrat[...]",
+      "Wrap your lips in luxurious shine with Iconixx Beauty Vegan Lip Gloss. This silky-smooth, non-sticky formula delivers a beautiful wash of color while leaving your lips feeling soft, hydrated, and comfortable all day. Designed for effortless glamour, it glides on evenly to create a radiant, high-shine finish that's perfect for everyday wear or layering over your favorite lipstick.\n\nInfused with nourishing vegan ingredients, this gloss helps lock in moisture while giving your lips a fuller, healthier-looking appearance. Whether you're going for a natural glow or a glamorous finish, Iconixx Beauty adds the perfect touch of confidence to every look.",
     highlights: [
       "Silky-smooth, non-sticky formula",
       "Radiant high-shine finish",
@@ -205,7 +205,7 @@ export const products: Product[] = [
     quantity: 8,
     image: firstLadyImg,
     description:
-      "Wrap your lips in luxurious shine with Iconixx Beauty Vegan Lip Gloss. This silky-smooth, non-sticky formula delivers a beautiful wash of color while leaving your lips feeling soft, hydrat[...]",
+      "Wrap your lips in luxurious shine with Iconixx Beauty Vegan Lip Gloss. This silky-smooth, non-sticky formula delivers a beautiful wash of color while leaving your lips feeling soft, hydrated, and comfortable all day. Designed for effortless glamour, it glides on evenly to create a radiant, high-shine finish that's perfect for everyday wear or layering over your favorite lipstick.\n\nInfused with nourishing vegan ingredients, this gloss helps lock in moisture while giving your lips a fuller, healthier-looking appearance. Whether you're going for a natural glow or a glamorous finish, Iconixx Beauty adds the perfect touch of confidence to every look.",
     highlights: [
       "Silky-smooth, non-sticky formula",
       "Radiant high-shine finish",
@@ -297,7 +297,7 @@ export const products: Product[] = [
       { label: "Gold", image: "https://ik.imagekit.io/jodiplease/mascara-gold.png" },
     ],
     description:
-      "Turn every blink into a statement with the Timeless Iconixx Beauty Mascara — designed to deliver bold volume, dramatic length, and flawless definition. Our precision wand and clump-free [...]",
+      "Turn every blink into a statement with the Timeless Iconixx Beauty Mascara — designed to deliver bold volume, dramatic length, and flawless definition. Our precision wand and clump-free formula coat every lash evenly for all-day glam that stays lightweight and comfortable. Vegan and cruelty-free.",
     highlights: [
       "Intense volume & dramatic length",
       "Smooth clump-free application",
@@ -316,7 +316,7 @@ export const products: Product[] = [
     quantity: 10,
     image: nudePaletteImg,
     description:
-      "The Timeless Nude Luxe Palette is the definition of effortless beauty. Featuring warm caramel tones, rich chocolate browns, golden shimmer accents, and buttery transition shades, this pale[...]",
+      "The Timeless Nude Luxe Palette is the definition of effortless beauty. Featuring warm caramel tones, rich chocolate browns, golden shimmer accents, and buttery transition shades, this palette blends seamlessly for versatile day-to-night looks in a luxury tan compact.",
     highlights: [
       "Warm caramel & chocolate tones",
       "Golden shimmer accents",
@@ -334,7 +334,7 @@ export const products: Product[] = [
     quantity: 10,
     image: royalPaletteImg,
     description:
-      "A luxury neutral palette designed for soft glam lovers who want elegance, warmth, and rich pigment all in one. Creamy matte browns, champagne shimmer, and golden bronze accents create vers[...]",
+      "A luxury neutral palette designed for soft glam lovers who want elegance, warmth, and rich pigment all in one. Creamy matte browns, champagne shimmer, and golden bronze accents create versatile looks with high-payoff color, all housed in a sleek black luxury case.",
     highlights: [
       "Creamy matte browns",
       "Champagne shimmer shades",
@@ -352,7 +352,7 @@ export const products: Product[] = [
     quantity: 20,
     image: linerImg,
     description:
-      "Create bold, flawless eyes with the Midnight Precision Liquid Liner — the ultimate luxury eyeliner for smooth, effortless application. The ultra-black pigment and precision tip make shar[...]",
+      "Create bold, flawless eyes with the Midnight Precision Liquid Liner — the ultimate luxury eyeliner for smooth, effortless application. The ultra-black pigment and precision tip make sharp, defined wings easy in a single stroke, with smudge-resistant, long-lasting wear.",
     highlights: [
       "Ultra-black intense pigment",
       "Precision tip for sharp wings",
@@ -377,7 +377,7 @@ export const products: Product[] = [
       { label: "Peach Impulsive", image: "https://ik.imagekit.io/jodiplease/peach-impulsive.png?updatedAt=1786642314820" },
     ],
     description:
-      "The CEO Lip Collection is a signature trio designed for the woman who walks in confidence and leaves a lasting impression. Ultra-smooth, velvet-matte formulas deliver rich pigment and comf[...]",
+      "The CEO Lip Collection is a signature trio designed for the woman who walks in confidence and leaves a lasting impression. Ultra-smooth, velvet-matte formulas deliver rich pigment and comfortable, non-drying wear across three signature shades, all in luxury rose gold casing.",
     highlights: [
       "Three signature shades",
       "Velvet matte finish",
@@ -395,7 +395,7 @@ export const products: Product[] = [
     quantity: 30,
     image: breezeLashesImg,
     description:
-      "Get the salon lash look without the salon price. The Breeze Cluster Lashes Kit provides soft, fluffy, and realistic lashes that blend seamlessly with your natural lashes. Includes tools fo[...]",
+      "Get the salon lash look without the salon price. The Breeze Cluster Lashes Kit provides soft, fluffy, and realistic lashes that blend seamlessly with your natural lashes. Includes tools for effortless at-home application, with a lash tray, bond & lock adhesive, remover, precision applicator, and mini curler.",
     highlights: [
       "Soft, fluffy, realistic cluster lashes",
       "Lightweight & comfortable wear",
