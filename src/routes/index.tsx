@@ -23,7 +23,7 @@ function Index() {
           <img
             src={hero}
             alt="TIMELESS ICONIXX Beauty campaign"
-            className="h-full w-full object-cover"
+            className="h-full w-full object-contain object-center"
           />
           <div className="absolute inset-0 bg-gradient-to-b from-background/40 via-background/10 to-background/80" />
         </div>
@@ -93,7 +93,7 @@ function Index() {
               <img
                 src={bandImage}
                 alt="The Matte Series"
-                className="aspect-square w-full object-cover shadow-2xl md:aspect-video"
+                className="aspect-square w-full object-contain object-center shadow-2xl md:aspect-video"
               />
             )}
           </div>
@@ -114,7 +114,7 @@ function Index() {
             </p>
             <Link
               to="/shop"
-              className="inline-block border border-primary-foreground px-10 py-4 text-[10px] font-bold uppercase tracking-[0.3em] text-primary-foreground transition-colors hover:bg-primary-foreground"
+              className="inline-block border border-primary-foreground px-10 py-4 text-[10px] font-bold uppercase tracking-[0.3em] text-primary-foreground transition-colors hover:bg-primary-foreg[...]
             >
               Shop the Series
             </Link>
@@ -136,7 +136,7 @@ function Index() {
                     src={p.image}
                     alt={p.name}
                     loading="lazy"
-                    className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
+                    className="h-full w-full object-contain object-center transition-transform duration-700 group-hover:scale-105"
                   />
                 </div>
                 <div className="mt-4 text-[10px] uppercase tracking-[0.25em] text-primary-foreground">
