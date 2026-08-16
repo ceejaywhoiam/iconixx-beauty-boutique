@@ -15,7 +15,7 @@ export function ProductCard({ product }: { product: Product }) {
       params={{ id: product.id }}
       className="group block"
     >
-      <div className="relative aspect-[4/5] overflow-hidden bg-blush/60">
+      <div className="relative aspect-[4/5] overflow-hidden bg-blush/60 flex items-center justify-center">
         <img
           src={product.image}
           alt={product.name}
