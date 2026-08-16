@@ -114,7 +114,7 @@ function Index() {
             </p>
             <Link
               to="/shop"
-              className="inline-block border border-primary-foreground px-10 py-4 text-[10px] font-bold uppercase tracking-[0.3em] text-primary-foreground transition-colors hover:bg-primary-foreg[...]
+              className="inline-block border border-primary-foreground px-10 py-4 text-[10px] font-bold uppercase tracking-[0.3em] text-primary-foreground transition-colors hover:bg-primary-foreground hover:text-primary"
             >
               Shop the Series
             </Link>
@@ -161,7 +161,7 @@ function Index() {
               viewBox="0 0 24 24"
               aria-hidden
             >
-              <path d="M14.017 21L14.017 18C14.017 16.8954 14.9124 16 16.017 16H19.017C19.5693 16 20.017 15.5523 20.017 15V9C20.017 8.44772 19.5693 8 19.017 8H15.017C14.4647 8 14.017 7.55228 14.0[...]" />
+              <path d="M9.983 3v7.391c0 5.704-3.731 9.57-8.983 10.609l-.995-2.151c2.432-.917 3.995-3.638 3.995-5.849h-4v-10h9.983zm14.017 0v7.391c0 5.704-3.748 9.571-8.983 10.609l-.995-2.151c2.432-.917 3.995-3.638 3.995-5.849h-3.999v-10h9.982z" />
             </svg>
           </div>
           <blockquote
