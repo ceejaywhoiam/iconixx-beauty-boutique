@@ -387,6 +387,21 @@ export const products: Product[] = [
     ],
   },
   {
+    id: "ceo-kisses-lipstick",
+    name: "CEO Kisses",
+    category: "Lipstick",
+    price: 22,
+    quantity: 10,
+    image: "https://ik.imagekit.io/jodiplease/IMG_2758.png?updatedAt=1794631494223",
+    description:
+      "CEO Kisses is a luxurious Iconixx Beauty lipstick designed for the woman who walks in confidence and leaves a lasting impression. Smooth, comfortable wear with rich color payoff.",
+    highlights: [
+      "Rich, pigmented color",
+      "Smooth, comfortable wear",
+      "Luxury packaging",
+    ],
+  },
+  {
     id: "breeze-cluster-lashes-kit",
     name: "Breeze Cluster Lashes Kit",
     tagline: "Salon Look at Home",
