@@ -5,6 +5,16 @@ import { ProductCard } from "@/components/product-card";
 import { SiteHeader, SiteFooter } from "@/components/site-header";
 
 export const Route = createFileRoute("/")({
+  head: () => ({
+    meta: [
+      { title: "TIMELESS ICONIXX Beauty — Luxury Cosmetics" },
+      { name: "description", content: "Shop TIMELESS ICONIXX Beauty glosses, palettes, mascara, and lip kits by Shara Frison." },
+      { property: "og:title", content: "TIMELESS ICONIXX Beauty — Luxury Cosmetics" },
+      { property: "og:description", content: "Discover luxury cosmetics by Shara Frison, from lip glosses to palettes and mascara." },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
+    ],
+  }),
   component: Index,
 });
 

@@ -5,6 +5,8 @@ import { SiteHeader, SiteFooter } from "@/components/site-header";
 export const Route = createFileRoute("/contact")({
   head: () => ({
     meta: [
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
       { title: "Contact — TIMELESS ICONIXX Beauty" },
       { name: "description", content: "Get in touch with TIMELESS ICONIXX Beauty for orders, press, or collaborations." },
       { property: "og:title", content: "Contact — TIMELESS ICONIXX Beauty" },

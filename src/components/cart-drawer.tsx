@@ -2,6 +2,8 @@ import { Link } from "@tanstack/react-router";
 import { ShoppingBag, X } from "lucide-react";
 import { Sheet, SheetContent, SheetTitle } from "@/components/ui/sheet";
 import { useCart } from "@/lib/cart";
+import { getProductSelection } from "@/lib/product-selection";
+import { Button } from "@/components/ui/button";
 
 export function CartDrawer() {
   const { detailed, subtotal, count, setQuantity, removeItem, isOpen, setOpen } = useCart();
@@ -35,7 +37,7 @@ export function CartDrawer() {
           <>
             <ul className="flex-1 divide-y divide-border/60 overflow-y-auto px-6">
               {detailed.map((l) => (
-                <li key={l.product.id} className="flex gap-4 py-5">
+                <li key={`${l.product.id}-${JSON.stringify(l.options ?? {})}`} className="flex gap-4 py-5">
                   <Link
                     to="/product/$id"
                     params={{ id: l.product.id }}
@@ -43,8 +45,8 @@ export function CartDrawer() {
                     className="block h-20 w-20 flex-shrink-0 overflow-hidden bg-blush/30"
                   >
                     <img
-                      src={l.product.image}
-                      alt={l.product.name}
+                      src={getProductSelection(l.product, l.options).image}
+                      alt={getProductSelection(l.product, l.options).name}
                       className="h-full w-full object-contain p-1.5"
                     />
                   </Link>
@@ -58,33 +60,34 @@ export function CartDrawer() {
                       >
                         {l.product.name}
                       </Link>
-                      <button
-                        onClick={() => removeItem(l.product.id)}
-                        aria-label={`Remove ${l.product.name}`}
+                      <Button variant="ghost" size="icon"
+                        onClick={() => removeItem(l.product.id, l.options)}
+                        aria-label={`Remove ${getProductSelection(l.product, l.options).name}`}
                         className="text-muted-foreground transition-colors hover:text-primary"
                       >
                         <X className="h-4 w-4" />
-                      </button>
+                      </Button>
                     </div>
+                    {l.options?.shade && <p className="my-2 text-xs text-muted-foreground">Shade: {l.options.shade}</p>}
                     <div className="flex items-center justify-between">
                       <div className="flex items-center border border-border">
-                        <button
-                          onClick={() => setQuantity(l.product.id, l.quantity - 1)}
+                        <Button variant="ghost" size="icon"
+                          onClick={() => setQuantity(l.product.id, l.quantity - 1, l.options)}
                           className="px-2.5 py-1 text-sm hover:bg-blush/30"
                           aria-label="Decrease quantity"
                         >
                           −
-                        </button>
+                        </Button>
                         <span className="min-w-7 text-center text-sm">{l.quantity}</span>
-                        <button
+                        <Button variant="ghost" size="icon"
                           onClick={() =>
-                            setQuantity(l.product.id, Math.min(l.product.quantity, l.quantity + 1))
+                            setQuantity(l.product.id, Math.min(l.product.quantity, l.quantity + 1), l.options)
                           }
                           className="px-2.5 py-1 text-sm hover:bg-blush/30"
                           aria-label="Increase quantity"
                         >
                           +
-                        </button>
+                        </Button>
                       </div>
                       <span className="text-sm text-primary">${l.lineTotal.toFixed(2)}</span>
                     </div>

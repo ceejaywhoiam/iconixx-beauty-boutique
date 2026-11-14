@@ -8,8 +8,6 @@ import { colorMap } from "@/lib/colors";
 import { useState } from "react";
 
 export const Route = createFileRoute("/product/$id")({
-  // Provide concrete params for the Start crawler so SSG/crawling succeeds.
-  staticParams: () => products.map((p) => ({ id: p.id })),
   loader: ({ params }) => {
     const product = getProduct(params.id);
     if (!product) throw notFound();
@@ -22,6 +20,8 @@ export const Route = createFileRoute("/product/$id")({
     const { product } = loaderData;
     return {
       meta: [
+        { property: "og:type", content: "website" },
+        { name: "twitter:card", content: "summary_large_image" },
         { title: `${product.name} — TIMELESS ICONIXX Beauty` },
         { name: "description", content: product.description.slice(0, 155) },
         { property: "og:title", content: `${product.name} — TIMELESS ICONIXX Beauty` },

@@ -9,6 +9,8 @@ const categories = ["All", "Matte Liquid Gloss", "Lip Gloss", "Lipstick", "Palet
 export const Route = createFileRoute("/shop")({
   head: () => ({
     meta: [
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
       { title: "Shop — TIMELESS ICONIXX Beauty" },
       { name: "description", content: "Shop luxury matte lip glosses, palettes, mascara, liners, lashes, and lip kits from TIMELESS ICONIXX Beauty." },
       { property: "og:title", content: "Shop — TIMELESS ICONIXX Beauty" },

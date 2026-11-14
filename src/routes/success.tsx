@@ -12,8 +12,12 @@ export const Route = createFileRoute("/success")({
   }),
   head: () => ({
     meta: [
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
       { title: "Order Confirmed — TIMELESS ICONIXX Beauty" },
       { name: "description", content: "Thank you for your TIMELESS ICONIXX Beauty order." },
+      { property: "og:title", content: "Order Confirmed — TIMELESS ICONIXX Beauty" },
+      { property: "og:description", content: "Thank you for your TIMELESS ICONIXX Beauty order." },
       { name: "robots", content: "noindex" },
     ],
   }),

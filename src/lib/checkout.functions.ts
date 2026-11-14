@@ -1,5 +1,6 @@
 import { createServerFn } from "@tanstack/react-start";
 import { getProduct } from "@/lib/products";
+import { getProductSelection } from "@/lib/product-selection";
 
 interface CheckoutInput {
   items: Array<{ id: string; quantity: number; options?: Record<string, string> }>;
@@ -24,7 +25,7 @@ export interface SessionVerificationResult {
 
 /** Retrieve and verify a Checkout Session from Stripe server-side. */
 export const verifyCheckoutSession = createServerFn({ method: "GET" })
-  .validator((data: { sessionId?: string }) => ({
+  .inputValidator((data: { sessionId?: string }) => ({
     sessionId: typeof data?.sessionId === "string" ? data.sessionId.slice(0, 200) : null,
   }))
   .handler(async ({ data }): Promise<SessionVerificationResult> => {
@@ -89,6 +90,7 @@ export const createCheckoutSession = createServerFn({ method: "POST" })
       subtotal += unit_amount * i.quantity;
 
       const shade = i.options?.["shade"];
+      const selection = getProductSelection(product, i.options);
       const description = [product.tagline, shade ? `Shade: ${shade}` : null]
         .filter(Boolean)
         .join(" · ");
@@ -100,22 +102,10 @@ export const createCheckoutSession = createServerFn({ method: "POST" })
           currency: "usd",
           unit_amount,
           product_data: {
-            name: shade ? `${product.name} — ${shade}` : product.name,
+            name: selection.name,
             ...(description ? { description } : {}),
-            ...((shade && product.gallery?.find((g) => g.label === shade)?.image) ||
-            product.image.startsWith("http")
-              ? {
-                  images: [
-                    (shade && product.gallery?.find((g) => g.label === shade)?.image) ||
-                      product.image,
-                  ],
-                }
-              : {}),
-            metadata: {
-              product_id: product.id,
-              category: product.category,
-              ...(shade ? { shade } : {}),
-            },
+            ...(selection.image.startsWith("https://") ? { images: [selection.image] } : {}),
+            metadata: selection.metadata,
           },
         },
       };

@@ -4,6 +4,8 @@ import { SiteHeader, SiteFooter } from "@/components/site-header";
 export const Route = createFileRoute("/about")({
   head: () => ({
     meta: [
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
       { title: "About — TIMELESS ICONIXX Beauty by Shara Frison" },
       { name: "description", content: "The story behind TIMELESS ICONIXX Beauty and its founder & CEO Shara Frison — soft luxury cosmetics made for every woman." },
       { property: "og:title", content: "About — TIMELESS ICONIXX Beauty" },

@@ -4,11 +4,15 @@ import { SiteHeader, SiteFooter } from "@/components/site-header";
 export const Route = createFileRoute("/cancel")({
   head: () => ({
     meta: [
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
       { title: "Checkout Cancelled — TIMELESS ICONIXX Beauty" },
       {
         name: "description",
         content: "Your checkout was cancelled and your bag is still waiting for you.",
       },
+      { property: "og:title", content: "Checkout Cancelled — TIMELESS ICONIXX Beauty" },
+      { property: "og:description", content: "Your checkout was cancelled and your bag is still waiting for you." },
       { name: "robots", content: "noindex" },
     ],
   }),

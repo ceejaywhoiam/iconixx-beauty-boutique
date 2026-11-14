@@ -5,12 +5,17 @@ import { SiteHeader, SiteFooter } from "@/components/site-header";
 import { useCart } from "@/lib/cart";
 import { createCheckoutSession } from "@/lib/checkout.functions";
 import { colorMap } from "@/lib/colors";
+import { getProductSelection } from "@/lib/product-selection";
 
 export const Route = createFileRoute("/cart")({
   head: () => ({
     meta: [
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
       { title: "Your Bag — TIMELESS ICONIXX Beauty" },
       { name: "description", content: "Review your soft luxury cosmetics and check out securely." },
+      { property: "og:title", content: "Your Bag — TIMELESS ICONIXX Beauty" },
+      { property: "og:description", content: "Review your soft luxury cosmetics and check out securely." },
       { name: "robots", content: "noindex" },
     ],
   }),
@@ -83,12 +88,8 @@ function CartPage() {
                     className="block h-24 w-24 flex-shrink-0 overflow-hidden bg-blush/30"
                   >
                     <img
-                      src={
-                        (l.options?.shade &&
-                          l.product.gallery?.find((g) => g.label === l.options!.shade)?.image) ||
-                        l.product.image
-                      }
-                      alt={l.options?.shade ? `${l.product.name} — ${l.options.shade}` : l.product.name}
+                      src={getProductSelection(l.product, l.options).image}
+                      alt={getProductSelection(l.product, l.options).name}
                       className="h-full w-full object-contain p-2"
                     />
                   </Link>

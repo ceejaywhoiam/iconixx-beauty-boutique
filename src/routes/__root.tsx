@@ -6,6 +6,7 @@ import {
   useRouter,
   HeadContent,
   Scripts,
+  type ErrorComponentProps,
 } from "@tanstack/react-router";
 import { useEffect, type ReactNode } from "react";
 
@@ -39,7 +40,7 @@ function NotFoundComponent() {
   );
 }
 
-function ErrorComponent({ error, reset }: { error: Error; reset: () => void }) {
+function ErrorComponent({ error, reset }: ErrorComponentProps) {
   console.error(error);
   const router = useRouter();
   useEffect(() => {
@@ -83,8 +84,6 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:title", content: "TIMELESS ICONIXX Beauty — Soft Luxury Cosmetics by Shara Frison" },
       { name: "twitter:description", content: "Discover TIMELESS ICONIXX Beauty: luxury matte lip glosses, palettes, mascara, and liners crafted for soft glam and boss-girl confidence." },
-      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/b5be9385-f18e-4d76-8649-f4fe798a5d04/id-preview-6548a27d--1a7d0ebc-e057-45dd-922c-16db4376c962.lovable.app-1785036974048.png" },
-      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/b5be9385-f18e-4d76-8649-f4fe798a5d04/id-preview-6548a27d--1a7d0ebc-e057-45dd-922c-16db4376c962.lovable.app-1785036974048.png" },
     ],
     links: [
       { rel: "stylesheet", href: appCss },
