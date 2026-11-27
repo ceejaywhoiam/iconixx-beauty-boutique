@@ -15,7 +15,10 @@ export const Route = createFileRoute("/cart")({
       { title: "Your Bag — TIMELESS ICONIXX Beauty" },
       { name: "description", content: "Review your soft luxury cosmetics and check out securely." },
       { property: "og:title", content: "Your Bag — TIMELESS ICONIXX Beauty" },
-      { property: "og:description", content: "Review your soft luxury cosmetics and check out securely." },
+      {
+        property: "og:description",
+        content: "Review your soft luxury cosmetics and check out securely.",
+      },
       { name: "robots", content: "noindex" },
     ],
   }),

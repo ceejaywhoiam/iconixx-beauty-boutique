@@ -8,9 +8,17 @@ export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
       { title: "TIMELESS ICONIXX Beauty — Luxury Cosmetics" },
-      { name: "description", content: "Shop TIMELESS ICONIXX Beauty glosses, palettes, mascara, and lip kits by Shara Frison." },
+      {
+        name: "description",
+        content:
+          "Shop TIMELESS ICONIXX Beauty glosses, palettes, mascara, and lip kits by Shara Frison.",
+      },
       { property: "og:title", content: "TIMELESS ICONIXX Beauty — Luxury Cosmetics" },
-      { property: "og:description", content: "Discover luxury cosmetics by Shara Frison, from lip glosses to palettes and mascara." },
+      {
+        property: "og:description",
+        content:
+          "Discover luxury cosmetics by Shara Frison, from lip glosses to palettes and mascara.",
+      },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
@@ -108,9 +116,7 @@ function Index() {
             )}
           </div>
           <div className="w-full space-y-8 md:w-1/2">
-            <div className="text-[10px] uppercase tracking-[0.35em] text-blush">
-              Exclusive Drop
-            </div>
+            <div className="text-[10px] uppercase tracking-[0.35em] text-blush">Exclusive Drop</div>
             <h2
               className="text-4xl leading-tight md:text-6xl"
               style={{ fontFamily: "'DM Serif Display', serif" }}
@@ -118,9 +124,8 @@ function Index() {
               The Matte Series Evolution
             </h2>
             <p className="max-w-lg text-base font-light leading-relaxed text-primary-foreground/80 md:text-lg">
-              Five signature shades, engineered for velvet-matte wear from
-              baby-pink brunch to rich mauve after hours. Highly pigmented,
-              featherlight, made for every tone.
+              Five signature shades, engineered for velvet-matte wear from baby-pink brunch to rich
+              mauve after hours. Highly pigmented, featherlight, made for every tone.
             </p>
             <Link
               to="/shop"
@@ -135,12 +140,7 @@ function Index() {
         <div className="mx-auto mt-20 max-w-7xl px-6 md:px-8">
           <div className="grid grid-cols-2 gap-x-6 gap-y-10 sm:grid-cols-3 lg:grid-cols-5">
             {glosses.map((p) => (
-              <Link
-                key={p.id}
-                to="/product/$id"
-                params={{ id: p.id }}
-                className="group block"
-              >
+              <Link key={p.id} to="/product/$id" params={{ id: p.id }} className="group block">
                 <div className="aspect-[4/5] overflow-hidden bg-blush/40">
                   <img
                     src={p.image}
@@ -152,9 +152,7 @@ function Index() {
                 <div className="mt-4 text-[10px] uppercase tracking-[0.25em] text-primary-foreground">
                   {p.name}
                 </div>
-                <div className="mt-1 text-sm font-light text-blush">
-                  ${p.price.toFixed(2)}
-                </div>
+                <div className="mt-1 text-sm font-light text-blush">${p.price.toFixed(2)}</div>
               </Link>
             ))}
           </div>
@@ -178,8 +176,8 @@ function Index() {
             className="text-3xl leading-tight text-foreground md:text-5xl"
             style={{ fontFamily: "'DM Serif Display', serif" }}
           >
-            Beauty is an expression of self-love — a signature we wear every
-            single day. We don't just sell cosmetics; we empower confidence.
+            Beauty is an expression of self-love — a signature we wear every single day. We don't
+            just sell cosmetics; we empower confidence.
           </blockquote>
           <div className="flex flex-col items-center space-y-2">
             <cite className="not-italic text-sm font-medium uppercase tracking-[0.3em] text-primary">

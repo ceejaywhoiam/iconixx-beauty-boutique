@@ -15,7 +15,12 @@ export const Route = createFileRoute("/product/$id")({
   },
   head: ({ loaderData }) => {
     if (!loaderData) {
-      return { meta: [{ title: "Product not found — TIMELESS ICONIXX Beauty" }, { name: "robots", content: "noindex" }] };
+      return {
+        meta: [
+          { title: "Product not found — TIMELESS ICONIXX Beauty" },
+          { name: "robots", content: "noindex" },
+        ],
+      };
     }
     const { product } = loaderData;
     return {
@@ -41,7 +46,10 @@ function NotFound() {
       <SiteHeader />
       <div className="mx-auto max-w-3xl px-6 py-32 text-center">
         <h1 className="text-display text-4xl text-primary">Product not found</h1>
-        <Link to="/shop" className="mt-8 inline-flex rounded-full bg-primary px-6 py-3 text-xs tracking-luxe text-primary-foreground hover:bg-primary/90">
+        <Link
+          to="/shop"
+          className="mt-8 inline-flex rounded-full bg-primary px-6 py-3 text-xs tracking-luxe text-primary-foreground hover:bg-primary/90"
+        >
           Back to shop
         </Link>
       </div>
@@ -52,7 +60,9 @@ function NotFound() {
 
 function ProductPage() {
   const { product } = Route.useLoaderData();
-  const related = products.filter((p) => p.category === product.category && p.id !== product.id).slice(0, 3);
+  const related = products
+    .filter((p) => p.category === product.category && p.id !== product.id)
+    .slice(0, 3);
   const inStock = product.quantity > 0;
   const low = product.quantity <= 10;
   const { addItem, setOpen } = useCart();
@@ -72,13 +82,14 @@ function ProductPage() {
     if (goToCart) router.navigate({ to: "/cart" });
   }
 
-
   return (
     <div className="min-h-screen bg-background">
       <SiteHeader />
       <section className="mx-auto max-w-7xl px-6 py-12">
         <div className="text-xs text-muted-foreground">
-          <Link to="/shop" className="hover:text-primary">Shop</Link>
+          <Link to="/shop" className="hover:text-primary">
+            Shop
+          </Link>
           <span className="mx-2">/</span>
           <span>{product.category}</span>
           <span className="mx-2">/</span>
@@ -119,11 +130,18 @@ function ProductPage() {
             <div className="mt-6 flex items-center gap-4">
               <div className="text-display text-3xl text-primary">${product.price.toFixed(2)}</div>
               {inStock ? (
-                <span className={"rounded-full px-3 py-1 text-[0.65rem] tracking-luxe " + (low ? "bg-accent text-accent-foreground" : "bg-secondary text-primary")}>
+                <span
+                  className={
+                    "rounded-full px-3 py-1 text-[0.65rem] tracking-luxe " +
+                    (low ? "bg-accent text-accent-foreground" : "bg-secondary text-primary")
+                  }
+                >
                   {low ? `Only ${product.quantity} left` : "In stock"}
                 </span>
               ) : (
-                <span className="rounded-full bg-destructive/10 px-3 py-1 text-[0.65rem] tracking-luxe text-destructive">Sold out</span>
+                <span className="rounded-full bg-destructive/10 px-3 py-1 text-[0.65rem] tracking-luxe text-destructive">
+                  Sold out
+                </span>
               )}
             </div>
             {product.quantityNote && (
@@ -147,7 +165,10 @@ function ProductPage() {
               <div className="mt-8 border-t border-border pt-6">
                 <div className="flex items-center justify-between">
                   <div className="text-[10px] uppercase tracking-[0.25em] text-primary">
-                    Shade{shade ? ":" : ""} <span className="text-muted-foreground normal-case tracking-normal">{shade ?? ""}</span>
+                    Shade{shade ? ":" : ""}{" "}
+                    <span className="text-muted-foreground normal-case tracking-normal">
+                      {shade ?? ""}
+                    </span>
                   </div>
                   {!shade && (
                     <span className="text-[11px] text-muted-foreground">Please select a shade</span>
@@ -202,7 +223,10 @@ function ProductPage() {
               >
                 Buy now
               </button>
-              <Link to="/shop" className="rounded-full border border-primary/30 px-8 py-3 text-xs tracking-luxe text-primary hover:bg-primary hover:text-primary-foreground">
+              <Link
+                to="/shop"
+                className="rounded-full border border-primary/30 px-8 py-3 text-xs tracking-luxe text-primary hover:bg-primary hover:text-primary-foreground"
+              >
                 Continue shopping
               </Link>
             </div>
@@ -212,9 +236,13 @@ function ProductPage() {
         {related.length > 0 && (
           <div className="mt-24">
             <div className="tracking-luxe text-accent">You may also love</div>
-            <h2 className="mt-2 text-display text-3xl text-primary">More from {product.category}</h2>
+            <h2 className="mt-2 text-display text-3xl text-primary">
+              More from {product.category}
+            </h2>
             <div className="mt-8 grid gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3">
-              {related.map((p) => <ProductCard key={p.id} product={p} />)}
+              {related.map((p) => (
+                <ProductCard key={p.id} product={p} />
+              ))}
             </div>
           </div>
         )}

@@ -77,7 +77,9 @@ function SuccessPage() {
 
         {paid && data && (
           <div className="mt-12 border border-border/60 bg-blush/20 p-8 text-left">
-            <div className="text-[10px] uppercase tracking-[0.35em] text-primary">Order Summary</div>
+            <div className="text-[10px] uppercase tracking-[0.35em] text-primary">
+              Order Summary
+            </div>
             <ul className="mt-6 divide-y divide-border/60">
               {data.lineItems.map((li, idx) => (
                 <li key={idx} className="flex justify-between gap-4 py-3 text-sm">

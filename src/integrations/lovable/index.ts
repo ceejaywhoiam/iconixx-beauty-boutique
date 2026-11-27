@@ -2,7 +2,8 @@
 
 // If Lovable injects a runtime object, surface it here; otherwise provide a safe
 // fallback to avoid build-time/runtime errors.
-const _maybeLovable = (globalThis as any).__lovable ?? {};
+const _maybeLovable =
+  (globalThis as typeof globalThis & { __lovable?: Record<string, unknown> }).__lovable ?? {};
 
 export const lovable: Record<string, unknown> = _maybeLovable;
 export default lovable;

@@ -10,10 +10,7 @@ export function CartDrawer() {
 
   return (
     <Sheet open={isOpen} onOpenChange={setOpen}>
-      <SheetContent
-        side="right"
-        className="flex w-full flex-col gap-0 p-0 sm:max-w-md"
-      >
+      <SheetContent side="right" className="flex w-full flex-col gap-0 p-0 sm:max-w-md">
         <div className="flex items-center justify-between border-b border-border/60 px-6 py-5">
           <SheetTitle className="text-display text-xl text-primary">
             Your Bag{count > 0 ? ` (${count})` : ""}
@@ -37,7 +34,10 @@ export function CartDrawer() {
           <>
             <ul className="flex-1 divide-y divide-border/60 overflow-y-auto px-6">
               {detailed.map((l) => (
-                <li key={`${l.product.id}-${JSON.stringify(l.options ?? {})}`} className="flex gap-4 py-5">
+                <li
+                  key={`${l.product.id}-${JSON.stringify(l.options ?? {})}`}
+                  className="flex gap-4 py-5"
+                >
                   <Link
                     to="/product/$id"
                     params={{ id: l.product.id }}
@@ -60,7 +60,9 @@ export function CartDrawer() {
                       >
                         {l.product.name}
                       </Link>
-                      <Button variant="ghost" size="icon"
+                      <Button
+                        variant="ghost"
+                        size="icon"
                         onClick={() => removeItem(l.product.id, l.options)}
                         aria-label={`Remove ${getProductSelection(l.product, l.options).name}`}
                         className="text-muted-foreground transition-colors hover:text-primary"
@@ -68,10 +70,14 @@ export function CartDrawer() {
                         <X className="h-4 w-4" />
                       </Button>
                     </div>
-                    {l.options?.shade && <p className="my-2 text-xs text-muted-foreground">Shade: {l.options.shade}</p>}
+                    {l.options?.shade && (
+                      <p className="my-2 text-xs text-muted-foreground">Shade: {l.options.shade}</p>
+                    )}
                     <div className="flex items-center justify-between">
                       <div className="flex items-center border border-border">
-                        <Button variant="ghost" size="icon"
+                        <Button
+                          variant="ghost"
+                          size="icon"
                           onClick={() => setQuantity(l.product.id, l.quantity - 1, l.options)}
                           className="px-2.5 py-1 text-sm hover:bg-blush/30"
                           aria-label="Decrease quantity"
@@ -79,9 +85,15 @@ export function CartDrawer() {
                           −
                         </Button>
                         <span className="min-w-7 text-center text-sm">{l.quantity}</span>
-                        <Button variant="ghost" size="icon"
+                        <Button
+                          variant="ghost"
+                          size="icon"
                           onClick={() =>
-                            setQuantity(l.product.id, Math.min(l.product.quantity, l.quantity + 1), l.options)
+                            setQuantity(
+                              l.product.id,
+                              Math.min(l.product.quantity, l.quantity + 1),
+                              l.options,
+                            )
                           }
                           className="px-2.5 py-1 text-sm hover:bg-blush/30"
                           aria-label="Increase quantity"

@@ -75,4 +75,3 @@ idempotently using an in-memory set of processed event IDs.
 - Handles `checkout.session.completed` — logs session and metadata.
 - Guards against duplicate delivery with an idempotency check on event IDs.
 - Returns `200 {"received":true}` on success; `400` or `500` on failure.
-

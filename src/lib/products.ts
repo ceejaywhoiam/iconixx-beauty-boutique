@@ -1,8 +1,13 @@
-const pinkDynastyImg = "https://ik.imagekit.io/jodiplease/pink-dynasty_compressed.png?updatedAt=1785590748796";
-const expensiveTasteImg = "https://ik.imagekit.io/jodiplease/expensive-taste_compressed.png?updatedAt=1785590749988";
-const richGirlImg = "https://ik.imagekit.io/jodiplease/rich-girl-energy_compressed.png?updatedAt=1785590749662";
-const firstClassKissImg = "https://ik.imagekit.io/jodiplease/first-class-kiss_compressed.png?updatedAt=1785590750953";
-const trophyWifeImg = "https://ik.imagekit.io/jodiplease/trophy-wife_compressed.png?updatedAt=1785590749918";
+const pinkDynastyImg =
+  "https://ik.imagekit.io/jodiplease/pink-dynasty_compressed.png?updatedAt=1785590748796";
+const expensiveTasteImg =
+  "https://ik.imagekit.io/jodiplease/expensive-taste_compressed.png?updatedAt=1785590749988";
+const richGirlImg =
+  "https://ik.imagekit.io/jodiplease/rich-girl-energy_compressed.png?updatedAt=1785590749662";
+const firstClassKissImg =
+  "https://ik.imagekit.io/jodiplease/first-class-kiss_compressed.png?updatedAt=1785590750953";
+const trophyWifeImg =
+  "https://ik.imagekit.io/jodiplease/trophy-wife_compressed.png?updatedAt=1785590749918";
 const ceoKissesImg = "https://ik.imagekit.io/jodiplease/ceo-kisses.png";
 const mochaLatteImg = "https://ik.imagekit.io/jodiplease/mocha-latte.png";
 const classyAndSassyImg = "https://ik.imagekit.io/jodiplease/classy-and-sassy.png";
@@ -12,12 +17,16 @@ const millionDollarMoodImg = "https://ik.imagekit.io/jodiplease/million-dollar-m
 const princessTreatmentImg = "https://ik.imagekit.io/jodiplease/princess-treatment.png";
 const pinkCityImg = "https://ik.imagekit.io/jodiplease/pink-city.png";
 const mascaraImg = "https://ik.imagekit.io/jodiplease/mascara.png";
-const nudePaletteImg = "https://ik.imagekit.io/jodiplease/timeless-palettes.png?updatedAt=1785885062923";
+const nudePaletteImg =
+  "https://ik.imagekit.io/jodiplease/timeless-palettes.png?updatedAt=1785885062923";
 const royalPaletteImg = "https://ik.imagekit.io/jodiplease/palettes.png?updatedAt=1785885062992";
 const linerImg = "https://ik.imagekit.io/jodiplease/mascara-precision.png";
-const ceoLipstickImg = "https://ik.imagekit.io/jodiplease/ceo-lip-collection_compressed.png?updatedAt=1785590745539";
-const breezeLashesImg = "https://ik.imagekit.io/jodiplease/breeze-cluster_compressed.png?updatedAt=1785590752852";
-const timelessLipKitImg = "https://ik.imagekit.io/jodiplease/timeless-beauty-kit_compressed.png?updatedAt=1785590752827";
+const ceoLipstickImg =
+  "https://ik.imagekit.io/jodiplease/ceo-lip-collection_compressed.png?updatedAt=1785590745539";
+const breezeLashesImg =
+  "https://ik.imagekit.io/jodiplease/breeze-cluster_compressed.png?updatedAt=1785590752852";
+const timelessLipKitImg =
+  "https://ik.imagekit.io/jodiplease/timeless-beauty-kit_compressed.png?updatedAt=1785590752827";
 const heroImg = "https://ik.imagekit.io/jodiplease/hero.jpg";
 
 export type Category =
@@ -28,7 +37,8 @@ export type Category =
   | "Mascara"
   | "Liner"
   | "Lashes"
-  | "Lip Kit";
+  | "Lip Kit"
+  | "LIMITED TIME BUNDLE";
 
 export interface GalleryShade {
   label: string;
@@ -372,9 +382,18 @@ export const products: Product[] = [
     image: ceoLipstickImg,
     colors: ["Nude Blush Millionaire", "Purple Passenger Princess", "Peach Impulsive"],
     gallery: [
-      { label: "Nude Blush Millionaire", image: "https://ik.imagekit.io/jodiplease/nude-blush.png?updatedAt=1786642316463" },
-      { label: "Purple Passenger Princess", image: "https://ik.imagekit.io/jodiplease/purple-passenger.png?updatedAt=1786642314632" },
-      { label: "Peach Impulsive", image: "https://ik.imagekit.io/jodiplease/peach-impulsive.png?updatedAt=1786642314820" },
+      {
+        label: "Nude Blush Millionaire",
+        image: "https://ik.imagekit.io/jodiplease/nude-blush.png?updatedAt=1786642316463",
+      },
+      {
+        label: "Purple Passenger Princess",
+        image: "https://ik.imagekit.io/jodiplease/purple-passenger.png?updatedAt=1786642314632",
+      },
+      {
+        label: "Peach Impulsive",
+        image: "https://ik.imagekit.io/jodiplease/peach-impulsive.png?updatedAt=1786642314820",
+      },
     ],
     description:
       "The CEO Lip Collection is a signature trio designed for the woman who walks in confidence and leaves a lasting impression. Ultra-smooth, velvet-matte formulas deliver rich pigment and comfortable, non-drying wear across three signature shades, all in luxury rose gold casing.",
@@ -395,11 +414,7 @@ export const products: Product[] = [
     image: "https://ik.imagekit.io/jodiplease/IMG_2758.png?updatedAt=1794631494223",
     description:
       "CEO Kisses is a luxurious Iconixx Beauty lipstick designed for the woman who walks in confidence and leaves a lasting impression. Smooth, comfortable wear with rich color payoff.",
-    highlights: [
-      "Rich, pigmented color",
-      "Smooth, comfortable wear",
-      "Luxury packaging",
-    ],
+    highlights: ["Rich, pigmented color", "Smooth, comfortable wear", "Luxury packaging"],
   },
   {
     id: "breeze-cluster-lashes-kit",
