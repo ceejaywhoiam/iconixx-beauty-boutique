@@ -1,8 +1,11 @@
 import { Link } from "@tanstack/react-router";
 import type { Product } from "@/lib/products";
 import { colorMap } from "@/lib/colors";
+import { getSalePrice } from "@/lib/pricing";
 
 export function ProductCard({ product }: { product: Product }) {
+  const salePrice = getSalePrice(product.price);
+  const isDiscounted = salePrice < product.price;
   const badge =
     product.quantity === 0
       ? { text: "Coming soon", tone: "muted" as const }
@@ -40,7 +43,12 @@ export function ProductCard({ product }: { product: Product }) {
         {product.tagline && (
           <p className="mt-1 text-[11px] text-muted-foreground">{product.tagline}</p>
         )}
-        <p className="mt-3 text-lg font-light text-primary">${product.price.toFixed(2)}</p>
+        <p className="mt-3 flex items-baseline gap-2 text-lg font-light text-primary">
+          ${salePrice.toFixed(2)}
+          {isDiscounted && (
+            <del className="text-sm text-muted-foreground">${product.price.toFixed(2)}</del>
+          )}
+        </p>
 
         {/* Shade selector: render swatches for any product that defines a colors array */}
         {product.colors && product.colors.length > 0 && (

@@ -8,6 +8,8 @@ import {
   type ReactNode,
 } from "react";
 import { getProduct, type Product } from "@/lib/products";
+import { getSalePrice } from "@/lib/pricing";
+import { useSaleActive } from "@/lib/use-sale-status";
 
 export interface CartItem {
   id: string;
@@ -40,6 +42,7 @@ export function CartProvider({ children }: { children: ReactNode }) {
   const [items, setItems] = useState<CartItem[]>([]);
   const [isOpen, setOpen] = useState(false);
   const [hydrated, setHydrated] = useState(false);
+  const saleActive = useSaleActive();
 
   useEffect(() => {
     try {
@@ -111,7 +114,7 @@ export function CartProvider({ children }: { children: ReactNode }) {
         {
           product,
           quantity: i.quantity,
-          lineTotal: product.price * i.quantity,
+          lineTotal: getSalePrice(product.price, saleActive) * i.quantity,
           options: i.options,
         },
       ];
@@ -130,7 +133,7 @@ export function CartProvider({ children }: { children: ReactNode }) {
       isOpen,
       setOpen,
     };
-  }, [items, addItem, removeItem, setQuantity, clear, isOpen]);
+  }, [items, addItem, removeItem, setQuantity, clear, isOpen, saleActive]);
 
   return <CartContext.Provider value={value}>{children}</CartContext.Provider>;
 }

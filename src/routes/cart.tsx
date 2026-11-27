@@ -27,6 +27,11 @@ export const Route = createFileRoute("/cart")({
 
 function CartPage() {
   const { detailed, subtotal, setQuantity, removeItem, count } = useCart();
+  const originalSubtotal = detailed.reduce(
+    (total, line) => total + line.product.price * line.quantity,
+    0,
+  );
+  const savings = originalSubtotal - subtotal;
   const checkoutFn = useServerFn(createCheckoutSession);
   const router = useRouter();
   const [loading, setLoading] = useState(false);
@@ -151,7 +156,14 @@ function CartPage() {
                       </button>
                     </div>
                   </div>
-                  <div className="text-right text-sm text-primary">${l.lineTotal.toFixed(2)}</div>
+                  <div className="text-right text-sm text-primary">
+                    {savings > 0 && (
+                      <del className="mr-2 text-xs text-muted-foreground">
+                        ${(l.product.price * l.quantity).toFixed(2)}
+                      </del>
+                    )}
+                    ${l.lineTotal.toFixed(2)}
+                  </div>
                 </li>
               ))}
             </ul>
@@ -162,6 +174,12 @@ function CartPage() {
                 <span>Subtotal</span>
                 <span>${subtotal.toFixed(2)}</span>
               </div>
+              {savings > 0 && (
+                <div className="mt-2 flex justify-between text-xs text-primary">
+                  <span>10% sale savings</span>
+                  <span>−${savings.toFixed(2)}</span>
+                </div>
+              )}
               <div className="mt-2 flex justify-between text-xs text-muted-foreground">
                 <span>Shipping & tax</span>
                 <span>Calculated at checkout</span>

@@ -6,6 +6,7 @@ import { useCart } from "@/lib/cart";
 import { ProductGallery } from "@/components/product-gallery";
 import { colorMap } from "@/lib/colors";
 import { useState } from "react";
+import { getSalePrice } from "@/lib/pricing";
 
 export const Route = createFileRoute("/product/$id")({
   loader: ({ params }) => {
@@ -65,6 +66,8 @@ function ProductPage() {
     .slice(0, 3);
   const inStock = product.quantity > 0;
   const low = product.quantity <= 10;
+  const salePrice = getSalePrice(product.price);
+  const isDiscounted = salePrice < product.price;
   const { addItem, setOpen } = useCart();
   const router = useRouter();
   const shades = product.gallery ?? [];
@@ -128,7 +131,12 @@ function ProductPage() {
             )}
 
             <div className="mt-6 flex items-center gap-4">
-              <div className="text-display text-3xl text-primary">${product.price.toFixed(2)}</div>
+              <div className="flex items-baseline gap-3">
+                <span className="text-display text-3xl text-primary">${salePrice.toFixed(2)}</span>
+                {isDiscounted && (
+                  <del className="text-base text-muted-foreground">${product.price.toFixed(2)}</del>
+                )}
+              </div>
               {inStock ? (
                 <span
                   className={
@@ -214,7 +222,7 @@ function ProductPage() {
                 disabled={!inStock}
                 className="rounded-full bg-primary px-8 py-3 text-xs tracking-luxe text-primary-foreground transition hover:bg-primary/90 disabled:opacity-40"
               >
-                Add to Bag — ${product.price.toFixed(2)}
+                Add to Bag — ${salePrice.toFixed(2)}
               </button>
               <button
                 onClick={() => handleAdd(true)}

@@ -7,6 +7,11 @@ import { Button } from "@/components/ui/button";
 
 export function CartDrawer() {
   const { detailed, subtotal, count, setQuantity, removeItem, isOpen, setOpen } = useCart();
+  const originalSubtotal = detailed.reduce(
+    (total, line) => total + line.product.price * line.quantity,
+    0,
+  );
+  const savings = originalSubtotal - subtotal;
 
   return (
     <Sheet open={isOpen} onOpenChange={setOpen}>
@@ -101,7 +106,14 @@ export function CartDrawer() {
                           +
                         </Button>
                       </div>
-                      <span className="text-sm text-primary">${l.lineTotal.toFixed(2)}</span>
+                      <span className="text-right text-sm text-primary">
+                        {savings > 0 && (
+                          <del className="mr-2 text-xs text-muted-foreground">
+                            ${(l.product.price * l.quantity).toFixed(2)}
+                          </del>
+                        )}
+                        ${l.lineTotal.toFixed(2)}
+                      </span>
                     </div>
                   </div>
                 </li>
@@ -113,6 +125,12 @@ export function CartDrawer() {
                 <span className="uppercase tracking-[0.2em] text-muted-foreground">Subtotal</span>
                 <span className="text-primary">${subtotal.toFixed(2)}</span>
               </div>
+              {savings > 0 && (
+                <div className="mt-2 flex items-center justify-between text-xs text-primary">
+                  <span>10% sale savings</span>
+                  <span>−${savings.toFixed(2)}</span>
+                </div>
+              )}
               <p className="mt-1 text-[11px] text-muted-foreground">
                 Shipping &amp; tax calculated at checkout.
               </p>

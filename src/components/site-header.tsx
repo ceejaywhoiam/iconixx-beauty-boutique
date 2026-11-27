@@ -3,6 +3,7 @@ import { Menu, ShoppingBag } from "lucide-react";
 import { useState } from "react";
 import { Sheet, SheetContent, SheetTitle, SheetTrigger } from "@/components/ui/sheet";
 import { useCart } from "@/lib/cart";
+import { useSaleActive } from "@/lib/use-sale-status";
 
 const NAV_LINKS: ReadonlyArray<{ to: string; label: string; exact?: boolean }> = [
   { to: "/", label: "Home", exact: true },
@@ -14,8 +15,17 @@ const NAV_LINKS: ReadonlyArray<{ to: string; label: string; exact?: boolean }> =
 export function SiteHeader() {
   const { count } = useCart();
   const [mobileOpen, setMobileOpen] = useState(false);
+  const saleActive = useSaleActive();
   return (
     <header className="sticky top-0 z-40 border-b border-border/50 bg-background/85 backdrop-blur-md">
+      {saleActive && (
+        <div
+          role="status"
+          className="bg-primary px-4 py-2 text-center text-[10px] font-bold uppercase tracking-[0.25em] text-primary-foreground"
+        >
+          10% OFF ALL ITEMS UNTIL 11/30
+        </div>
+      )}
       <div className="mx-auto grid max-w-7xl grid-cols-[auto_minmax(0,1fr)_auto] items-center gap-4 px-6 py-5 md:grid-cols-3">
         <div className="flex items-center md:hidden">
           <Sheet open={mobileOpen} onOpenChange={setMobileOpen}>
