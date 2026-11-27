@@ -8,7 +8,10 @@ export const Route = createFileRoute("/contact")({
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
       { title: "Contact — TIMELESS ICONIXX Beauty" },
-      { name: "description", content: "Get in touch with TIMELESS ICONIXX Beauty for orders, press, or collaborations." },
+      {
+        name: "description",
+        content: "Get in touch with TIMELESS ICONIXX Beauty for orders, press, or collaborations.",
+      },
       { property: "og:title", content: "Contact — TIMELESS ICONIXX Beauty" },
       { property: "og:description", content: "Reach out to the TIMELESS ICONIXX Beauty team." },
     ],
@@ -38,14 +41,34 @@ function Contact() {
         ) : (
           <form
             className="mt-10 grid gap-4"
-            onSubmit={(e) => { e.preventDefault(); setSent(true); }}
+            onSubmit={(e) => {
+              e.preventDefault();
+              setSent(true);
+            }}
           >
             <div className="grid gap-4 sm:grid-cols-2">
-              <input required placeholder="Name" className="rounded-full border border-border bg-background px-5 py-3 text-sm outline-none focus:border-accent" />
-              <input required type="email" placeholder="Email" className="rounded-full border border-border bg-background px-5 py-3 text-sm outline-none focus:border-accent" />
+              <input
+                required
+                placeholder="Name"
+                className="rounded-full border border-border bg-background px-5 py-3 text-sm outline-none focus:border-accent"
+              />
+              <input
+                required
+                type="email"
+                placeholder="Email"
+                className="rounded-full border border-border bg-background px-5 py-3 text-sm outline-none focus:border-accent"
+              />
             </div>
-            <input placeholder="Subject" className="rounded-full border border-border bg-background px-5 py-3 text-sm outline-none focus:border-accent" />
-            <textarea required rows={6} placeholder="Your message" className="rounded-2xl border border-border bg-background px-5 py-4 text-sm outline-none focus:border-accent" />
+            <input
+              placeholder="Subject"
+              className="rounded-full border border-border bg-background px-5 py-3 text-sm outline-none focus:border-accent"
+            />
+            <textarea
+              required
+              rows={6}
+              placeholder="Your message"
+              className="rounded-2xl border border-border bg-background px-5 py-4 text-sm outline-none focus:border-accent"
+            />
             <button className="justify-self-start rounded-full bg-primary px-7 py-3 text-xs tracking-luxe text-primary-foreground hover:bg-primary/90">
               Send Message
             </button>

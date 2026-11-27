@@ -82,7 +82,12 @@ export function ProductGallery({
               (idx === i ? "border-primary" : "border-border hover:border-primary/50")
             }
           >
-            <img src={s.image} alt={s.label} loading="lazy" className="h-full w-full object-contain" />
+            <img
+              src={s.image}
+              alt={s.label}
+              loading="lazy"
+              className="h-full w-full object-contain"
+            />
           </button>
         ))}
       </div>

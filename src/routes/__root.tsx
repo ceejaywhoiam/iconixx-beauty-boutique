@@ -51,17 +51,21 @@ function ErrorComponent({ error, reset }: ErrorComponentProps) {
     <div className="flex min-h-screen items-center justify-center bg-background px-4">
       <div className="max-w-md text-center">
         <h1 className="text-display text-2xl text-primary">Something went wrong</h1>
-        <p className="mt-2 text-sm text-muted-foreground">
-          Please try again or head back home.
-        </p>
+        <p className="mt-2 text-sm text-muted-foreground">Please try again or head back home.</p>
         <div className="mt-6 flex flex-wrap justify-center gap-2">
           <button
-            onClick={() => { router.invalidate(); reset(); }}
+            onClick={() => {
+              router.invalidate();
+              reset();
+            }}
             className="rounded-full bg-primary px-5 py-2 text-xs tracking-luxe text-primary-foreground hover:bg-primary/90"
           >
             Try again
           </button>
-          <a href="/" className="rounded-full border border-border px-5 py-2 text-xs tracking-luxe hover:bg-accent hover:text-accent-foreground">
+          <a
+            href="/"
+            className="rounded-full border border-border px-5 py-2 text-xs tracking-luxe hover:bg-accent hover:text-accent-foreground"
+          >
             Go home
           </a>
         </div>
@@ -76,21 +80,42 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
       { title: "TIMELESS ICONIXX Beauty — Soft Luxury Cosmetics by Shara Frison" },
-      { name: "description", content: "Discover TIMELESS ICONIXX Beauty: luxury matte lip glosses, palettes, mascara, and liners crafted for soft glam and boss-girl confidence." },
+      {
+        name: "description",
+        content:
+          "Discover TIMELESS ICONIXX Beauty: luxury matte lip glosses, palettes, mascara, and liners crafted for soft glam and boss-girl confidence.",
+      },
       { name: "author", content: "TIMELESS ICONIXX Beauty" },
-      { property: "og:title", content: "TIMELESS ICONIXX Beauty — Soft Luxury Cosmetics by Shara Frison" },
-      { property: "og:description", content: "Discover TIMELESS ICONIXX Beauty: luxury matte lip glosses, palettes, mascara, and liners crafted for soft glam and boss-girl confidence." },
+      {
+        property: "og:title",
+        content: "TIMELESS ICONIXX Beauty — Soft Luxury Cosmetics by Shara Frison",
+      },
+      {
+        property: "og:description",
+        content:
+          "Discover TIMELESS ICONIXX Beauty: luxury matte lip glosses, palettes, mascara, and liners crafted for soft glam and boss-girl confidence.",
+      },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "TIMELESS ICONIXX Beauty — Soft Luxury Cosmetics by Shara Frison" },
-      { name: "twitter:description", content: "Discover TIMELESS ICONIXX Beauty: luxury matte lip glosses, palettes, mascara, and liners crafted for soft glam and boss-girl confidence." },
+      {
+        name: "twitter:title",
+        content: "TIMELESS ICONIXX Beauty — Soft Luxury Cosmetics by Shara Frison",
+      },
+      {
+        name: "twitter:description",
+        content:
+          "Discover TIMELESS ICONIXX Beauty: luxury matte lip glosses, palettes, mascara, and liners crafted for soft glam and boss-girl confidence.",
+      },
     ],
     links: [
       { rel: "stylesheet", href: appCss },
       { rel: "icon", href: "/favicon.ico", type: "image/x-icon" },
       { rel: "preconnect", href: "https://fonts.googleapis.com" },
       { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
-      { rel: "stylesheet", href: "https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Fira+Sans:wght@300;400;500;600;700&display=swap" },
+      {
+        rel: "stylesheet",
+        href: "https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Fira+Sans:wght@300;400;500;600;700&display=swap",
+      },
     ],
   }),
   shellComponent: RootShell,

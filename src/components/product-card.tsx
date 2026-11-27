@@ -10,11 +10,7 @@ export function ProductCard({ product }: { product: Product }) {
         ? { text: "Low stock", tone: "accent" as const }
         : { text: product.category, tone: "category" as const };
   return (
-    <Link
-      to="/product/$id"
-      params={{ id: product.id }}
-      className="group block"
-    >
+    <Link to="/product/$id" params={{ id: product.id }} className="group block">
       <div className="relative aspect-[4/5] overflow-hidden bg-blush/60 flex items-center justify-center">
         <img
           src={product.image}
@@ -49,7 +45,9 @@ export function ProductCard({ product }: { product: Product }) {
         {/* Shade selector: render swatches for any product that defines a colors array */}
         {product.colors && product.colors.length > 0 && (
           <div className="mt-3 flex items-center gap-3">
-            <div className="text-[10px] uppercase tracking-[0.25em] text-muted-foreground">Shades</div>
+            <div className="text-[10px] uppercase tracking-[0.25em] text-muted-foreground">
+              Shades
+            </div>
 
             <div className="flex items-center gap-2">
               {product.colors.map((c) => (
@@ -58,7 +56,7 @@ export function ProductCard({ product }: { product: Product }) {
                   title={`${c} — ${colorMap[c] ?? ""}`}
                   aria-label={c}
                   className="inline-block h-4 w-4 rounded-full border border-border shadow-sm"
-                  style={{ backgroundColor: colorMap[c] ?? 'transparent' }}
+                  style={{ backgroundColor: colorMap[c] ?? "transparent" }}
                 />
               ))}
             </div>

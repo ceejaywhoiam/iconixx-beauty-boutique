@@ -48,9 +48,7 @@ export function SiteHeader() {
         </div>
 
         <Link to="/" className="flex min-w-0 flex-col leading-none md:justify-self-start">
-          <span className="text-display truncate text-2xl text-primary">
-            TIMELESS ICONIXX
-          </span>
+          <span className="text-display truncate text-2xl text-primary">TIMELESS ICONIXX</span>
           <span className="tracking-[0.35em] text-[10px] uppercase text-accent">Beauty</span>
         </Link>
         <nav className="hidden items-center justify-center gap-10 text-[11px] uppercase tracking-[0.25em] md:flex">
@@ -98,20 +96,34 @@ export function SiteFooter() {
           </div>
           <div className="mt-1 text-[10px] uppercase tracking-[0.35em] text-accent">Beauty</div>
           <p className="mt-4 max-w-xs text-sm font-light leading-relaxed text-muted-foreground">
-            Soft luxury cosmetics for the woman who walks in confidence.
-            Founded by CEO Shara Frison.
+            Soft luxury cosmetics for the woman who walks in confidence. Founded by CEO Shara
+            Frison.
           </p>
         </div>
         <div>
           <div className="text-[10px] uppercase tracking-[0.35em] text-primary">Explore</div>
           <ul className="mt-6 space-y-3 text-sm">
-            <li><Link to="/shop" className="hover:text-primary">Shop All</Link></li>
-            <li><Link to="/about" className="hover:text-primary">Our Story</Link></li>
-            <li><Link to="/contact" className="hover:text-primary">Contact</Link></li>
+            <li>
+              <Link to="/shop" className="hover:text-primary">
+                Shop All
+              </Link>
+            </li>
+            <li>
+              <Link to="/about" className="hover:text-primary">
+                Our Story
+              </Link>
+            </li>
+            <li>
+              <Link to="/contact" className="hover:text-primary">
+                Contact
+              </Link>
+            </li>
           </ul>
         </div>
         <div>
-          <div className="text-[10px] uppercase tracking-[0.35em] text-primary">The Timeless Iconixx List</div>
+          <div className="text-[10px] uppercase tracking-[0.35em] text-primary">
+            The Timeless Iconixx List
+          </div>
           <p className="mt-6 text-sm font-light text-muted-foreground">
             Drops, restocks, and soft-luxury moments in your inbox.
           </p>

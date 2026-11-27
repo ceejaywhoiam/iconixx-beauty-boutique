@@ -18,7 +18,11 @@ describe("selected mascara shade", () => {
       if (!product) throw new Error("Missing mascara product");
       const selection = getProductSelection(product, { shade });
       assert.equal(selection.name, `The Timeless Collection — ${shade}`);
-      assert.deepEqual(selection.metadata, { product_id: "timeless-mascara", category: "Mascara", shade });
+      assert.deepEqual(selection.metadata, {
+        product_id: "timeless-mascara",
+        category: "Mascara",
+        shade,
+      });
     });
   }
 });

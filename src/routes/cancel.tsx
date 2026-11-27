@@ -12,7 +12,10 @@ export const Route = createFileRoute("/cancel")({
         content: "Your checkout was cancelled and your bag is still waiting for you.",
       },
       { property: "og:title", content: "Checkout Cancelled — TIMELESS ICONIXX Beauty" },
-      { property: "og:description", content: "Your checkout was cancelled and your bag is still waiting for you." },
+      {
+        property: "og:description",
+        content: "Your checkout was cancelled and your bag is still waiting for you.",
+      },
       { name: "robots", content: "noindex" },
     ],
   }),

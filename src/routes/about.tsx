@@ -7,9 +7,16 @@ export const Route = createFileRoute("/about")({
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
       { title: "About — TIMELESS ICONIXX Beauty by Shara Frison" },
-      { name: "description", content: "The story behind TIMELESS ICONIXX Beauty and its founder & CEO Shara Frison — soft luxury cosmetics made for every woman." },
+      {
+        name: "description",
+        content:
+          "The story behind TIMELESS ICONIXX Beauty and its founder & CEO Shara Frison — soft luxury cosmetics made for every woman.",
+      },
       { property: "og:title", content: "About — TIMELESS ICONIXX Beauty" },
-      { property: "og:description", content: "The story behind TIMELESS ICONIXX Beauty and CEO Shara Frison." },
+      {
+        property: "og:description",
+        content: "The story behind TIMELESS ICONIXX Beauty and CEO Shara Frison.",
+      },
     ],
   }),
   component: About,
@@ -25,22 +32,24 @@ function About() {
           Founded on confidence.
         </h1>
         <p className="mt-8 text-lg leading-relaxed text-foreground/80">
-          TIMELESS ICONIXX Beauty was created by <span className="text-primary">Shara Frison</span> — a
-          founder who believes beauty should feel like a signature, not a costume. Every
-          shade, every finish, every detail is designed for the woman who walks in confidence
-          and leaves a lasting impression.
+          TIMELESS ICONIXX Beauty was created by <span className="text-primary">Shara Frison</span>{" "}
+          — a founder who believes beauty should feel like a signature, not a costume. Every shade,
+          every finish, every detail is designed for the woman who walks in confidence and leaves a
+          lasting impression.
         </p>
         <p className="mt-6 leading-relaxed text-foreground/80">
-          From velvet-matte lip glosses to buttery neutral palettes and precision liners,
-          TIMELESS ICONIXX is soft luxury made accessible — highly pigmented, cruelty-free, and
-          beautiful on every skin tone.
+          From velvet-matte lip glosses to buttery neutral palettes and precision liners, TIMELESS
+          ICONIXX is soft luxury made accessible — highly pigmented, cruelty-free, and beautiful on
+          every skin tone.
         </p>
 
         <div className="mt-16 grid gap-6 border-t border-border pt-12 sm:grid-cols-3">
           <div>
             <div className="text-display text-3xl text-accent">Soft</div>
             <div className="tracking-luxe mt-1">Luxury</div>
-            <p className="mt-2 text-sm text-muted-foreground">Feminine, elegant, timeless finishes.</p>
+            <p className="mt-2 text-sm text-muted-foreground">
+              Feminine, elegant, timeless finishes.
+            </p>
           </div>
           <div>
             <div className="text-display text-3xl text-accent">Bold</div>
@@ -50,20 +59,25 @@ function About() {
           <div>
             <div className="text-display text-3xl text-accent">Made</div>
             <div className="tracking-luxe mt-1">For Every Tone</div>
-            <p className="mt-2 text-sm text-muted-foreground">Inclusive shades. Cruelty-free formulas.</p>
+            <p className="mt-2 text-sm text-muted-foreground">
+              Inclusive shades. Cruelty-free formulas.
+            </p>
           </div>
         </div>
 
         <div className="mt-16 rounded-2xl bg-secondary/60 p-10 text-center">
           <p className="text-display text-2xl leading-snug text-primary md:text-3xl">
-            "I built TIMELESS ICONIXX for the girl who knows her worth — the one who walks in
-            softly and leaves everyone remembering her."
+            "I built TIMELESS ICONIXX for the girl who knows her worth — the one who walks in softly
+            and leaves everyone remembering her."
           </p>
           <div className="mt-4 tracking-luxe text-accent">Shara Frison, Founder & CEO</div>
         </div>
 
         <div className="mt-12 text-center">
-          <Link to="/shop" className="inline-flex rounded-full bg-primary px-7 py-3 text-xs tracking-luxe text-primary-foreground hover:bg-primary/90">
+          <Link
+            to="/shop"
+            className="inline-flex rounded-full bg-primary px-7 py-3 text-xs tracking-luxe text-primary-foreground hover:bg-primary/90"
+          >
             Explore the Collection
           </Link>
         </div>
