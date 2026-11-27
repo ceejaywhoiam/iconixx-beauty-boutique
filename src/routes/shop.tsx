@@ -17,6 +17,8 @@ const categories = [
   "LIMITED TIME BUNDLE",
 ] as const;
 
+const bundleCategoryQuery = "category=limited-time-bundle";
+
 let stripeBuyButtonScript: Promise<void> | undefined;
 
 function loadStripeBuyButton() {
@@ -39,6 +41,11 @@ function loadStripeBuyButton() {
 
 function LimitedTimeBundle() {
   const [status, setStatus] = useState<"loading" | "ready" | "error">("loading");
+  const [bundleUrl, setBundleUrl] = useState("");
+
+  useEffect(() => {
+    setBundleUrl(`${window.location.origin}/shop?${bundleCategoryQuery}`);
+  }, []);
 
   useEffect(() => {
     let active = true;
@@ -61,11 +68,43 @@ function LimitedTimeBundle() {
     return <p role="alert">Unable to load the bundle. Please try again later.</p>;
   }
 
-  return createElement("stripe-buy-button", {
-    "buy-button-id": "buy_btn_1UgOz5PV913oAM83K2aM6GRD",
-    "publishable-key":
-      "pk_live_51TdHM7PV913oAM83DCzDa38W6PPoQHU3Gd9d77e0sc8gnyIBrb6KS5h9yOmWQJlKO5w4DvIbTz6wNbYdE5tQM1jf00FoU2UOq2",
-  });
+  const qrCodeUrl = bundleUrl
+    ? `https://api.qrserver.com/v1/create-qr-code/?${new URLSearchParams({
+        size: "180x180",
+        data: bundleUrl,
+      })}`
+    : undefined;
+
+  return (
+    <div className="space-y-6">
+      {createElement("stripe-buy-button", {
+        "buy-button-id": "buy_btn_1UgOz5PV913oAM83K2aM6GRD",
+        "publishable-key":
+          "pk_live_51TdHM7PV913oAM83DCzDa38W6PPoQHU3Gd9d77e0sc8gnyIBrb6KS5h9yOmWQJlKO5w4DvIbTz6wNbYdE5tQM1jf00FoU2UOq2",
+      })}
+      <div className="border border-[#D4AF37]/50 bg-white p-5 text-center">
+        <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#9A7100]">
+          Scan to shop the bundle
+        </p>
+        {qrCodeUrl ? (
+          <img
+            src={qrCodeUrl}
+            alt="QR code to open the limited-time bundle on TIMELESS ICONIXX Beauty"
+            className="mx-auto mt-4 h-[180px] w-[180px]"
+            width={180}
+            height={180}
+          />
+        ) : (
+          <p className="mt-4 text-sm text-muted-foreground">Preparing QR code...</p>
+        )}
+        {bundleUrl && (
+          <a href={bundleUrl} className="mt-3 inline-block text-xs underline underline-offset-4">
+            Open the bundle page
+          </a>
+        )}
+      </div>
+    </div>
+  );
 }
 
 export const Route = createFileRoute("/shop")({
@@ -93,6 +132,13 @@ export const Route = createFileRoute("/shop")({
 function Shop() {
   const [cat, setCat] = useState<(typeof categories)[number]>("All");
   const filtered = cat === "All" ? products : products.filter((p) => p.category === cat);
+
+  useEffect(() => {
+    const category = new URLSearchParams(window.location.search).get("category");
+    if (category === "limited-time-bundle") {
+      setCat("LIMITED TIME BUNDLE");
+    }
+  }, []);
 
   return (
     <div className="min-h-screen bg-background">
