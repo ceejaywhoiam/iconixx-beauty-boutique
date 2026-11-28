@@ -76,12 +76,14 @@ function LimitedTimeBundle() {
     : undefined;
 
   return (
-    <div className="space-y-6">
-      {createElement("stripe-buy-button", {
-        "buy-button-id": "buy_btn_1UgOz5PV913oAM83K2aM6GRD",
-        "publishable-key":
-          "pk_live_51TdHM7PV913oAM83DCzDa38W6PPoQHU3Gd9d77e0sc8gnyIBrb6KS5h9yOmWQJlKO5w4DvIbTz6wNbYdE5tQM1jf00FoU2UOq2",
-      })}
+    <div className="col-span-full grid grid-cols-1 items-center gap-8 md:grid-cols-[minmax(0,1fr)_260px]">
+      <div>
+        {createElement("stripe-buy-button", {
+          "buy-button-id": "buy_btn_1UgOz5PV913oAM83K2aM6GRD",
+          "publishable-key":
+            "pk_live_51TdHM7PV913oAM83DCzDa38W6PPoQHU3Gd9d77e0sc8gnyIBrb6KS5h9yOmWQJlKO5w4DvIbTz6wNbYdE5tQM1jf00FoU2UOq2",
+        })}
+      </div>
       <div className="border border-[#D4AF37]/50 bg-white p-5 text-center">
         <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#9A7100]">
           Scan to shop the bundle
