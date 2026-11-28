@@ -36,43 +36,52 @@ function Index() {
     <div className="min-h-screen bg-background selection:bg-accent selection:text-accent-foreground">
       <SiteHeader />
 
-      {/* Hero — centered editorial */}
-      <section className="relative flex min-h-[85vh] items-center justify-center overflow-hidden">
+      {/* Hero — full-bleed beauty campaign */}
+      <section className="relative isolate flex min-h-[82svh] items-center overflow-hidden bg-plum">
         <div className="absolute inset-0 z-0">
           <img
             src={hero}
             alt="TIMELESS ICONIXX Beauty campaign"
-            className="h-full w-full object-contain object-center"
+            className="h-full w-full object-cover object-[58%_center]"
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-background/40 via-background/10 to-background/80" />
+          <div className="absolute inset-0 bg-gradient-to-r from-plum/85 via-plum/55 to-plum/5" />
+          <div className="absolute inset-0 bg-gradient-to-t from-plum/35 via-transparent to-plum/10" />
         </div>
 
-        <div className="relative z-10 px-6 text-center">
-          <div className="text-[10px] uppercase tracking-[0.4em] text-primary">
-            Est. by Shara Frison
-          </div>
-          <h1
-            className="mt-6 text-6xl leading-none text-primary drop-shadow-sm md:text-9xl"
-            style={{ fontFamily: "'DM Serif Display', serif" }}
-          >
-            TIMELESS ICONIXX
-          </h1>
-          <p className="mt-8 inline-block bg-background/60 backdrop-blur-sm px-3 py-1 rounded-md text-[12px] uppercase tracking-[0.35em] font-medium text-primary-foreground drop-shadow-md">
-            Redefining the standard of elegance
-          </p>
-          <div className="mt-10 flex flex-wrap justify-center gap-4">
-            <Link
-              to="/shop"
-              className="bg-primary px-10 py-4 text-[10px] font-bold uppercase tracking-[0.3em] text-primary-foreground transition-colors hover:bg-primary/90"
+        <div className="relative z-10 mx-auto w-full max-w-7xl px-6 py-24 md:px-8">
+          <div className="max-w-3xl text-left">
+            <div className="flex items-center gap-4 text-[10px] uppercase tracking-[0.4em] text-blush">
+              <span className="h-px w-10 bg-blush/80" />
+              Est. by Shara Frison
+            </div>
+            <h1
+              className="mt-8 text-[clamp(4rem,10vw,9rem)] leading-[0.8] tracking-[-0.045em] text-background drop-shadow-sm"
+              style={{ fontFamily: "'DM Serif Display', serif" }}
             >
-              Shop the collection
-            </Link>
-            <Link
-              to="/about"
-              className="border border-primary px-10 py-4 text-[10px] font-bold uppercase tracking-[0.3em] text-primary transition-colors hover:bg-primary hover:text-primary-foreground"
-            >
-              Our Story
-            </Link>
+              <span className="block">TIMELESS</span>
+              <span className="mt-3 block text-blush">ICONIXX</span>
+            </h1>
+            <div className="mt-7 flex items-center gap-4 text-[11px] uppercase tracking-[0.55em] text-background">
+              <span>Beauty</span>
+              <span className="h-px w-16 bg-background/70" />
+            </div>
+            <p className="mt-6 max-w-md text-sm font-light leading-relaxed text-background/90 md:text-base">
+              Redefining the standard of elegance.
+            </p>
+            <div className="mt-10 flex flex-wrap gap-4">
+              <Link
+                to="/shop"
+                className="bg-background px-8 py-4 text-[10px] font-bold uppercase tracking-[0.3em] text-plum transition-colors hover:bg-blush"
+              >
+                Shop the collection
+              </Link>
+              <Link
+                to="/about"
+                className="border border-background/80 px-8 py-4 text-[10px] font-bold uppercase tracking-[0.3em] text-background transition-colors hover:bg-background hover:text-plum"
+              >
+                Our Story
+              </Link>
+            </div>
           </div>
         </div>
       </section>

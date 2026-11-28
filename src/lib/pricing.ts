@@ -7,7 +7,8 @@ export function isSaleActive(now = Date.now()) {
 
 export function getSalePrice(price: number, saleActive = isSaleActive()) {
   const priceInCents = Math.round(price * 100);
-  return (saleActive
-    ? Math.round((priceInCents * (100 - SALE_DISCOUNT_PERCENT)) / 100)
-    : priceInCents) / 100;
+  return (
+    (saleActive ? Math.round((priceInCents * (100 - SALE_DISCOUNT_PERCENT)) / 100) : priceInCents) /
+    100
+  );
 }
