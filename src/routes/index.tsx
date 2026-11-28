@@ -3,6 +3,7 @@ import hero from "@/assets/hero.jpg";
 import { products } from "@/lib/products";
 import { ProductCard } from "@/components/product-card";
 import { SiteHeader, SiteFooter } from "@/components/site-header";
+import { getSalePrice } from "@/lib/pricing";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -139,22 +140,32 @@ function Index() {
         {/* Gloss grid inside band */}
         <div className="mx-auto mt-20 max-w-7xl px-6 md:px-8">
           <div className="grid grid-cols-2 gap-x-6 gap-y-10 sm:grid-cols-3 lg:grid-cols-5">
-            {glosses.map((p) => (
-              <Link key={p.id} to="/product/$id" params={{ id: p.id }} className="group block">
-                <div className="aspect-[4/5] overflow-hidden bg-blush/40">
-                  <img
-                    src={p.image}
-                    alt={p.name}
-                    loading="lazy"
-                    className="h-full w-full object-contain object-center transition-transform duration-700 group-hover:scale-105"
-                  />
-                </div>
-                <div className="mt-4 text-[10px] uppercase tracking-[0.25em] text-primary-foreground">
-                  {p.name}
-                </div>
-                <div className="mt-1 text-sm font-light text-blush">${p.price.toFixed(2)}</div>
-              </Link>
-            ))}
+            {glosses.map((p) => {
+              const salePrice = getSalePrice(p.price);
+              return (
+                <Link key={p.id} to="/product/$id" params={{ id: p.id }} className="group block">
+                  <div className="aspect-[4/5] overflow-hidden bg-blush/40">
+                    <img
+                      src={p.image}
+                      alt={p.name}
+                      loading="lazy"
+                      className="h-full w-full object-contain object-center transition-transform duration-700 group-hover:scale-105"
+                    />
+                  </div>
+                  <div className="mt-4 text-[10px] uppercase tracking-[0.25em] text-primary-foreground">
+                    {p.name}
+                  </div>
+                  <div className="mt-1 flex items-baseline gap-2 text-sm font-light text-blush">
+                    ${salePrice.toFixed(2)}
+                    {salePrice < p.price && (
+                      <del className="text-xs text-primary-foreground/60">
+                        ${p.price.toFixed(2)}
+                      </del>
+                    )}
+                  </div>
+                </Link>
+              );
+            })}
           </div>
         </div>
       </section>

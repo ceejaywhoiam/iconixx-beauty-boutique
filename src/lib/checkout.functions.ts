@@ -1,6 +1,7 @@
 import { createServerFn } from "@tanstack/react-start";
 import { getProduct } from "@/lib/products";
 import { getProductSelection } from "@/lib/product-selection";
+import { getSalePrice } from "@/lib/pricing";
 
 interface CheckoutInput {
   items: Array<{ id: string; quantity: number; options?: Record<string, string> }>;
@@ -86,7 +87,7 @@ export const createCheckoutSession = createServerFn({ method: "POST" })
       if (i.quantity > product.quantity) {
         throw new Error(`Only ${product.quantity} left of ${product.name}`);
       }
-      const unit_amount = Math.round(product.price * 100);
+      const unit_amount = Math.round(getSalePrice(product.price) * 100);
       subtotal += unit_amount * i.quantity;
 
       const shade = i.options?.["shade"];
